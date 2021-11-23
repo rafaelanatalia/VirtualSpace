@@ -1,0 +1,116 @@
+/* ================Variaveis======================= */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap");
+
+:root {
+  --cor--primaria: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    #0071b2;
+  --cor--secundaria: #00517f;
+  --cor--liteen: #4dbeff;
+  --cor--media: #398ebf;
+  --border--bottom: 2px solid rgba(0, 0, 0, 0.5);
+  --titulos: 48px;
+  --textos: 20px;
+  --textcolor: #fff;
+  --font-family: "Nunito", sans-serif;
+  --fontweidt: bold;
+  --z--index-max: 100;
+  --z--index-medio: 50;
+  --z--index-baixo: 1;
+}
+/* =================RESET======================== */
+*{
+    padding: 0;
+    margin: 0;
+}
+/* ===================HEADER==================== */
+
+    header {
+        width: 100%;
+        height: 20vh;
+    }
+    .header-container{
+        background-color: var(--cor--secundaria);
+        height: 18vh;
+        display: flex;
+        flex-direction: row;
+    }
+    .logo-container{
+        flex-grow: 50;
+        border: 4px black dashed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    #nav-menu{
+        flex-grow: 50;
+        border: 4px black dashed;
+        display: flex;
+        align-items: center;
+        padding-left: 5vw;
+    }
+    nav > ul {
+        display: flex;
+        list-style-type: none ;
+    }
+    nav > ul > li {
+        display: flex;
+        justify-content: center;
+    }
+    header > nav > ul > li > i{
+        line-height: 2px;
+    }
+    nav > ul > li >a{
+        color: white;
+        padding: 1vh 2vw;
+        text-decoration: none;
+        font-family: var(--font-family);
+    }
+    nav > ul > li >a:hover{
+        border-radius: 2px 6px 8px 10px;
+        border-bottom: 5px solid #4dbeff;
+    }
+    .logo {
+        width: 110px;
+        display: flex;
+        align-items: flex-end;
+    }
+
+  /* ==============BOTÕES============== */
+  #Home{
+    padding-top: 150px;
+  }
+  #planos{
+    padding-top: 150px;
+  }
+  #sua_loja{
+    padding-top: 150px;
+  }
+  /* ====================MAIN================== */
+
+.container-flex{
+    border:black 0.5vw dashed;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+}
+.container-left{
+    border:black 0.5vw dashed;
+    flex-grow: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-right{
+    border:black 0.5vw dashed;
+    flex-grow: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.block {
+    width: 150px;
+    height: 150px;
+    background-color: indigo;
+}
+ 
