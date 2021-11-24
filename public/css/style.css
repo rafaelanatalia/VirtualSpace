@@ -186,6 +186,8 @@ h1 {
     backdrop-filter: blur(100px);
     border-radius: 28px;
   }
+
+  
   form {
     width: 309px;
 
@@ -1326,7 +1328,7 @@ footer{
     width: 100%;
     height: 100%;
 }
-}
+
 
 
 @media (min-width:481px){
