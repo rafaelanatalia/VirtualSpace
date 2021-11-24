@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap");
+
+:root {
+  --cor--primaria: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    #0071b2;
+  --cor--secundaria: #00517f;
+  --cor--liteen: #4dbeff;
+  --cor--media: #398ebf;
+  --border--bottom: 2px solid rgba(0, 0, 0, 0.5);
+  --titulos: 48px;
+  --textos: 20px;
+  --textcolor: #fff;
+  --font-family: "Nunito", sans-serif;
+  --fontweidt: bold;
+  --z--index-max: 100;
+  --z--index-medio: 50;
+  --z--index-baixo: 1;
+}
+/*============  RESET ====================*/
+h1 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+@media (min-width:1281px){
+  /*============ HEADER ====================*/
+  .logo {
+    width: 120px;
+    height: auto;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  header {
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    justify-content: space-evenly;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      #0071b2;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+
+  header > nav {
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  header > nav > ul {
+    display: flex;
+  }
+
+  header > nav > ul > li {
+    display: flex;
+    flex-direction: row;
+    margin: 0.5rem;
+  }
+
+  header > nav > ul > li > a {
+    font-family: "Nunito";
+
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+    padding:5px;
+  }
+  .bx {
+    font-size: 20px;
+    color: #dee1ee;
+  }
+
+  header > nav > ul > li > a:hover {
+    font-size: 20px;
+    border-radius: 2px 6px 8px 10px;
+    border-bottom: 5px solid #4dbeff;
+  }
+
+  .nav_toggle {
+    display: none;
+  }
+  /* ==============BOTÕES============== */
+  #Home{
+    padding-top: 150px;
+  }
+  #planos{
+    padding-top: 150px;
+  }
+  #sua_loja{
+    padding-top: 150px;
+  }
+
+  /*============ MAIN====================*/
+
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+    background-color: var(--cor--primaria);
+    padding-top: 20vh ;
+  
+  }
+ .BarraDeBusca{
+     display: flex;
+     justify-content: space-between;
+     height: 30px;
+   margin: auto;
+ left:50px;
+ position:relative;
+ boder
+}
+body > header > div.BarraDeBusca > i{
+    margin-left: 300px;
+    position: absolute;
+    right: 21px;
+    top: 4px;
+    
+}
+.container{
+    position: relative;
+    width: 100vw;
+    height: 30vw;
+    margin-top:50vh;
+    
+}
+.Monitor{position: absolute;
+  height: 30px;
+  margin-top: 50px;
+}
+
+.box1{
+  background-color: green;
+}
+
+.box2{background-color: rebeccapurple;}
