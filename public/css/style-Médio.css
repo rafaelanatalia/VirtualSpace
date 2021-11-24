@@ -88,6 +88,22 @@ h1 {
   .nav_toggle {
     display: none;
   }
+  .BarraDeBusca{
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    margin: auto;
+    left:50px;
+    position:relative;
+}
+
+body > header > div.BarraDeBusca > i{
+    margin-left: 300px;
+    position: absolute;
+    right: 21px;
+    top: 4px;   
+}
+
   /* ==============BOTÕES============== */
   #Home{
     padding-top: 150px;
@@ -101,45 +117,36 @@ h1 {
 
   /*============ MAIN====================*/
 
-  main {
+main{
+
     display: flex;
     flex-wrap: wrap;
     position: relative;
     z-index: 1;
     background-color: var(--cor--primaria);
-    padding-top: 20vh ;
   
-  }
- .BarraDeBusca{
-     display: flex;
-     justify-content: space-between;
-     height: 30px;
-   margin: auto;
- left:50px;
- position:relative;
- boder
 }
-body > header > div.BarraDeBusca > i{
-    margin-left: 300px;
-    position: absolute;
-    right: 21px;
-    top: 4px;
-    
-}
-.container{
+.Container{
     position: relative;
+    max-width: 100vw;
+    max-height: 500px;
     width: 100vw;
-    height: 30vw;
-    margin-top:50vh;
-    
+    height: 500px;
+    display: flex;
+    margin-top:120px;
+    border:black 0.5vw dashed;
 }
-.Monitor{position: absolute;
-  height: 30px;
-  margin-top: 50px;
+.Monitor{
+  
 }
 
 .box1{
-  background-color: green;
+  border:black 0.5vw dashed;
 }
 
-.box2{background-color: rebeccapurple;}
+.box2{
+  border:black 0.5vw dashed;
+  background-color: rebeccapurple;
+  width: 100px;
+  height: 100px;
+}
