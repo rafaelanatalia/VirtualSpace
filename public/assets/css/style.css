@@ -84,11 +84,13 @@ h1 {
     border-bottom: 5px solid #4dbeff;
   }
 
-  .nav_toggle {
+  #btnmobile {
     display: none;
   }
 
-
+  #btnmobile:active~header>nav{
+    display: block;
+  }
  
 
   
@@ -272,7 +274,7 @@ h1 {
     width: 100%;
     padding-top: 150px;
     padding-bottom: 24px;
-    justify-content: space-evenly;
+    
     background: var(--cor--primaria);
     z-index: var(--z--index-medio);
   }
@@ -295,7 +297,7 @@ h1 {
     text-align: center;
     font-family: "Nunito", sans-serif;
     font-size: 18px;
-    color: #000000;
+    color: #ffffff;
   }
 
   /*============ COMO CRIAR====================*/
@@ -686,7 +688,6 @@ h1 {
       width: 100%;
       height: 100%;
       display: flex;
-      
       flex-direction: column;
       align-items: center;
       padding-top: 30px;
@@ -726,7 +727,7 @@ footer>.contatos>div>ul>li{
 
 @media (max-width:768px) {
   .logo{
-    width: 60px;
+    width: 120px;
   }
 
   #btnmobile{
@@ -742,199 +743,299 @@ footer>.contatos>div>ul>li{
 
   header{
     width: 100%;
-    justify-content: left;
+    justify-content: space-between;
   }
-  header>nav>ul{
+  header>nav{
     display: none;
+    justify-content: space-between;  
+    margin-top: 100px;
   }
   
-  ul.active ul{
+  header>nav>ul{
+    display: flex;
+    flex-direction: column;
+  }
+
+  #btnmobile.active ~ header>nav{
     display: flex;
   }
 
+/*        Home mobile 768px      */
 
 
+/*esquerda*/
+  .flex-container-center{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+  }
 
-}
-
-
-@media screen and (max-width: 480px) {
+  .nuvem-branca, .fundo_azul {
   
-
- header{
-   width: 100%;
-   display: flex;
-   justify-content:space-between;
-   
-   
- }
-
- header> nav{
-   margin-top: 5rem;
-  margin-left: 0.5rem;
-  display: none;
+    width: 760px;
   
- }
-
-
-nav>ul{
-  display: none;
-  flex-direction: column;
-
 }
-
- .nav_toggle{
-   display: flex;
-   margin-top: 35px;
-   margin-right: 150px;
-
-    
- }
-
- #nav-toggle > i{
-   display: flex;
-   font-size: 40px;
-   color: var(--cor--liteen);
- }
-
- #nav-toggle > i:hover{
-  font-size: 45px;
-  
-
-}
-
-/*============ MAIN====================*/
-
-main {
-  display: flex;
-  flex-wrap: wrap;
+  .foguete {
   position: relative;
-  z-index: 1;
+  left: 109px;
+
 }
 
+  .planeta{
+    left: 86px;
+  }
 
-
-/*============ ESQUERDA ====================*/
-
-.Esquerda {
-  margin-left: 30px;
-}
-
-.flex-container-center{ 
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-}
-
-.foguete {
-  left: 100px;
-}
-.planeta {
-  
-  bottom: 190px;
-  left: 82px;
-}
-
-.nuvem-branca {
-  position: relative;
-  width: 655px;
-  bottom: 228px;
-  z-index: var(--z--index-medio);
-}
-
-.fundo_azul {
-  position: relative;
-  width: 660px;
-  bottom: 429px;
-  right: 4px;
-}
-
-/*============ DIREITA====================*/
+/*direita*/
 
 .Direita{
-  margin-top: 30px;
-  margin-left: auto;
-  margin-bottom: 10px;
+  margin-left: 200px;
+  margin-bottom: 30px;
+}
+  .Esquerda>p{
+    color: black;
+  }
+
+/*         sobre nos mobile*/
+  #Sobre_nos{
+  padding-top: 60px;
 }
 
+#Sobre_nos > div > h3{
+  color:white;
+  margin-bottom: 30px;
+  margin-top: 5px;
+}
 
+/*sua loja*/
+  
+  .criar, .add, .config, .vender{
+    width: 93px;
+    height: 88px;
+  }
 
-
-
-/*============ SOBRE NOS ====================*/
-#Sobre_nos{}
-
-  /*============ COMO CRIAR====================*/
-
-
-  #sua_loja {
-    width: 690px;
-   justify-content: normal;
+  .criar>p, .add>p, .config>p, .vender>p{
+    font-size: 15px;
   }
   #sua_loja > div > img{
     width: 50px;
   }
 
-  .circulos{
-    justify-content: normal;
+
+  #planos{
+    padding-top: 0;
   }
 
 
 
-/*============ plano card====================*/
-
-h3{
-  margin-left: 194px;
 
 }
 
-.Planos-card{
-  justify-content: normal;
-  margin: 0;
-  margin-top: 30px;
+@media screen and (max-width: 480px) {
+  
+  body{
+    block-size: border-box;
+    flex-wrap: wrap;
+  }
+  .logo{
+    width: 120px;
+  }
+
+  #btnmobile{
+    margin-top: 24px;
+    margin-right: 30px;
+    display: block;
+  }
+
+  #btnmobile{
+    font-size: 60px;
+  }
+
+  
+
+  header{
+    margin-right: 50px;
+    width: 100%;
+    justify-content: space-between;
+    
+  }
+  header>nav{
+    display: none;
+    justify-content: space-between;  
+    margin-top: 100px;
+    
+  }
+  
+  header>nav>ul{
+    display: flex;
+    flex-direction: column;
+  }
+
+  header>nav>ul>li>a{
+    font-size: 25px;
+  }
+
+  .bx{
+    font-size: 35px;
+  }
+
+  #btnmobile~header>nav{
+    display: flex;
+  }
+
+/*        Home mobile   */
+
+
+/*esquerda*/
+  .flex-container-center{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+  }
+
+  .Esquerda{
+    border-bottom: none;
+  }
+
+  .inicial {
+   font-size: 25px;
+  }
+  
+  .nuvem-branca, .fundo_azul {
+  
+    width: 760px;
+  
+}
+  .foguete {
+  position: relative;
+  left: 109px;
+
+}
+
+  .planeta{
+    left: 86px;
+  }
+
+  /*============ FORMULARIOS ====================*/
+
+  .Direita {
+    
+    width: 419px;
+    height: 500px;
+  margin-left: 200px;   
+  margin-top: 140px;
   margin-bottom: 30px;
+  }
+/*direita*/
+
+form {
+  width: 409px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
+}
+
+label {
+  margin-top: 20px;
+  margin-left: 15px;
+  font-size: 30px;
+  font-family: "Nunito";
+  color: rgb(34, 33, 33);
+}
+input {
+ 
+  border-radius: 40px;
+  width: 350px;
+  height: 55px;
+  margin-left: 39px;
+  font-size: 25px;
+  text-shadow: 15px;
+}
+
+.Direita input[type="text"]::placeholder,
+  .Direita input[type="email"]::placeholder,
+  .Direita input[type="password"]::placeholder {
+    font-size: 23px;
+    color: white;
+    text-indent: 15px;
+  }
+/*         sobre nos mobile*/
+  #Sobre_nos{
+  padding-top: 60px;
+  width: 99%;
+  
+ 
+}
+
+#Sobre_nos > div > h3{
+  color:white;
+  margin-bottom: 30px;
+  margin-top: 5px;
+}
+
+/*sua loja*/
+
+ 
+  
+  .criar, .add, .config, .vender{
+    width: 93px;
+    height: 88px;
+  }
+
+  .criar>p, .add>p, .config>p, .vender>p{
+    font-size: 15px;
+  }
+  #sua_loja > div > img{
+    width: 50px;
+  }
+
+/*        planos         */
+  #planos{
+    padding-top: 0;
+    
+  }
+
+  h4{
+    font-size: 22px;
+}
+
+h5{
+    font-size: 24px;
+}
+
+li{
+    color: var(--textcolor);
+    margin: 5px;
 }
 
 
+  .top{
+    height: 520px;
+  }
 
-.criar, .add, .config, .vender{
-  width: 100px;
-    height: 89px;
-}
+  .basico, .medio{
+    height: 490px;
+  }
+  .basico:hover,
+  .medio:hover{
+    width: 270px;
+    height: 500px;
 
+  }
 
-.criar>p{} .add>p, .config>p, .vender>p{
-  margin: auto auto;
-  font-size: 16px;
-  font-weight: normal;
-  text-align: center;
-  color: darkmagenta;
-
-}
-
-
-/*============ FOOTER ====================*/
-footer{
-  background-color: black;
-  width: 100%;
-  height: 100%;
-}
+  .top:hover{
+    height: 540px;
+  }
 
 
 
 
 
+/*Footer*/
+  footer{
+   width: 100%;
 
-
-
-
-
-
-
-
-
+  }
 
 
 
