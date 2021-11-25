@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap");
+
+:root {
+  --cor--primaria: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    #0071b2;
+  --cor--secundaria: #00517f;
+  --cor--liteen: #4dbeff;
+  --cor--media: #398ebf;
+  --border--bottom: 2px solid rgba(0, 0, 0, 0.5);
+  --titulos: 48px;
+  --textos: 20px;
+  --textcolor: #fff;
+  --font-family: "Nunito", sans-serif;
+  --fontweidt: bold;
+  --z--index-max: 100;
+  --z--index-medio: 50;
+  --z--index-baixo: 1;
+}
+/*============  RESET ====================*/
+h1 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+  /*============ HEADER ====================*/
+  .logo {
+    width: 120px;
+    height: auto;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  header {
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    justify-content: space-evenly;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    #0071b2;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+
+  header > nav {
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  header > nav > ul {
+    display: flex;
+  }
+
+  header > nav > ul > li {
+    display: flex;
+    flex-direction: row;
+    margin: 0.5rem;
+  }
+
+  header > nav > ul > li > a {
+    font-family: "Nunito";
+
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+    padding:5px;
+  }
+  .bx {
+    font-size: 20px;
+    color: #dee1ee;
+  }
+
+  header > nav > ul > li > a:hover {
+    font-size: 20px;
+    border-radius: 2px 6px 8px 10px;
+    border-bottom: 5px solid #4dbeff;
+  }
+
+  .nav_toggle {
+    display: none;
+  }
+  .BarraDeBusca{
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    margin: auto;
+    left:50px;
+    position:relative;
+}
+
+body > header > div.BarraDeBusca > i{
+    margin-left: 300px;
+    position: absolute;
+    right: 21px;
+    top: 4px;   
+}
+
+  /* ==============BOTÕES============== */
+  #Home{
+    padding-top: 150px;
+  }
+  #planos{
+    padding-top: 150px;
+  }
+  #sua_loja{
+    padding-top: 150px;
+  }
+
+  /*============ MAIN====================*/
+
+.conteudo-flex{
+  width:100vw;
+  height: 300px;
+  border: black 0.5vw dashed;
+  max-width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+}
+main{
+  border: deeppink 0.5vw dashed;
+  margin-top: 130px;
+  height: 1200px;
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container-flex{
+  border:blue 0.5vw dashed;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* =====================FOOTER======================== */
+footer{
+  width: 100vw;
+  height: 175px;
+  background-color: black;
+}
