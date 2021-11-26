@@ -82,6 +82,7 @@ h1 {
     font-size: 20px;
     border-radius: 2px 6px 8px 10px;
     border-bottom: 5px solid #4dbeff;
+    
   }
 
   #btnmobile {
@@ -113,6 +114,7 @@ h1 {
     flex-wrap: wrap;
     position: relative;
     z-index: 1;
+    
   }
 
   /*============ IMG====================*/
@@ -143,7 +145,7 @@ h1 {
     text-align: center;
     font-family: "Nunito", sans-serif;
     font-size: 48px;
-    color: #000000;
+    color: #ffffff;
   }
 
   .inicial {
@@ -151,6 +153,7 @@ h1 {
     top: 24px;
     width: 514px;
     text-align: left;
+    color: black;
   }
   .foguete {
     position: relative;
@@ -723,7 +726,46 @@ footer>.contatos>div>ul>li{
   font-size: 46px;
 }
 
+@media (max-width:1279px) {
 
+  body{
+    width: 1279px;
+  }
+  
+  .logo{
+    width: 100px;
+  }
+
+  header>nav{
+    
+    display: none;
+  }
+  nav{
+    margin-top: 50px;
+  }
+  nav> ul{
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+
+
+  #btnmobile{
+    margin-top: 30px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    background: transparent;
+    border: transparent;
+  }
+  #btnmobile>i{
+   font-size: 40px;
+  }
+
+
+
+
+}
 
 @media (max-width:768px) {
   .logo{
@@ -834,6 +876,7 @@ footer>.contatos>div>ul>li{
   
   body{
     block-size: border-box;
+   
     flex-wrap: wrap;
   }
   .logo{
