@@ -114,7 +114,7 @@ h1 {
     flex-wrap: wrap;
     position: relative;
     z-index: 1;
-    margin-left: 157px;
+    
   }
 
   /*============ IMG====================*/
@@ -737,13 +737,30 @@ footer>.contatos>div>ul>li{
   }
 
   header>nav{
-    display: flex;
+    
+    display: none;
   }
-
+  nav{
+    margin-top: 50px;
+  }
   nav> ul{
     flex-direction: column;
+    margin-bottom: 10px;
   }
 
+
+
+  #btnmobile{
+    margin-top: 30px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    background: transparent;
+    border: transparent;
+  }
+  #btnmobile>i{
+   font-size: 40px;
+  }
 
 
 
