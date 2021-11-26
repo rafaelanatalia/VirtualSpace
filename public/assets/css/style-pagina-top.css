@@ -191,4 +191,7 @@ footer{
     width: 100vw;
     height: 175px;
     background-color: black;
+    color:white;
+    font-family: "Nunito", sans-serif;
+    font-size: 30px;
   }
