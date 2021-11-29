@@ -23,8 +23,34 @@
 /* ===================HEADER==================== */
 
     header {
-  
-        height: 20vh;
+      height: 50x;
+      position: relative;
+      transform: translateY(-110px);
+    }
+    header:hover{
+      animation: arrow 0.7s both;
+    }
+
+    @keyframes arrow {
+      0% {transform: translateY(-121px);}
+      10%{transform: translateY(-110px);}
+      20%{transform: translateY(-100px);}
+      30%{transform: translateY(-80px);}
+      40%{transform: translateY(-60px);}
+      50%{transform: translateY(-40px);}
+      60%{transform: translateY(-30px);}
+      70%{transform: translateY(-20px);}
+      80%{transform: translateY(-10px);}
+      90%{transform: translateY(-5px);}
+      100%{transform: translateY(-0);}
+    }
+    .down-arrow{
+      background-color: var(--cor--secundaria);
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
     }
     .header-container{
         background-color: var(--cor--secundaria);
@@ -34,7 +60,6 @@
     }
     .logo-container{
         flex-grow: 80;
-        border: 4px black dashed;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -42,7 +67,6 @@
     }
     #nav-menu{
         flex-grow: 50;
-        border: 4px black dashed;
         display: flex;
         align-items: center;
         padding-left: 5vw;
