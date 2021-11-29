@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap");
+:root {
+    --cor--primaria: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    #0071b2;
+  --cor--secundaria: #00517f;
+  --cor--liteen: #4dbeff;
+  --cor--media: #398ebf;
+  --border--bottom: 2px solid rgba(0, 0, 0, 0.5);
+  --titulos: 48px;
+  --textos: 20px;
+  --textcolor: #fff;
+  --font-family: "Nunito", sans-serif;
+  --fontweidt: bold;
+  --z--index-max: 100;
+  --z--index-medio: 50;
+  --z--index-baixo: 1;
+}
+/* RESET*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*HEADER*/
+.logo{
+    width: 80px;
+    height:auto;
+    margin-left: 10px;
+}
+.logo>img{
+ width: 80px;
+}
+header{
+    display:flex;
+    background: var(--cor--primaria);
+    width: 480px;
+    justify-content: space-between;
+}
+
+
+header>nav{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+    header>nav>ul{
+        list-style: none;
+        align-items: center;
+        
+    }
+
+    header>nav>ul>li{
+        margin-top: 15px;
+    }
+    
+    header>nav>ul>li>a{
+        color: white;
+        text-decoration: none;
+        font-size: var(--textos);
+        font-family: var(--font-family);
+    }
+
+#btnmobile{
+    display: block;
+    background: transparent;
+    border: transparent;
+   margin-right: 60px;
+    
+}
+#btnmobile > i{
+    font-size: 30px;
+    color: white;
+}
+
+
+
+/* main vitrines de preços*/
+main{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    width: 480px;
+   
+}
+
+/* geral*/
+.conteudo-diversos{
+    display: flex;
+    flex-wrap: wrap;
+  
+}
+
+/*cada produto*/
+.conteudo-1, .conteudo-2,.conteudo-3, .conteudo-4, .conteudo-5 {
+    display: flex;
+    justify-content: space-between;
+    width: 480px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 2px solid #4400b2;
+  
+}
+.conteudo-1:hover, .conteudo-2:hover,.conteudo-3:hover, .conteudo-4:hover, .conteudo-5:hover{
+   
+    background: rgb(29, 219, 22);
+}
+
+/*textos*/
+.info{
+    display: flex;
+    flex-direction: column;
+    
+}
+h1,h2{
+    display: flex;
+    font-family: var(--font-family);
+    color: black;
+    margin-top: 30px;
+    font-size: 13px;
+}
+
+/*img dos produtos*/
+body > main > div > section> img{
+    width: 100px;
+    height: auto;
+}
+
+/*botoes*/
+main > div > section>button{
+    width: 150px;
+    height: 50px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family);
+    border: var(--border--bottom);
+    color: #fff;
+    background: #4400b2;
+    margin-top: 99px;
+   
+}
+
+button:hover{
+    background: linear-gradient(0deg, rgba(199, 27, 27, 0.2) 0%, rgba(59, 23, 192, 0.2) 100%),
+    #5a13ce;;
+}
+
+footer{
+    background: violet;
+}

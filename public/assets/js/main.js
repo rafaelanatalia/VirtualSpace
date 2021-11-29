@@ -1,9 +1,9 @@
 /*menu mobile*/
 
-const btnmobile =document.querySelector("#btnmobile");
+const show =document.querySelector("#btnmobile");
 
 function toggleMenu(){
-    const nav =document.querySelector("#nav-menu");
+    const nav =document.querySelector("body > header > nav");
     nav.classList.toggle(active)
 }
 

@@ -60,18 +60,16 @@ h1 {
   }
 
   header > nav > ul > li {
-    display: flex;
+    display: block;
     flex-direction: row;
     margin: 0.5rem;
   }
 
   header > nav > ul > li > a {
     font-family: "Nunito";
-
     font-size: 18px;
     text-decoration: none;
     color: #fff;
-    padding:5px;
   }
   .bx {
     font-size: 20px;
@@ -79,10 +77,8 @@ h1 {
   }
 
   header > nav > ul > li > a:hover {
-    font-size: 20px;
     border-radius: 2px 6px 8px 10px;
     border-bottom: 5px solid #4dbeff;
-    
   }
 
   #btnmobile {
@@ -145,7 +141,7 @@ h1 {
     text-align: center;
     font-family: "Nunito", sans-serif;
     font-size: 48px;
-    color: #ffffff;
+    color: black;
   }
 
   .inicial {
@@ -213,7 +209,7 @@ h1 {
     margin-left: 15px;
     font-size: 18px;
     font-family: "Nunito";
-    color: rgb(34, 33, 33);
+    color:white;
   }
 
   input {
@@ -227,17 +223,17 @@ h1 {
     font-size: 16px;
     transition: 0.2s;
     outline: none;
-    border: 2px solid rgba(10, 19, 223, 0.6);
+    border: none;
     background-color: rgba(255, 255, 255, 0.25);
     box-shadow: 0px 4px 4px rgba(88, 55, 207, 0.541);
-    border-radius: 30px;
+
     text-shadow: 10px;
   }
 
   .Direita input[type="text"]:focus,
   .Direita input[type="email"]:focus,
   .Direita input[type="password"]:focus {
-    background-color: #2fa0b0;
+    background-color: #814ff3;
   }
 
   .Direita input[type="text"]::placeholder,
@@ -292,12 +288,14 @@ h1 {
         rgba(255, 255, 255, 0.434) 0%,
         rgba(145, 165, 246, 0.532) 100%
       );
-    border: 2px solid rgba(10, 19, 223, 0.6);
+
     box-shadow: 0px 4px 4px rgba(88, 55, 207, 0.541);
     border-radius: 30px;
   }
   p {
-    text-align: center;
+    text-align: justify;
+    margin-left: 50px;
+    margin-right: 50px;
     font-family: "Nunito", sans-serif;
     font-size: 18px;
     color: #ffffff;
@@ -327,123 +325,30 @@ h1 {
     margin-bottom: 50px;
   }
 
-  .criar {
+  .criar,.add, .config, .vender {
     display: flex;
     flex-direction: column;
-    width: 120px;
-    height: 110px;
-    padding: 12px 6px;
-    margin-bottom: 10px;
-    background: #ffffff;
-    border-left: 10px solid #0a13df;
-    border-right: 4px solid #0a13df;
-    border-top: 4px solid #0a13df;
-    border-bottom: 4px solid #0a13df;
-    border-radius: 100px;
+    
   }
 
-  .criar > i {
+  .criar > i, .add > i,.config > i, .vender > i{
     display: flex;
     justify-content: center;
     font-size: 30px;
     color: darkmagenta;
   }
 
-  .criar > p {
+  .criar > p, .add > p,.config > p,.vender > p {
     margin: auto auto;
     font-size: 20px;
     text-align: center;
     padding-top: 14px;
     color: darkmagenta;
   }
-
-  .add {
-    display: flex;
-    flex-direction: column;
-    width: 120px;
-    height: 110px;
-    padding: 12px 6px;
-    margin-bottom: 10px;
-    background: #ffffff;
-    border-left: 10px solid #0a13df;
-    border-right: 4px solid #0a13df;
-    border-top: 4px solid #0a13df;
-    border-bottom: 4px solid #0a13df;
-    border-radius: 100px;
+  
+  #sua_loja > div >img{
+    width: 60px;
   }
-
-  .add > i {
-    display: flex;
-    justify-content: center;
-    font-size: 30px;
-    color: darkmagenta;
-  }
-
-  .add > p {
-    margin: auto auto;
-    font-size: 20px;
-    text-align: center;
-    color: darkmagenta;
-  }
-
-  .config {
-    display: flex;
-    flex-direction: column;
-    width: 120px;
-    height: 110px;
-    padding: 12px 6px;
-    margin-bottom: 10px;
-    background: #ffffff;
-    border-left: 10px solid #0a13df;
-    border-right: 4px solid #0a13df;
-    border-top: 4px solid #0a13df;
-    border-bottom: 4px solid #0a13df;
-    border-radius: 100px;
-  }
-
-  .config > i {
-    display: flex;
-    justify-content: center;
-    font-size: 30px;
-    color: darkmagenta;
-  }
-
-  .config > p {
-    margin: auto auto;
-    font-size: 20px;
-    text-align: center;
-    color: darkmagenta;
-  }
-
-  .vender {
-    display: flex;
-    flex-direction: column;
-    width: 120px;
-    height: 110px;
-    padding: 12px 6px;
-    margin-bottom: 10px;
-    background: #ffffff;
-    border-left: 10px solid #0a13df;
-    border-right: 4px solid #0a13df;
-    border-top: 4px solid #0a13df;
-    border-bottom: 4px solid #0a13df;
-    border-radius: 100px;
-  }
-
-  .vender > i {
-    display: flex;
-    justify-content: center;
-    font-size: 30px;
-    color: darkmagenta;
-  }
-
-  .vender > p {
-    margin: auto auto;
-    font-size: 20px;
-    text-align: center;
-    color: darkmagenta;
-  }
-
   /*============ PLANOS ====================*/
 
   #planos{
@@ -716,6 +621,7 @@ footer>.contatos>div>ul>li{
   display: flex;
   list-style-type: none;
   margin: 12px;
+  font-family: var(--font-family);
 }
 .scroll{
   display: flex;
@@ -1143,54 +1049,6 @@ footer>.contatos>div>ul>li{
 footer > div.end > div > h5{
   font-size: 30px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
