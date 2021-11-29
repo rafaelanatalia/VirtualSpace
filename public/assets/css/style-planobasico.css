@@ -105,7 +105,7 @@ main{
 }
 .conteudo-1:hover, .conteudo-2:hover,.conteudo-3:hover, .conteudo-4:hover, .conteudo-5:hover{
    
-    background: rgb(29, 219, 22);
+    background: rgba(22, 107, 219, 0.151);
 }
 
 /*textos*/
@@ -148,6 +148,198 @@ button:hover{
     #5a13ce;;
 }
 
-footer{
-    background: violet;
+footer{ 
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: rgb(0, 0, 0);
+}
+
+
+footer> .contatos{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 17px;
+  border-bottom: 3px solid rgba(116, 116, 116, 0.733);
+  
+}
+
+
+footer> .contatos>div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 40px;
+}
+
+footer>.contatos>div>ul>li{
+display: flex;
+list-style-type: none;
+margin: 15px;
+font-family: var(--font-family);
+color: white;
+font-size: 21px;
+}
+.scroll{
+display: flex;
+margin-left: 1200px;
+}
+
+.scroll>i{
+font-size: 46px;
+}
+
+
+@media (max-width:768px) {
+    .logo{
+        width: 80px;
+        height:auto;
+        margin-left: 10px;
+    }
+    .logo>img{
+     width: 80px;
+    }
+
+    header,main{
+        width: 768px;
+        
+    }
+
+    .conteudo-1, .conteudo-2,.conteudo-3, .conteudo-4, .conteudo-5{
+        width: 768px;
+    }
+
+
+}
+
+
+@media (max-width:1279px) {
+    
+    header,main,footer{
+        width: 1279px;
+    }
+    .conteudo-1, .conteudo-2,.conteudo-3, .conteudo-4, .conteudo-5 {
+        display: flex;
+        flex-direction: column;
+        width: 213px;
+        height: 300px;
+        border: 2px solid #4400b2;
+      
+    }
+
+    main > div > section>button {
+        width: 215px;
+        height: 51px;
+        margin-top: 0;
+    }
+    h1,h2{
+       
+        font-size: 18px;
+    }
+
+    body > main > div > section> img{
+        width: 110px;
+        margin-left: 54px;
+    }
+
+    footer, footer>.contatos{
+        flex-direction: row;
+    }
+
+    footer{
+       
+        margin-top: 100px;
+    }
+}
+
+
+
+@media (min-width:1280px) {
+    header,main,footer{
+        width: 100%;
+    }
+
+    /*HEADER*/
+ 
+    .logo>img {
+        width: 120px;
+        height: auto;
+      }
+
+     
+
+      header {
+
+        display: flex;
+     
+        justify-content: space-evenly;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+          #0071b2;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+      }
+    
+      header > nav {
+        margin-left: 0.5rem;
+        display: flex;
+        align-items: center;
+        margin-top: 0;
+      }
+    
+      header > nav > ul {
+        display: flex;
+      }
+    
+      header > nav > ul > li {
+        display: block;
+        flex-direction: row;
+        margin: 0.5rem;
+      }
+    
+      header > nav > ul > li > a {
+        font-family: "Nunito";
+        font-size: 18px;
+        text-decoration: none;
+        color: #fff;
+      }
+      .bx {
+        font-size: 20px;
+        color: #dee1ee;
+      }
+    
+      header > nav > ul > li > a:hover {
+        border-radius: 2px 6px 8px 10px;
+        border-bottom: 5px solid #4dbeff;
+      }
+    
+      #btnmobile {
+        display: none;
+      }
+    
+
+/*      main      */
+      main{
+          margin-top: 100px;
+          position: relative;
+      }
+
+      .conteudo-diversos{
+        margin-left: 360px;
+      }
+
+
+
+
+/*       footer      */
+footer>.contatos{
+    flex-direction: row;
+}
+    .contatos>ul, .contatos>ul>li{
+        display: flex;
+        
+    }
 }

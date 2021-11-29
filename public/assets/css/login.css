@@ -145,8 +145,8 @@ input {
     font-size: var(--textos);
     transition: 0.2s;
     outline: none;
-    border: 2px solid rgba(10, 19, 223, 0.6);
-    background-color: rgba(250, 250, 250, 0.692);
+    border: none;
+    background-color: rgba(250, 250, 250, 0.562);
     box-shadow: 0px 4px 4px rgba(88, 55, 207, 0.541);
     border-radius: 30px;
     text-shadow: 10px;
@@ -155,7 +155,7 @@ input {
   .login input[type="text"]:focus,
   .login input[type="email"]:focus,
   .login input[type="password"]:focus {
-    background-color: var(--cor--primaria);
+    background-color:#ab91f283;
   }
 
   .login input[type="text"]::placeholder,
