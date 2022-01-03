@@ -1,37 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/assets/css/style.css">
-    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-    <title>Virtual Space</title>
-</head>
-<body>
-    
-    <header>
-<div class="logo-container">
-    <a href="#Home"><img src="/public/assets/img/Vitural_space-logo.png" alt="logo da empresa" class="logo"></a>
-</div>
-        
-<nav id="nav-menu">
-    
-        <ul>
-            <li><a href="#Home">Home</a></li>
-            <li><a href="#Sobre_nos">Sobre nos</a></li>
-            <li><a href="#planos">Planos</a></li>
-            <li><a href="#sua_loja">Como montar sua Loja</a></li>
-            <li><a href="modelos.html">Modelos de Paginas</a></li>
-            <li><i class='bx bx-user'></i><a href="login.html">Login</a></li>
-            <li><i class='bx bx-user-plus'></i><a href="criarconta.html">Criar Conta</a></li>
-        </ul>
-        
-    </nav>
-        <a href="" class="btnmobile"><i class='bx bx-menu'  ></i></a>
-    
-        
-    </header>
+<%- include('header'); %>
 
 
     <main id="Home">
@@ -39,10 +6,10 @@
             <div class="Esquerda">
          <h1>Crie sua loja</h1>
          <p class="inicial">Faça parte desta equipe e junte nossas historias e monte sua loja Virtual e voe com conosco</p>
-             <img src="/public/assets/img/rocket.png" alt="foquete" class="foguete">
-             <img src="/public/assets/img/planet x40.png" alt="fundo" class="planeta">
-             <img src="/public/assets/img/whitesmoke branco.png" alt="nuvem" class="nuvem-branca">
-             <img src="/public/assets/img/bluesmoke fundo azul.png" alt="fundo da nuvem" class="fundo_azul"> 
+             <img src="/assets/img/rocket.png" alt="foquete" class="foguete">
+             <img src="/assets/img/planet x40.png" alt="fundo" class="planeta">
+             <img src="/assets/img/whitesmoke branco.png" alt="nuvem" class="nuvem-branca">
+             <img src="/assets/img/bluesmoke fundo azul.png" alt="fundo da nuvem" class="fundo_azul"> 
      </div>
  
       <div class="Direita">
@@ -60,7 +27,7 @@
     </div>
      <!--Sobre nós-->
      <section id="Sobre_nos">
-         <img src="/public/assets/img/menina no foguete.png" alt="meninan o foguete">
+         <img src="/assets/img/menina no foguete.png" alt="meninan o foguete">
          <!--Imagem da menina voando-->
          <div class="texto_sobre">
              <h3>Sobre nos</h3>
@@ -78,18 +45,18 @@
                 
                 <p>criar loja</p>
             </div>
-            <img src="/public/assets/img/Arrow 1.svg" alt="seta">
+            <img src="/assets/img/Arrow 1.svg" alt="seta">
             <div class="add">
                 <i class='bx bx-cart'></i>
                 <p>adicionar produtos</p>
             </div>
-            <img src="/public/assets/img/Arrow 1.svg" alt="seta">
+            <img src="/assets/img/Arrow 1.svg" alt="seta">
 
             <div class="config">
                 <i class='bx bx-wallet-alt'></i>
                 <p>configurar pagamentos</p>
             </div>
-            <img src="/public/assets/img/Arrow 1.svg" alt="seta">
+            <img src="/assets/img/Arrow 1.svg" alt="seta">
 
             <div class="vender">
                 <i class='bx bx-line-chart'></i>
@@ -107,7 +74,7 @@
 
              <!--basico -->
              <div class="basico">
-                 <img src="/public/assets/img/Dayflow Sitting BASICO.png" alt="plano basico">
+                 <img src="/assets/img/Dayflow Sitting BASICO.png" alt="plano basico">
                 <div class="valor">
                     <h4>Basico</h4>
                     <h5>R$ XX,xx</h5>
@@ -130,7 +97,7 @@
 
                   <!--top -->
              <div class="top"> 
-                 <img src="/public/assets/img/Dayflow Sitting top.png" alt="plano top">
+                 <img src="/assets/img/Dayflow Sitting top.png" alt="plano top">
                  <div class="valor">
                     <h4>Basico</h4>
                     <h5>R$ XX,xx</h5>
@@ -154,7 +121,7 @@
              </div>
              <!--medio -->
              <div class="medio"> 
-                 <img src="/public/assets/img/Dayflow Sitting medio.png" alt="plano medio">
+                 <img src="/assets/img/Dayflow Sitting medio.png" alt="plano medio">
 
                  <div class="valor">
                     <h4>Basico</h4>
@@ -182,56 +149,4 @@
      
  
     </main>
-    <footer>
-        <div class="contatos">
-         <div >
-            <h5>Loja</h5>
-            <Ul>
-                <li>Quem Somos Nos</li>
-                <li>Loja de Temas</li>
-                <li>Planos</li>
-                <li>Forma de Pagamentos</li>
-            </Ul>
-            
-        </div>
-        <div>
-            <h5>Contatos</h5>
-            <Ul>
-                <li>Quem Somos Nos</li>
-                <li>Loja de Temas</li>
-                <li>Planos</li>
-                <li>Forma de Pagamentos</li>
-            </Ul>
-        </div>
-        <div>
-            <h5>Ajuda</h5>
-            <Ul>
-                <li>Quem Somos Nos</li>
-                <li>Loja de Temas</li>
-                <li>Planos</li>
-                <li>Forma de Pagamentos</li>
-            </Ul>
-        </div>
-    </div>
-       <div class="end">
-           <div>
-            <h5>Siga-nos nas Redes Sociais</h5>
-        </div>
-       
-       </div>
-         <div class="scroll">
-            <a href="#home"><i class='bx bx-caret-up-circle'></i></a>
-        </div>
-    </footer>
-
-
-
-
-
-     <!--========== MAIN JS ==========-->
-     <script src="/public/assets/js/main.js"></script>
-
-
-</body>
-</html>
-
+    <%- include('footer') %>
