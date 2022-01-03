@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/css/login.css">
+    <link rel="stylesheet" href="/assets/css/login.css">
     <title>Criar Conta</title>
 </head>
 <body>
     <div class="center">
         <div class="login">
             <h2>Criar Conta</h2>
-    <form action="">
+    <form action="/adm/create" method="POST">
               <label>Nome da Loja</label>
-              <input type="text" name="" placeholder="Nome da Loja">
+              <input type="text" name="lojanome" placeholder="Nome da Loja">
               <label>Email</label>
-              <input type="email" name="" placeholder="Seuemail@email.com">
+              <input type="email" name="email" placeholder="Seuemail@email.com">
               <label>Senha</label>
-              <input type="password" name="" placeholder="seusenha123">
+              <input type="password" name="senha" placeholder="seusenha123">
               <input type="submit" value="Criar Conta">
 
               <a class="criarconta" href="criarconta.html" title="">Login</a>

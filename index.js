@@ -1,9 +1,11 @@
 // impostando o express
 const express = require("express");
+const AdmController = require("./controller/AdmController");
+
 
 //importando os roteadores
-const VirtualRouter= require("./routers/VirtualRouter");
-
+const VirtualRouter = require("./routers/VirtualRouter");
+const AdmRouter = require('./routers/AdmRouter');
 
 //criando o servidor 
 const server=express();
@@ -18,6 +20,7 @@ server.use(express.static(__dirname+ '/public'));
 
 // criar a rota respondendo a requisição
 server.use('/', VirtualRouter);
+server.use('/adm', AdmRouter);
 
 
 //levantando o servidor

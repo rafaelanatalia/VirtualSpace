@@ -1,5 +1,6 @@
 //criando o  roteador e impostando o express
 const express = require("express");
+const AdmController = require("../controller/AdmController");
 
 //impostando o controller
 const VirtualController= require('../controller/VirtualController');
@@ -9,5 +10,6 @@ const router=express.Router();
 
 //definindo rotas
 router.get('/',VirtualController.home);
+
 
 module.exports= router
