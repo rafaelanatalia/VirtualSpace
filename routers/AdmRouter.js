@@ -14,6 +14,8 @@ const router=express.Router();
 router.get('/login',AdmController.showlogin);
 router.post('/create',AdmController.Registro);
 router.get('/create',AdmController.Create);
+router.post('/login',AdmController.Login);
+router.get('/dashboard',AdmController.Login);
 
 module.exports= router;
 

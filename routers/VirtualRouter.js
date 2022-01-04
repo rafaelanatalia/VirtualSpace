@@ -10,6 +10,6 @@ const router=express.Router();
 
 //definindo rotas
 router.get('/',VirtualController.home);
-
+router.get('/ModeloDePaginas',VirtualController.ModeloPaginas);
 
 module.exports= router

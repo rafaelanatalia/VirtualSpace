@@ -22,11 +22,12 @@ const fs = require('fs');
 
         if(usuario === undefined){
             return res.send('Senha ou Email invalido');
+        }else{
+
+        // req.session.usuario = usuario;
+
+        return res.redirect('/adm/dashboard');
         }
-
-        req.session.usuario = usuario;
-
-        return res.redirect('index');
     },
     Logout:(req,res)=>{
         
