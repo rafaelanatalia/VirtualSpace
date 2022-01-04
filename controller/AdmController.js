@@ -1,6 +1,5 @@
 const fs = require('fs');
-const { ClientRequest } = require('http');
-const user = require('../database/Usuarios.json');
+
 
     module.exports = AdmController = {
        
@@ -36,18 +35,19 @@ const user = require('../database/Usuarios.json');
         return res.redirect('/adm/login')
     },
     Registro:(req,res)=>{
+        const user = require('../database/Usuarios.json');
         const nomeloja = req.body.lojanome;
         const email = req.body.email;
         const senha = req.body.senha;
-
+        
         const cliente = {nomeloja,email,senha};
 
-        cliente.id = user[cliente.length - 1].id + 1;
+        cliente.id = user[user.length - 1].id + 1;
 
         user.push(cliente);
 
         fs.writeFileSync(
-            __dirname + '/../database/Usuarios.json',JSON.stringify(cliente, null, 3),{flag:'w'}
+            __dirname + '/../database/Usuarios.json',JSON.stringify(user, null, 3),{flag:'w'}
         );
         res.redirect('/');
     }

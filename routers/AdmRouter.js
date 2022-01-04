@@ -11,9 +11,9 @@ const router=express.Router();
 
 //definindo rotas
 
-router.get('/create',AdmController.Create);
 router.get('/login',AdmController.showlogin);
-
+router.post('/create',AdmController.Registro);
+router.get('/create',AdmController.Create);
 
 module.exports= router;
 

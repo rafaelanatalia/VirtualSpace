@@ -18,6 +18,10 @@ server.set('views','./views');
 //config a pasta public
 server.use(express.static(__dirname+ '/public'));
 
+//JSON
+server.use(express.urlencoded({extended: false}));
+server.use(express.json());
+
 // criar a rota respondendo a requisição
 server.use('/', VirtualRouter);
 server.use('/adm', AdmRouter);
