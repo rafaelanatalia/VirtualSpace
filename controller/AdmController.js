@@ -40,6 +40,9 @@ const fs = require('fs');
         const nomeloja = req.body.lojanome;
         const email = req.body.email;
         const senha = req.body.senha;
+        const senhanovamente = req.body.senhanovamente;
+        if(senha == senhanovamente){
+
         
         const cliente = {nomeloja,email,senha};
 
@@ -51,6 +54,9 @@ const fs = require('fs');
             __dirname + '/../database/Usuarios.json',JSON.stringify(user, null, 3),{flag:'w'}
         );
         res.redirect('/');
+        }else{
+            res.send('As Senhas Estão Diferentes')
+        }
     }
 };
 

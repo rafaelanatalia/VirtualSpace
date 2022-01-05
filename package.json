@@ -19,7 +19,7 @@
   "homepage": "https://github.com/rafaelanatalia/VirtualSpace#readme",
   "devDependencies": {
     "ejs": "^3.1.6",
-    "express": "^4.17.1",
+    "express": "^4.17.2",
     "express-generator": "^4.16.1",
     "nodemon": "^2.0.15"
   },
@@ -76,6 +76,7 @@
     "finalhandler": "^1.1.2",
     "forwarded": "^0.2.0",
     "fresh": "^0.5.2",
+    "fs": "^0.0.1-security",
     "get-stream": "^4.1.0",
     "glob-parent": "^5.1.2",
     "global-dirs": "^3.0.0",

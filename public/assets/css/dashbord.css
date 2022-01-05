@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap");
 :root {
   --cor--primaria: #91d7f2;
+  --cor--secundaria: #0071b2;
   --border--bottom: 2px solid rgba(0, 0, 0, 0.5);
   --titulos: 48px;
   --textos: 20px;
@@ -19,5 +20,88 @@
   margin: 0;
   padding: 0;
 }
+.header{
+  background-color: var(--cor--secundaria);
+  height: 100px;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+}
+.logo{
+  display: flex;
+  width: 100px;
+  height: 100px;
+  margin-left: 20px;
+  flex-grow: 50;
+}
+.nav-menu{
+  display: flex;
+  align-items: center;
+  flex-grow: 50;
+  justify-content: flex-end;
+}
+div.nav-menu > a > i {
+  font-size: 30px;
+  margin-right: 20px;
+  color: black;
+}
 
 
+/* ==================================main==================================== */
+.container-flex{
+  border: black 0.5vw dashed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+.container-flex-left{
+  border: black 0.5vw dashed;
+  display: flex;
+  width: 5vw;
+  max-width: 5vw;
+  background-color: #1D1531;
+  flex-grow:5;
+}
+.container-flex-rigth{
+  border: black 0.5vw dashed;
+  display: flex;
+  width: 95vw;
+  max-width: 95vw;
+  background-color: rgba(10, 19, 223, 0.22);
+  flex-grow: 95;
+}
+.flex-rigth-margem{
+  display: flex;
+  flex-direction: column;
+  border: black 0.5vw dashed;
+  width: 100vw;
+  margin: 10px;
+}
+.container-rigth-box{
+  border: black 0.5vw dashed;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+.resumo-vendas{
+  border: black 0.5vw dashed;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+.resumo-vendas-box{
+  display: flex;
+  border: black 0.5vw dashed;
+  width: 60px;
+  height: 40px;
+}
+div.container-flex-left > a > i {
+  color: white;
+}

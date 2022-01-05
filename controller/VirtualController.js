@@ -4,7 +4,7 @@ const controller={
     },
     ModeloPaginas:(req,res)=>{
         res.render('paginas/modelo-paginas');
-    }
+    },
 }
 
 
