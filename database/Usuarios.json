@@ -17,5 +17,11 @@
       "email": "gabriel.patara@gmail.com",
       "senha": "123456",
       "id": 2
+   },
+   {
+      "nomeloja": "LeLe",
+      "email": "lele@hotmail.com",
+      "senha": "123456",
+      "id": 3
    }
 ]

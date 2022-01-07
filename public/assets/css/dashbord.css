@@ -49,22 +49,24 @@ div.nav-menu > a > i {
 
 /* ==================================main==================================== */
 .container-flex{
-  border: black 0.5vw dashed;
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: row;
 }
+/* ==============================================Conteiner Left======================================= */
 .container-flex-left{
-  border: black 0.5vw dashed;
   display: flex;
   width: 5vw;
   max-width: 5vw;
   background-color: #1D1531;
   flex-grow:5;
 }
+div.container-flex-left > a > i {
+  color: white;
+}
+/* =============================================Conteiner Rigth==================================== */
 .container-flex-rigth{
-  border: black 0.5vw dashed;
   display: flex;
   width: 95vw;
   max-width: 95vw;
@@ -74,34 +76,64 @@ div.nav-menu > a > i {
 .flex-rigth-margem{
   display: flex;
   flex-direction: column;
-  border: black 0.5vw dashed;
   width: 100vw;
   margin: 10px;
 }
+/* ---------------------Titulo-------------------- */
 .container-rigth-box{
-  border: black 0.5vw dashed;
   height: 70px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 
 }
+/* ---------------------Resumo De Vendas ------------------- */
 .resumo-vendas{
-  border: black 0.5vw dashed;
   height: 70px;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  justify-content: space-around;
+  align-items: stretch;
 }
 .resumo-vendas-box{
   display: flex;
-  border: black 0.5vw dashed;
+  width: 70px;
+  height: 65px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.label-box-white{
+  font-size: 6px;
+  display: flex;
+  height: 10px;
+  width: 30px;
+}
+.vendas-box-white{
+  display: flex;
+  background-color: white;
   width: 60px;
   height: 40px;
+  border-radius: 5px;
 }
-div.container-flex-left > a > i {
-  color: white;
-}
+/* -------------------------Grafico--------------------------------- */
+  .container-grafico{
+    width: 320px;
+    height: 200px;
+    max-width: 320px;
+    max-height: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container-grafico > label {
+    font-size: 9px;
+    margin:5px;
+  }
+  .grafico{
+    background-color: white;
+    width: 270px;
+    height: 200px;
+    border-radius: 10px;
+  }
