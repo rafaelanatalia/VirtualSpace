@@ -167,30 +167,33 @@ div.container-flex-left > a > i {
   top:2px;
   right: 5px;
 }
-/* .relatórios-L{
-  border: black 2px dashed;
-  max-width: 150px;
-}
-.relatórios-L > ul > li{
-  list-style-type: none;
+.relatórios-L {
+  background-color: none;
   display: flex;
-  justify-content: center;
-  max-width: 150px;
+  flex-direction: column;
+  position: absolute;
+  top: 244px;
+  left: 150px;
+  overflow: hidden;
 }
-.relatórios-L > ul > li > a {
+.relatórios-L > a {
   text-decoration: none;
-  background-color: #1D1531;
+  color: white;
   display: flex;
   justify-content: center;
-  color: white;
-  font-size: 13px;
-  padding: 10px 50px;
-  max-width: 150px;
+  background-color: #1D1531;
+  padding: 10px 31px;
+  position: relative;
+  left: -150px;
+  transition: 2s;
 }
-.relatórios-L > ul > li > a:hover{
+.relatórios-L > a:hover{
   border-left: 2px solid #ED0A4B;
   background-color: #110B21;
-} */
+}
+.relatórios-P:hover ~ .relatórios-L > a{
+  transform: translateX(150px);
+}
 
 /* =============================================Conteiner Rigth==================================== */
 .container-flex-rigth{
