@@ -64,14 +64,13 @@ div.nav-menu > a > i {
 .lateral-menu-rigth > ul > li > a{
   background-color: var(--cor--secundaria);
   text-decoration: none;
-  color: black;
-  border: black 1px solid;
+  color: white;
   padding: 10px 25px;
   display: flex;
   margin: 0;
   position: relative;
   left: 200px;
-  transition:  2s;
+  transition: 1s;
 }
 .lateral-menu-rigth > ul > li > a:hover{
   background-color: var(--cor--primaria);
@@ -119,19 +118,82 @@ div.container-flex-left > a > i {
   justify-content: center;
   display: flex;
   flex-wrap: nowrap;
-  max-width: 100px;
+  max-width: 150px;
 }
 .list-menu-left > ul > li{
   list-style-type: none;
+  width: 100vw;
+  max-width: 150px;
 }
 .list-menu-left > ul > li> a {
   text-decoration: none;
   color: white;
-  border: white 0.5vw dashed;
-  padding: 15px 60px;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 15px 40px;
   display: flex;
+  font-size: 13px;
   flex-wrap: nowrap;
+  max-width:150px;
+  max-height: 100vh;
 }
+.list-menu-left > ul > li> a:hover{
+  border-left: 2px solid #ED0A4B;
+  background-color: #110B21;
+}
+.list-menu-left > ul > li> a > .divisoria-rigth{  
+  position: relative;
+  left:30px
+}
+.inicio > i{
+  position: relative;
+  right: 10px;
+  top: 2px;
+}
+.pessoas > i {
+  position: relative;
+  top:2px;
+  right: 5px;
+}
+.vendas > i{
+  position: relative;
+  top:2px;
+  right: 5px;
+}
+/* ===========================Relatórios=================================== */
+.relatórios-P > i{
+  position: relative;
+  top:2px;
+  right: 5px;
+}
+.relatórios-L {
+  background-color: none;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 244px;
+  left: 150px;
+  overflow: hidden;
+}
+.relatórios-L > a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  background-color: #1D1531;
+  padding: 10px 31px;
+  position: relative;
+  left: -150px;
+  transition: 2s;
+}
+.relatórios-L > a:hover{
+  border-left: 2px solid #ED0A4B;
+  background-color: #110B21;
+}
+.relatórios-P:hover ~ .relatórios-L > a{
+  transform: translateX(150px);
+}
+
 /* =============================================Conteiner Rigth==================================== */
 .container-flex-rigth{
   display: flex;
@@ -182,21 +244,25 @@ div.container-flex-left > a > i {
   width: 60px;
   height: 40px;
   border-radius: 5px;
-  flex-direction: row;
+  display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
 }
 .img-box-white{
-  border: black 1px dashed;
   width: 30px;
   height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.card-view-dados{
-  border: black 1px dashed;
+.box-white-dados{
   width: 30px;
   height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 /* -------------------------Grafico--------------------------------- */
   .container-grafico{
     width: 320px;
