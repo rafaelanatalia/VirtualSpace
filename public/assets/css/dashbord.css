@@ -245,7 +245,21 @@ div.container-flex-left > a > i {
   width: 60px;
   height: 40px;
   border-radius: 5px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
+.img-box-white{
+  border: black 1px dashed;
+  width: 30px;
+  height: 40px;
+}
+.card-view-dados{
+  border: black 1px dashed;
+  width: 30px;
+  height: 40px;
+}
+
 /* -------------------------Grafico--------------------------------- */
   .container-grafico{
     width: 320px;
