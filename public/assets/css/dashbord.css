@@ -119,19 +119,79 @@ div.container-flex-left > a > i {
   justify-content: center;
   display: flex;
   flex-wrap: nowrap;
-  max-width: 100px;
+  max-width: 150px;
 }
 .list-menu-left > ul > li{
   list-style-type: none;
+  width: 100vw;
+  max-width: 150px;
 }
 .list-menu-left > ul > li> a {
   text-decoration: none;
   color: white;
-  border: white 0.5vw dashed;
-  padding: 15px 60px;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 15px 40px;
   display: flex;
+  font-size: 13px;
   flex-wrap: nowrap;
+  max-width:150px;
+  max-height: 100vh;
 }
+.list-menu-left > ul > li> a:hover{
+  border-left: 2px solid #ED0A4B;
+  background-color: #110B21;
+}
+.list-menu-left > ul > li> a > .divisoria-rigth{  
+  position: relative;
+  left:30px
+}
+.inicio > i{
+  position: relative;
+  right: 10px;
+  top: 2px;
+}
+.pessoas > i {
+  position: relative;
+  top:2px;
+  right: 5px;
+}
+.vendas > i{
+  position: relative;
+  top:2px;
+  right: 5px;
+}
+/* ===========================Relatórios=================================== */
+.relatórios-P > i{
+  position: relative;
+  top:2px;
+  right: 5px;
+}
+/* .relatórios-L{
+  border: black 2px dashed;
+  max-width: 150px;
+}
+.relatórios-L > ul > li{
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  max-width: 150px;
+}
+.relatórios-L > ul > li > a {
+  text-decoration: none;
+  background-color: #1D1531;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 13px;
+  padding: 10px 50px;
+  max-width: 150px;
+}
+.relatórios-L > ul > li > a:hover{
+  border-left: 2px solid #ED0A4B;
+  background-color: #110B21;
+} */
+
 /* =============================================Conteiner Rigth==================================== */
 .container-flex-rigth{
   display: flex;
