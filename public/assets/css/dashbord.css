@@ -284,3 +284,28 @@ div.container-flex-left > a > i {
     height: 200px;
     border-radius: 10px;
   }
+  /* =============================Dia Anterior e Melhores Vendedores================================== */
+  .position-melhores-dia{
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+  }
+  .container-duplo{
+    width: 135px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box-white-both{
+    background-color: white;
+    width: 120px;
+    height: 170px;
+    border-radius: 30px;
+  }
+  .container-duplo > label{
+    font-size: 10px;
+  }
