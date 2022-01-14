@@ -23,5 +23,11 @@
       "email": "lele@hotmail.com",
       "senha": "123456",
       "id": 3
+   },
+   {
+      "nomeloja": "lala",
+      "email": "rafaela@rafa.com",
+      "senha": "1234",
+      "id": 4
    }
 ]

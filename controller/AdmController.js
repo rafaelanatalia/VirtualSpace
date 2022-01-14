@@ -26,14 +26,14 @@ const fs = require('fs');
 
         // req.session.usuario = usuario;
 
-        return res.render('dashboard');
+        return res.redirect('/views/dashboard');
         }
     },
     Logout:(req,res)=>{
         
         req.session,usuario = undefined;
 
-        return res.render('/adm/login')
+        return res.redirect('/adm/login')
     },
     Registro:(req,res)=>{
         const user = require('../database/Usuarios.json');
