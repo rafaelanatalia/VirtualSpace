@@ -94,9 +94,17 @@
   }
   
   a {
-    color: #212534;
+    color: white;
     text-decoration: none;
     font-family: sans-serif;
     font-weight: bold;
     margin-top: 2rem;
+  }
+
+  button{
+    width: 204px;
+    height: 40px;
+    border-color: #3c67e3;
+    background-color: #4e00c2;
+    border-radius: 10px;
   }

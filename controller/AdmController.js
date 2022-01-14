@@ -26,7 +26,7 @@ const fs = require('fs');
 
         // req.session.usuario = usuario;
 
-        return res.redirect('/adm/dashboard');
+        return res.redirect('/views/dashboard');
         }
     },
     Logout:(req,res)=>{
