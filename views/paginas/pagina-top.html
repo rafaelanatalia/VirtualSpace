@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/public/assets/css/style-pagina-top.css">
+    <link rel="stylesheet" href="/public/assets/css/carrocel.css">
     <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+       <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
    
 </head>
@@ -40,20 +43,28 @@
     <main>
         <div class="container-flex">
             <div class="container-margin">
+
                 <!-- ============================Carrosel========================= -->
-                <div class="slides">
-                    <input type="radio" name="Slide" id="slide1">
-                    <input type="radio" name="Slide" id="slide2">
-                    <input type="radio" name="Slide" id="slide3">
-                    <input type="radio" name="Slide" id="slide4">
-                    <input type="radio" name="Slide" id="slide5">
-                    <div class="slide-1"><img src="./public/img/Carrosel-top/imagem1.png" alt=""></div>
-                    <div class="slide-2"><img src="./public/img/Carrosel-top/imagem2.png" alt=""></div>
-                    <div class="slide-3"><img src="./public/img/Carrosel-top/imagem3.png" alt=""></div>
-                    <div class="slide-4"><img src="./public/img/Carrosel-top/imagem4.png" alt=""></div>
-                    <div class="slide-5"><img src="./public/img/Carrosel-top/imagem5.png" alt=""></div>
-                    
-                </div>
+             
+                     <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">Slide 1</div>
+                          <div class="swiper-slide">Slide 2</div>
+                          <div class="swiper-slide">Slide 3</div>
+                          <div class="swiper-slide">Slide 4</div>
+                          <div class="swiper-slide">Slide 5</div>
+                          <div class="swiper-slide">Slide 6</div>
+                          <div class="swiper-slide">Slide 7</div>
+                          <div class="swiper-slide">Slide 8</div>
+                          <div class="swiper-slide">Slide 9</div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+                
+                
+            </div>
                 <div class="navegacao-carrosel">
                     <label class="label-carrosel" for="#slide1"></label>
                     <label class="label-carrosel" for="#slide2"></label>
@@ -105,5 +116,9 @@
         <br>
         Siga-nos nas Redes Sociais
     </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="/public/assets/js/carrocel.js"></script>
 </body>
 </html>

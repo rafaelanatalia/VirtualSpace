@@ -9,15 +9,11 @@
     --card-width: 350px;
   }
   
-
+main{
+  margin-left: 50px;
+  margin-right: 50px;
+}
   
-  .container {
-    
-    background: #212534;
-    display: flex;
-    align-items: center;
-    
-  }
   
   
   .card {
@@ -35,8 +31,8 @@
     color: rgb(88 199 250 / 0%);
     cursor: pointer;
     font-family: cursive;
-    margin-top: 12px;
-    margin-bottom: 13px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   
   .card:hover {
@@ -51,16 +47,16 @@
   
   .card::before {
     content: "";
-    width: 104%;
-    height: 102%;
+    width: 106%;
+    height: 114%;
     border-radius: 10px;
     background-image: linear-gradient(
       var(--rotate)
       , #5ddcff, #3c67e3 43%, #4e00c2);
       position: absolute;
       z-index: -1;
-      top: -1%;
-      left: -2%;
+      top: -6%;
+      left: -3%;
       animation: spin 2.5s linear infinite;
   }
   
@@ -107,4 +103,12 @@
     border-color: #3c67e3;
     background-color: #4e00c2;
     border-radius: 10px;
+  }
+
+  
+  
+  img{
+    z-index: 1;
+    height: 150px;
+    width: 350px;
   }
