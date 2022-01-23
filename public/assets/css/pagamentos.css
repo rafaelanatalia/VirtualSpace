@@ -24,6 +24,15 @@
     box-sizing: border-box;
 }
 
+h4{
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+h6,h5{
+    font-size:18px;
+    margin-bottom: 10px;
+}
 main>.infotop{
     background: var(--fundoinformativo);
 }
@@ -34,6 +43,21 @@ main>.infotop>h1{
     color: var(--textcolor);
     font-size: 20px;
     padding: 20px 0;
+    animation-name: infito;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+}
+
+@keyframes infito{
+    0% {background: #fff;}
+    10%{background: rgb(218, 151, 151);}
+    30%{background: #0071b2;}
+    50% {background: #6936a7;}
+    80% {background: #753bda;}
+    100%{background: rgb(35, 211, 167);}
+    h1{animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);}
 }
 h3{
     display: flex;
@@ -49,9 +73,37 @@ h3{
     border-bottom: 2px solid silver;
 }
 main>.container>.dadospessoais, .endereco, .resumo{
-    margin-right: 100px;
-    
+    margin-right: 100px;   
 }
+
+div.container > div.resumo>h4,
+div.container > div.resumo>h6
+{
+  margin-bottom: 10px;  
+}
+
+
+/* Resumo */
+.resumo{
+    padding: 2px 20px;
+    border-left: 2px solid silver;
+}
+
+.lado{
+    display: flex;
+}
+i{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.containerResumo{
+    width: 200px;
+    height: 150px;
+    background: #0071b2;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
 
 main>.listadeprodutos{
     margin: 10px 30px;
@@ -59,4 +111,41 @@ main>.listadeprodutos{
 
 main>.listadeprodutos>h5{
     padding: 5px 0;
+}
+
+.button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+button{
+    width: 200px;
+    height: 50px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    border-color: #0071b2;
+    color: #fff;
+    font-size: 20px;
+} 
+
+
+button.avançar{
+    background-color: #8a2be2;
+    animation-name: spin;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+button.retroceder{
+    background-color: #E33232;
+}
+
+@keyframes spin {
+    0% {background-color: #AE69F5;}
+    25% {background-color: #6936a7;}
+    50% {background: #2f0a5c;}
+    100% {background-color: #753bda }
 }
