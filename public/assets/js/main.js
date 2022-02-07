@@ -1,12 +1,15 @@
 /*menu mobile*/
+var menuBar= document.querySelector('#btnmobile i');
 
-const show =document.querySelector("#btnmobile");
+menuBar.addEventListener('click',(e)=>{
+    e.preventDefault();
+   let menuMobile=document.querySelector('body > header > nav ul');
+   if(menuMobile.classList.contains('show-menu')){
+       menuMobile.classList.remove('show-menu');
+   }
+   else{
+       menuMobile.classList.add('show-menu');
+       
+   }
 
-function toggleMenu(){
-    const nav =document.querySelector("body > header > nav");
-    nav.classList.toggle(active)
-}
-
-btnmobile.addEventListener('click',toglleMenu)
-
-
+})
