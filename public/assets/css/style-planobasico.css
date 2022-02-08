@@ -220,3 +220,186 @@ footer .contatos div{
 }
 
 }
+
+@media screen and (max-width:1279px){
+    body{
+        max-width: 1279px;
+    }
+
+    header{
+        max-width: 1279px;
+    }
+
+    .container-conteudo{
+        display: flex;
+    }
+
+.conteudo-diversos{
+    display: flex;
+flex-wrap: wrap;
+}
+
+.conteudo-1, .conteudo-2, .conteudo-3, .conteudo-4, .conteudo-5{
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+margin-bottom: 20px;
+margin-left: 20px;
+border-style: solid;
+} 
+
+section > img{
+    width: 160px;
+    height: 160px;
+}
+
+.info{
+    width: 100%;
+}
+.info h1{
+font-size: 20px;
+}
+
+.info h2{
+    font-size: 23px;
+}
+
+button{
+    margin-top: 100px;
+    width: 100%;
+    height: 50px;
+    background: var(--cor--media);
+    color: rgb(12, 11, 11);
+}
+
+button:hover{
+    cursor: pointer;
+   
+    animation-duration: 3s;
+    animation-name: arcos;;
+}
+
+@keyframes arcos {
+    from{
+        background: #398ebf;
+
+    }    
+
+    to{ 
+        background: #22749c;
+    }
+}
+
+/* footer */
+.contatos{
+    display: flex;
+    margin-left: 20px;
+}
+
+}
+
+@media screen and (min-width:1280px){
+
+    header{
+        min-width: 1280px;
+        width: 100%;
+    }
+    header nav {
+        display: flex; 
+    
+    }
+
+    header nav{
+        display: flex;
+        flex-direction: row;
+        padding-top: 0;
+        align-items: center
+    }
+
+    nav ul{
+        display: flex;
+    }
+header nav ul{
+    display: flex;
+    margin-left: 20px;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+    ul.show-menu{
+        display: block;
+        transition: 2s;
+    }
+
+    #btnmobile i{
+        display: none;
+    }
+
+
+    .container-conteudo{
+        display: flex;
+    }
+
+.conteudo-diversos{
+    display: flex;
+flex-wrap: wrap;
+}
+
+.conteudo-1, .conteudo-2, .conteudo-3, .conteudo-4, .conteudo-5{
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+margin-bottom: 20px;
+margin-left: 20px;
+border-style: solid;
+} 
+
+section > img{
+    width: 160px;
+    height: 160px;
+}
+
+.info{
+    width: 100%;
+}
+.info h1{
+font-size: 20px;
+}
+
+.info h2{
+    font-size: 23px;
+}
+
+button{
+    margin-top: 100px;
+    width: 100%;
+    height: 50px;
+    background: var(--cor--media);
+    color: rgb(12, 11, 11);
+}
+
+button:hover{
+    cursor: pointer;
+   
+    animation-duration: 3s;
+    animation-name: arcos;;
+}
+
+@keyframes arcos {
+    from{
+        background: #398ebf;
+
+    }    
+
+    to{ 
+        background: #22749c;
+    }
+}
+
+/* footer */
+.contatos{
+    display: flex;
+    margin-left: 20px;
+}
+}
