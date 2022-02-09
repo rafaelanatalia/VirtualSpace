@@ -398,8 +398,15 @@ button:hover{
 }
 
 /* footer */
+
+footer{
+    width: 1280px;
+    
+    display: flex;
+}
 .contatos{
     display: flex;
     margin-left: 20px;
+
 }
 }
