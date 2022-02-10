@@ -3,23 +3,13 @@
 :root {
     --cor--primaria: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     #0071b2;
-  --cor--secundaria: #00517f;
-  --cor--liteen: #4dbeff;
-  --cor--media: #398ebf;
-  --border--bottom: 2px solid rgba(0, 0, 0, 0.5);
-  --titulos: 48px;
-  --textos: 20px;
-  --textcolor: #fff;
-  --font-family: "Nunito", sans-serif;
-  --fontweidt: bold;
-  --z--index-max: 100;
-  --z--index-medio: 50;
-  --z--index-baixo: 1;
+  
 }
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'nutino';
 }
 
 /* body */
@@ -161,12 +151,6 @@ font-size: 12px;
       }
 
 
-
-
-
-
-
-
 /* fim do slide */
 .preco h1{
     color: #0071b2;
@@ -177,7 +161,7 @@ font-size: 12px;
     color: #4dbeff;
     padding: 06px 0px;
 }
-.container-produto > button{
+.preco > button{
     background: #4dbeff;
     border: 2px solid #0071b2;
     border-radius: 10px;
@@ -261,3 +245,198 @@ footer div ul li, footer div h3 {
         max-width: 768px;
         
     }
+.container-produto h1{
+    font-size: 25px;
+}
+
+
+#mostrar{
+    margin-left: 464px;
+}
+
+
+    footer{
+        display: flex;
+    }
+    
+    footer .contatos{
+        display: flex;
+    }
+    
+    
+    footer .contatos div{
+        margin-left: 2rem;
+    }
+    
+    
+
+}
+
+
+@media screen and (max-width:1279px){
+    body{
+        max-width: 1279px;
+    }
+
+    header{
+        max-width: 1279px;
+    }
+
+/* Produtos */
+.info{
+    width: 1279px;
+}
+
+.produto-full{
+    width: 40%
+}
+.container-produto{
+    display: flex;
+    flex-wrap: wrap;
+}
+.container-produto h1{
+    font-size: 28px;
+}
+
+.container-slide{
+    width: 482px;
+}
+
+.preco h3{
+    font-size: 35px;
+}
+.preco h1{
+    font-size: 40px;
+}
+.preco h4{
+    font-size: 20px;
+}
+.preco button{
+    width: 250px;
+    height: 50px;
+}
+
+.info-tecnicas{
+    margin: 75px 30px;
+}
+
+#mostrar{
+    margin-left: 909px;
+}
+    /* footer */
+.contatos{
+    display: flex;
+    margin-left: 20px;
+}
+
+}
+
+
+@media screen and (min-width:1280px){
+
+    body{
+        min-width: 1280px;
+    }
+    header{
+        min-width: 1280px;
+        width: 100%;
+    }
+    header nav {
+        display: flex; 
+    
+    }
+
+    header nav{
+        display: flex;
+        flex-direction: row;
+        padding-top: 0;
+        align-items: center
+    }
+
+    nav ul{
+        display: flex;
+    }
+header nav ul{
+    display: flex;
+    margin-left: 20px;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+    ul.show-menu{
+        display: block;
+        transition: 2s;
+    }
+
+    #btnmobile i{
+        display: none;
+    }
+
+
+/* Produtos */
+.info{
+    width: 1279px;
+}
+
+.produto-full{
+    width: 40%
+}
+.container-produto{
+    display: flex;
+    flex-wrap: wrap;
+}
+.container-produto h1{
+    font-size: 28px;
+}
+
+.container-slide{
+    width: 482px;
+}
+.preco{
+    margin: 20px 225px;
+}
+.preco h3{
+    font-size: 35px;
+}
+.preco h1{
+    font-size: 40px;
+}
+.preco h4{
+    font-size: 20px;
+}
+.preco button{
+    width: 250px;
+    height: 50px;
+}
+
+.info-tecnicas{
+    margin: 75px 30px;
+}
+
+#mostrar{
+    margin-left: 909px;
+}
+    /* footer */
+.contatos{
+    display: flex;
+    margin-left: 20px;
+}
+
+    /* footer */
+
+footer{
+    width: 1280px;
+    
+    display: flex;
+}
+.contatos{
+    display: flex;
+    margin-left: 20px;
+
+}
+
+.contatos div{
+    margin-left: 20px;
+}
+}
