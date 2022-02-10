@@ -13,3 +13,20 @@ menuBar.addEventListener('click',(e)=>{
    }
 
 })
+
+
+// mostrar descrição de produto
+var verProdutos= document.querySelector ('#mostrar ')
+
+verProdutos.addEventListener('click', (e)=>{
+    e.preventDefault();
+
+    const vitrine=document.querySelector("#descricao > div > p");
+    if(vitrine.classList.contains('show-text')){
+        vitrine.classList.remove('show-text');
+    }
+    else{
+        vitrine.classList.add( 'show-text');
+    }
+
+})

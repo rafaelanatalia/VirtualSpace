@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap");
+
+:root {
+    --cor--primaria: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    #0071b2;
+  --cor--secundaria: #00517f;
+  --cor--liteen: #4dbeff;
+  --cor--media: #398ebf;
+  --border--bottom: 2px solid rgba(0, 0, 0, 0.5);
+  --titulos: 48px;
+  --textos: 20px;
+  --textcolor: #fff;
+  --font-family: "Nunito", sans-serif;
+  --fontweidt: bold;
+  --z--index-max: 100;
+  --z--index-medio: 50;
+  --z--index-baixo: 1;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body */
+body{
+    max-width: 480px;
+    margin: auto;
+}
+
+main{
+    margin: 22px 8px;
+}
+/*HEADER*/
+.logo{
+    width: 80px;
+    height:auto;
+    margin-left: 10px;
+}
+.logo>img{
+ width: 80px;
+}
+
+
+header{
+    display: flex;
+background: var(--cor--primaria);
+justify-content: space-between;
+    max-width: 480px;
+    width: 100%;
+}
+nav{
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+nav ul{display: none;}
+
+ul li {
+    margin-bottom: 10px;
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+header > nav > ul > li > a:hover {
+ 
+    border-radius: 0px 3px 4px 5px;
+    border-bottom: 2px solid #4dbeff;
+  }
+
+#btnmobile  {
+    cursor: pointer;
+    margin-right: 30px;
+    margin-top: 22px;
+    background: transparent;
+    border: none;
+    width: 30px;
+    height: 30px;
+}
+#btnmobile i{ 
+ border: none;
+ font-size: 30px;
+ color: #000000;
+}
+ ul.show-menu{
+    display: block;
+    transition: 2s;
+}
+
+/* produto */
+
+.info h3{
+font-size: 12px;
+}
+
+.info h1{
+    font-size: 18px;
+}
+
+.produto-full > img{
+    width:200px;
+    height: 200px;
+
+}
+
+/* slides */
+.container-slide{
+    margin: 20px 0;
+}
+.container-slide,
+      .slides {
+        position: relative;
+        height: 100%;
+      }
+
+      .slides {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+
+
+
+
+
+
+
+/* fim do slide */
+.preco h1{
+    color: #0071b2;
+    padding: 06px 0px;
+}
+
+.preco h4{
+    color: #4dbeff;
+    padding: 06px 0px;
+}
+.container-produto > button{
+    background: #4dbeff;
+    border: 2px solid #0071b2;
+    border-radius: 10px;
+}
+
+
+button{
+    width: 200px;
+    height: 30px;
+}
+
+.info-tecnicas{
+    margin-top: 20px;
+}
+
+#descricao{
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+#descricao h5{
+    font-size: 20px;
+   
+}
+
+#mostrar{
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    margin-left: 179px;
+}
+#descricao button i{
+    color: #000000;
+    font-size: 20px;
+}
+
+#descricao p{
+    display: none;
+    text-align: justify;
+    margin: 15px 6px;
+}
+
+#descricao > div > p.show-text{
+    display: block;
+    transition: 2s;
+   
+}
+
+
+/* footer */
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #000000;
+}
+
+footer div{
+    margin-top: 20px;
+}
+
+footer div h3{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+footer div ul li, footer div h3 {
+    color: #fff;
+}
+
+
+@media screen and (max-width:768px) {
+    img{
+        width: 144px;
+        height: auto;
+    }
+    body{
+        max-width: 768px;
+    }
+
+    header{
+        max-width: 768px;
+        
+    }
