@@ -58,5 +58,6 @@ const fs = require('fs');
             res.send('As Senhas Estão Diferentes')
         }
     }
+
 };
 

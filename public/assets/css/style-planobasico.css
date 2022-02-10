@@ -300,6 +300,9 @@ button:hover{
 
 @media screen and (min-width:1280px){
 
+    body{
+        min-width: 1280px;
+    }
     header{
         min-width: 1280px;
         width: 100%;
@@ -347,7 +350,7 @@ flex-wrap: wrap;
 }
 
 .conteudo-1, .conteudo-2, .conteudo-3, .conteudo-4, .conteudo-5{
-    width: 300px;
+    width: 250px;
     display: flex;
     flex-wrap: wrap;
 margin-bottom: 20px;
@@ -408,5 +411,9 @@ footer{
     display: flex;
     margin-left: 20px;
 
+}
+
+.contatos div{
+    margin-left: 20px;
 }
 }
