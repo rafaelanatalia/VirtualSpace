@@ -12,7 +12,9 @@ const router=express.Router();
 router.get('/',VirtualController.home);
 router.get('/ModeloDePaginas',VirtualController.ModeloPaginas);
 router.get('/beta/planobasico',VirtualController.PlanoBasico);
-router.get('/produto',VirtualController.ShowProduto);
+router.get('/beta/planomedio',VirtualController.PlanoMedio);
+router.get('/beta/planotop',VirtualController.PlanoTop);
+router.get('/produtos',VirtualController.ShowProduto);
 
 
 

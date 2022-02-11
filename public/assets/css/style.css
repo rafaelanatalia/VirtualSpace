@@ -457,7 +457,7 @@ h1 {
         }
 
   .bnt-basico:hover {
-          color: var(--textcolor);
+         
           background: linear-gradient(
             180deg,
             rgba(138, 15, 187, 0.6) 0%,
@@ -518,7 +518,7 @@ h1 {
             }
       
       .bnt-medio:hover {
-          color: var(--textcolor);
+          
           background: linear-gradient(
               180deg,
               rgba(138, 15, 187, 0.6) 0%,
@@ -532,7 +532,10 @@ h1 {
             #planos > div > div.medio > img{
               margin-top: 11px;
           }
-
+button>a{
+  color: var(--textcolor);
+  text-decoration: none;
+}
   /*============ plano top ====================*/
   .top{
       display: flex;

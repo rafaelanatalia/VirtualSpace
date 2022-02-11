@@ -17,6 +17,8 @@ main{
   
   
   .card {
+    
+    
     background: #191c29;
     width: var(--card-width);
     height: var(--card-height);
@@ -112,3 +114,5 @@ main{
     height: 150px;
     width: 350px;
   }
+
+  .container-card{ margin: 0 40px}
