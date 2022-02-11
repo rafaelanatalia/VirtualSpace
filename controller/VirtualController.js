@@ -9,6 +9,9 @@ const controller={
     PlanoBasico:(req,res)=>{
         res.render('paginas/planobasico');
     },
+    ShowProduto:(req,res)=>{
+        res.render('paginas/produto');
+    },
 }
 
 

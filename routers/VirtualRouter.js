@@ -12,5 +12,8 @@ const router=express.Router();
 router.get('/',VirtualController.home);
 router.get('/ModeloDePaginas',VirtualController.ModeloPaginas);
 router.get('/beta/planobasico',VirtualController.PlanoBasico);
+router.get('/produto',VirtualController.ShowProduto);
+
+
 
 module.exports= router
