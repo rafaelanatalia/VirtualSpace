@@ -1,4 +1,5 @@
 const fs = require('fs');
+const bcrypt = require('bcrypt');
 
 
     module.exports = AdmController = {
@@ -16,18 +17,23 @@ const fs = require('fs');
          
         const {email,senha} = req.body;
 
-        const usuarios = require('../database/Usuarios.json');
+        const usuariosstring = fs.readFileSync(__dirname + '/../database/Usuarios.json',{encoding:"utf-8"});
+        const usuarios = JSON.parse(usuariosstring);
 
-        const usuario = usuarios.find( u => u.email == email && u.senha == senha );
+        const usuario = usuarios.find( u => u.email == email);
 
         if(usuario === undefined){
             return res.send('Senha ou Email invalido');
-        }else{
-
+        }
+        const senhacorreta = bcrypt.compareSync(senha,usuario.senha);
+        
+        if(!senhacorreta){
+            return res.send('Senha ou Email invalido');
+        }
         // req.session.usuario = usuario;
 
         return res.redirect('/views/dashboard');
-        }
+
     },
     Logout:(req,res)=>{
         
@@ -36,17 +42,18 @@ const fs = require('fs');
         return res.redirect('/adm/login')
     },
     Registro:(req,res)=>{
-        const user = require('../database/Usuarios.json');
+        const userstring = fs.readFileSync(__dirname + '/../database/Usuarios.json',{encoding:"utf-8"});
+        const user = JSON.parse(userstring);
         const nomeloja = req.body.lojanome;
         const email = req.body.email;
         const senha = req.body.senha;
         const senhanovamente = req.body.senhanovamente;
         if(senha == senhanovamente){
-
+        const hash = bcrypt.hashSync(senha,10); 
         
-        const cliente = {nomeloja,email,senha};
+        const cliente = {nomeloja,email,senha:hash};
 
-        cliente.id = user[user.length - 1].id + 1;
+        cliente.id = user.length === 0 ? 1 : user.length + 1;
 
         user.push(cliente);
 
