@@ -1,5 +1,8 @@
+// const produtos = require('../database/Produtos.json');
 const fs = require('fs');
 const bcrypt = require('bcrypt');
+const { randomUUID } = require('crypto');
+const { validationResult } = require('express-validator');
 
 
     module.exports = AdmController = {
@@ -37,10 +40,11 @@ const bcrypt = require('bcrypt');
     },
     Logout:(req,res)=>{
         
-        req.session,usuario = undefined;
+        req.session.usuario = undefined;
 
         return res.redirect('/adm/login')
     },
+
     Registro:(req,res)=>{
         const userstring = fs.readFileSync(__dirname + '/../database/Usuarios.json',{encoding:"utf-8"});
         const user = JSON.parse(userstring);
@@ -64,7 +68,47 @@ const bcrypt = require('bcrypt');
         }else{
             res.send('As Senhas Estão Diferentes')
         }
+    },
+
+    showProdutos: (req, res) => {
+        res.render('crud-usuarios/addProdutos')
+    },
+
+
+    AddProdutos: (req,res) => {
+
+        const erros = validationResult(req);
+        
+        if(!erros.isEmpty()){
+            // return res.send(erros.mapped());
+            res.render('crud-usuarios/addProdutos', {erros: erros.mapped()})
+        }
+
+        const nome = req.body.nome;
+        const descricao = req.body.descricao;
+        const preco = Number(req.body.preco);
+        // const categori = Select(req.body.select);
+        const produtos = {nome, descricao, preco}
+        
+        // Adicionar o id à pizza recém criada
+        produtos.id = randomUUID();
+
+
+
+        // Adicionar a pizza ao array de pizzas
+        produtos.push
+
+        // Salvar o json do array de pizzas no arquivo Pizzas.json
+        fs.writeFileSync(
+            __dirname + '/../database/Produtos.json',
+            JSON.stringify(produtos, null, 4),
+            {flag:'w'}
+        );
+        
+        // Direcionar o usuário para a página que exibe a lista de pizzas
+        res.redirect('/');
+
+
+}
+
     }
-
-};
-

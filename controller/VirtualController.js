@@ -19,6 +19,8 @@ const controller={
     ShowProduto:(req,res)=>{
         res.render('paginas/produto');
     },
+
+    
 }
 
 
