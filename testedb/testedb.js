@@ -1,6 +1,6 @@
-// const Sequelize = require("sequelize");
-// const dbConfig = require("../server/config/database");
-// const dbConn = new Sequelize(dbConfig);
+const Sequelize = require("sequelize");
+const dbConfig = require("../server/config/database");
+const dbConn = new Sequelize(dbConfig);
 
 
 
