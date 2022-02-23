@@ -1,4 +1,4 @@
-// const produtos = require('../database/Produtos.json');
+
 const fs = require('fs');
 const bcrypt = require('bcrypt');
 const { randomUUID } = require('crypto');
@@ -88,14 +88,15 @@ const { validationResult } = require('express-validator');
         const descricao = req.body.descricao;
         const preco = Number(req.body.preco);
         // const categori = Select(req.body.select);
-        const produtos = {nome, descricao, preco}
         
-        // Adicionar o id à pizza recém criada
+        const produtos = {nome, descricao, preco,img:'/img/' + req.file.filename}
+        
+        // Adicionar o id de produtos recém criada
         produtos.id = randomUUID();
 
 
 
-        // Adicionar a pizza ao array de pizzas
+        // Adicionar a produtos ao array de de produtos
         const dados=fs.readFileSync(
             __dirname + '/../database/Produtos.json',
             {encoding:"utf-8"} 
@@ -104,14 +105,14 @@ const { validationResult } = require('express-validator');
 
         parseado.push(produtos)
 
-        // Salvar o json do array de pizzas no arquivo Pizzas.json
+        // Salvar o json do array de produtos no arquivo Produtos.json temporario
         fs.writeFileSync(
             __dirname + '/../database/Produtos.json',
             JSON.stringify(parseado, null, 4),
             {flag:'w'}
         );
         
-        // Direcionar o usuário para a página que exibe a lista de pizzas
+        // Direcionar o usuário para a página que exibe a lista de produtos
         res.redirect('/');
 
 

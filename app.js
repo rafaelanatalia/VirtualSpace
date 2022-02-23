@@ -1,7 +1,6 @@
 // impostando o express
 require("dotenv").config()
 const express = require("express");
-const AdmController = require("./controller/AdmController");
 var createError = require('http-errors');
 var path = require('path');
 var cookieParser = require('cookie-parser');
@@ -37,7 +36,7 @@ app.use('/adm', AdmRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-
+  res.render('404');
     next(createError(404));
    
   });
@@ -54,5 +53,6 @@ app.use(function(req, res, next) {
   });
 
 //levantando o servidor
+
 module.exports=app
 

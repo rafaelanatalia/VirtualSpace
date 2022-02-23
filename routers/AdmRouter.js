@@ -2,18 +2,9 @@
 //criando o  roteador e impostando o express
 const express = require("express");
 const AdmController = require("../controller/AdmController");
+// import multer
+const upload= require("../middlewares/upload-img")
 
-const multer = require('multer');
-const storage = multer.diskStorage(
-    {
-        destination: (req, file, cb) => {cb(null, __dirname + '/../public/img')},
-        filename: (req, file, cb) => {
-            console.log(file);
-            cb(null,Date.now() + '-' + file.originalname);
-        }
-    }
-);
-const upload = multer({storage})
 
 //impostando o controller
 const VirtualController= require('../controller/VirtualController');
@@ -31,7 +22,7 @@ router.get('/dashboard',AdmController.Login);
 
 // produtos
 router.get('/adicionarprodutos',AdmController.showProdutos);
-router.post('/adicionarprodutos',upload.single('img'),AdmController.AddProdutos);
+router.post('/adicionarprodutos',AdmController.AddProdutos);
 
 
 module.exports= router;
