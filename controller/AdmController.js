@@ -96,12 +96,18 @@ const { validationResult } = require('express-validator');
 
 
         // Adicionar a pizza ao array de pizzas
-        produtos.push
+        const dados=fs.readFileSync(
+            __dirname + '/../database/Produtos.json',
+            {encoding:"utf-8"} 
+        )
+        const parseado=JSON.parse(dados)
+
+        parseado.push(produtos)
 
         // Salvar o json do array de pizzas no arquivo Pizzas.json
         fs.writeFileSync(
             __dirname + '/../database/Produtos.json',
-            JSON.stringify(produtos, null, 4),
+            JSON.stringify(parseado, null, 4),
             {flag:'w'}
         );
         

@@ -1,4 +1,5 @@
 // impostando o express
+require("dotenv").config()
 const express = require("express");
 const AdmController = require("./controller/AdmController");
 var createError = require('http-errors');
@@ -12,37 +13,37 @@ const VirtualRouter = require("./routers/VirtualRouter");
 const AdmRouter = require('./routers/AdmRouter');
 
 //criando o servidor 
-const server=express();
+const app=express();
 
 //configurando o view engine para ejs
-server.set('views', path.join(__dirname, 'views'));
-server.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
-server.use(logger('dev'));
-server.use(express.json());
-server.use(express.urlencoded({ extended: false }));
-server.use(cookieParser());
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
 //config a pasta public
-server.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 //JSON
-server.use(express.urlencoded({extended: false}));
-server.use(express.json());
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
 
 // criar a rota respondendo a requisição
-server.use('/', VirtualRouter);
-server.use('/adm', AdmRouter);
+app.use('/', VirtualRouter);
+app.use('/adm', AdmRouter);
 
 // catch 404 and forward to error handler
-server.use(function(req, res, next) {
+app.use(function(req, res, next) {
 
     next(createError(404));
-    
+   
   });
   
   // error handler
-  server.use(function(err, req, res, next) {
+  app.use(function(err, req, res, next) {
     // set locals, only providing error in development
     res.locals.message = err.message;
     res.locals.error = req.app.get('env') === 'development' ? err : {};
@@ -53,7 +54,5 @@ server.use(function(req, res, next) {
   });
 
 //levantando o servidor
-server.listen(5000,()=>{
-    console.log("Servidor Ok")
-})
+module.exports=app
 
