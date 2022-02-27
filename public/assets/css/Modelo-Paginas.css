@@ -1,118 +1,146 @@
-@property --rotate {
-    syntax: "<angle>";
-    initial-value: 360deg;
-    inherits: false;
-  }
-  
-  :root {
-    --card-height: 150px;
-    --card-width: 350px;
-  }
-  
-main{
-  margin-left: 50px;
-  margin-right: 50px;
+body {
+  background-image: radial-gradient(circle, #d8b7ca, #d1b4ce, #c8b1d2, #bdb0d7, #aeafda, #a1b2dc, #94b5dd, #88b7db, #83bcd7, #82c0d1, #86c3cb, #8ec6c4);
 }
-  
-  
-  
-  .card {
-    
-    
-    background: #191c29;
-    width: var(--card-width);
-    height: var(--card-height);
-    padding: 3px;
-    position: relative;
-    border-radius: 6px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    display: flex;
-    font-size: 1.5em;
-    color: rgb(88 199 250 / 0%);
-    cursor: pointer;
-    font-family: cursive;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .card:hover {
-    color: rgb(88 199 250 / 100%);
-    transition: color 1s;
-  }
-  .card:hover:before, .card:hover:after {
-    animation: none;
-    opacity: 0;
-  }
-  
-  
-  .card::before {
-    content: "";
-    width: 106%;
-    height: 114%;
-    border-radius: 10px;
-    background-image: linear-gradient(
-      var(--rotate)
-      , #5ddcff, #3c67e3 43%, #4e00c2);
-      position: absolute;
-      z-index: -1;
-      top: -6%;
-      left: -3%;
-      animation: spin 2.5s linear infinite;
-  }
-  
-  .card::after {
-    position: absolute;
-    content: "";
-    top: calc(var(--card-height) / 6);
-    left: 0;
-    right: 0;
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-    margin: 0 auto;
-    transform: scale(0.8);
-    filter: blur(calc(var(--card-height) / 6));
-    background-image: linear-gradient(
-      var(--rotate)
-      , #5ddcff, #3c67e3 43%, #4e00c2);
-      opacity: 1;
-    transition: opacity .5s;
-    animation: spin 2.5s linear infinite;
-  }
-  
-  @keyframes spin {
-    0% {
-      --rotate: 0deg;
-    }
-    100% {
-      --rotate: 360deg;
-    }
-  }
-  
-  a {
-    color: white;
-    text-decoration: none;
-    font-family: sans-serif;
-    font-weight: bold;
-    margin-top: 2rem;
+main {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.wrapper {
+  padding: 30px 10px;
+}
+
+section {
+  display: flex;
+  justify-content: space-around;
+  -webkit-box-align: center;
+
+  align-items: center;
+  padding: 0 1.5em;
+  position: relative;
+  font-size: 12px;
+}
+
+.container {
+  width: 461px;
+  perspective: 1000px;
+  height: 20em;
+  cursor: pointer;
+  padding: 1.5em 0;
+}
+
+.container:hover .card {
+  transform: rotateX(180deg);
+}
+
+.card {
+  transform-style: preserve-3d;
+  height: 100%;
+  width: 100%;
+  transition: 0.5s ease;
+}
+
+.front,
+.back {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  color: white;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 0.4em;
+}
+
+.front {
+  background: (linear, left top, right top, from(#a246ef), to(#6523fe));
+  background: -o-linear-gradient(left, #a246ef, #6523fe);
+  background: linear-gradient(to right, #a246ef, #6523fe);
+}
+
+.front img {
+  width: 8em;
+}
+
+.back {
+
+  transform: rotateX(180deg);
+  background-image: linear-gradient(to right top, #1a4c97, #394fab, #5a50bd, #7d4dcb, #a245d4);
+}
+
+.content {
+
+  transform: translateZ(60px);
+}
+
+.content h3 {
+  font-size: 1.6em;
+  margin-top: 1em;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.content p {
+  font-size: 1em;
+  line-height: 2em;
+  letter-spacing: 0.02em;
+  padding: 0 3em;
+}
+
+
+button {
+  background: none;
+  border: none;
+  text-align: center;
+}
+
+button>a {
+
+  transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+  display: block;
+  margin: 20px auto;
+  max-width: 180px;
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 20px 30px;
+}
+
+button>a.button {
+  color: #e2deeee7;
+  box-shadow: rgba(8, 25, 179, 0.568) 0 0px 0px 2px inset;
+}
+
+button>a.button:hover {
+  color: #e0aceb;
+  box-shadow: rgba(115, 11, 201, 0.7) 0 0px 0px 40px inset;
+}
+
+
+
+@media screen and (min-width: 992px) {
+  section {
+    padding: 0 1em;
+    font-size: 16px;
   }
 
-  button{
-    width: 204px;
-    height: 40px;
-    border-color: #3c67e3;
-    background-color: #4e00c2;
-    border-radius: 10px;
-  }
+  .container {
 
-  
-  
-  img{
-    z-index: 1;
-    height: 150px;
-    width: 350px;
+    max-width: 33.33%;
+    padding: 0 1.5em;
   }
-
-  .container-card{ margin: 0 40px}
+}

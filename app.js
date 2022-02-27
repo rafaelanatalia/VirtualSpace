@@ -11,11 +11,15 @@ var logger = require('morgan');
 const VirtualRouter = require("./routers/VirtualRouter");
 const AdmRouter = require('./routers/AdmRouter');
 
+// importando os middlewares
+
+
 //criando o servidor 
 const app=express();
 
 //configurando o view engine para ejs
 app.set('views', path.join(__dirname, 'views'));
+
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
@@ -33,6 +37,7 @@ app.use(express.json());
 // criar a rota respondendo a requisição
 app.use('/', VirtualRouter);
 app.use('/adm', AdmRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -52,7 +57,8 @@ app.use(function(req, res, next) {
     res.render('error');
   });
 
-//levantando o servidor
 
+//o levantamento do servidor foi para a bin 
+// importando o app para a bin 
 module.exports=app
 

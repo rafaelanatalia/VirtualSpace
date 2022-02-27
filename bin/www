@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Module dependencies.
+ * Dependências do módulo.
  */
 
  var app = require('../app');
@@ -10,6 +10,7 @@
  
  /**
   * Get port from environment and store in Express.
+  * Obtenha a porta do ambiente e armazene no Express.
   */
  
  var port = normalizePort(process.env.PORT || '3000');
@@ -17,12 +18,14 @@
  
  /**
   * Create HTTP server.
+  * criando o servidor HTTP
   */
  
  var server = http.createServer(app);
  
  /**
   * Listen on provided port, on all network interfaces.
+  * Ouça na porta fornecida, em todas as interfaces de rede.
   */
  
  server.listen(port);
@@ -31,6 +34,7 @@
  
  /**
   * Normalize a port into a number, string, or false.
+  * Normalize uma porta em um número, string ou false.
   */
  
  function normalizePort(val) {
@@ -38,11 +42,13 @@
  
    if (isNaN(port)) {
      // named pipe
+//piso nomeado
      return val;
    }
  
    if (port >= 0) {
      // port number
+// número da porta
      return port;
    }
  
@@ -51,6 +57,7 @@
  
  /**
   * Event listener for HTTP server "error" event.
+  * Ouvinte de eventos para o evento "erro" do servidor HTTP.
   */
  
  function onError(error) {
@@ -63,6 +70,8 @@
      : 'Port ' + port;
  
    // handle specific listen errors with friendly messages
+  //  lidar com erros de escuta específicos com mensagens amigáveis
+
    switch (error.code) {
      case 'EACCES':
        console.error(bind + ' requires elevated privileges');
@@ -79,6 +88,7 @@
  
  /**
   * Event listener for HTTP server "listening" event.
+  * Ouvinte de evento para o evento "escutando" do servidor HTTP.
   */
  
  function onListening() {

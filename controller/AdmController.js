@@ -11,6 +11,30 @@ const { validationResult } = require('express-validator');
         res.render('crud-usuarios/criarconta');
         
     },
+    Registro:(req,res)=>{
+        const userstring = fs.readFileSync(__dirname + '/../database/Usuarios.json',{encoding:"utf-8"});
+        const user = JSON.parse(userstring);
+        const nomeloja = req.body.lojanome;
+        const email = req.body.email;
+        const senha = req.body.senha;
+        const senhanovamente = req.body.senhanovamente;
+        if(senha == senhanovamente){
+        const hash = bcrypt.hashSync(senha,10); 
+        
+        const cliente = {nomeloja,email,senha:hash};
+
+        cliente.id = user.length === 0 ? 1 : user.length + 1;
+
+        user.push(cliente);
+
+        fs.writeFileSync(
+            __dirname + '/../database/Usuarios.json',JSON.stringify(user, null, 3),{flag:'w'}
+        );
+        res.redirect('/');
+        }else{
+            res.send('As Senhas Estão Diferentes')
+        }
+    },
 
     showlogin:(req,res)=>{
         res.render('crud-usuarios/login');
@@ -45,33 +69,12 @@ const { validationResult } = require('express-validator');
         return res.redirect('/adm/login')
     },
 
-    Registro:(req,res)=>{
-        const userstring = fs.readFileSync(__dirname + '/../database/Usuarios.json',{encoding:"utf-8"});
-        const user = JSON.parse(userstring);
-        const nomeloja = req.body.lojanome;
-        const email = req.body.email;
-        const senha = req.body.senha;
-        const senhanovamente = req.body.senhanovamente;
-        if(senha == senhanovamente){
-        const hash = bcrypt.hashSync(senha,10); 
-        
-        const cliente = {nomeloja,email,senha:hash};
-
-        cliente.id = user.length === 0 ? 1 : user.length + 1;
-
-        user.push(cliente);
-
-        fs.writeFileSync(
-            __dirname + '/../database/Usuarios.json',JSON.stringify(user, null, 3),{flag:'w'}
-        );
-        res.redirect('/');
-        }else{
-            res.send('As Senhas Estão Diferentes')
-        }
+    showDashbord:(req,res)=>{
+        res.render('adms/dashboard');
     },
-
+    
     showProdutos: (req, res) => {
-        res.render('crud-usuarios/addProdutos')
+        res.render('adms/addProdutos')
     },
 
 
