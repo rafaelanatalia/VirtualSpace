@@ -1,6 +1,7 @@
 //criando o  roteador e impostando o express
 const express = require("express");
 const AdmController = require("../controller/AdmController");
+const UsuarioController = require("../controller/UsuarioController");
 
 //impostando o controller
 const VirtualController= require('../controller/VirtualController');
@@ -16,6 +17,12 @@ router.get('/beta/planomedio',VirtualController.PlanoMedio);
 router.get('/beta/planotop',VirtualController.PlanoTop);
 router.get('/produtos',VirtualController.ShowProduto);
 
+// Rotas Dashboard
 
+router.get('/produtos',UsuarioController.ShowProdutos);
+router.get('/produtos/:id',UsuarioController);
+router.post('/cadastro-produtos',UsuarioController.AddProdutos);
+router.delete('/produtos/:id',UsuarioController.Delete);
+router.put('/produtos/:id',UsuarioController);
 
 module.exports= router
