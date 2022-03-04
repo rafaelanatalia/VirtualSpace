@@ -1,15 +1,21 @@
 
 //criando o  roteador e impostando o express
 const express = require("express");
-const AdmController = require("../controller/AdmController");
-
-
-// import multer
-const multer= require("../middlewares/multer")
 
 
 //impostando o controller
+const AdmController = require("../controller/AdmController");
+const UsuarioContoller = require("../controller/UsuarioController")
+
 const VirtualController= require('../controller/VirtualController');
+
+
+
+// import multer
+const upload= require("../middlewares/multer")
+
+
+
 
 //criando roteador e exportando o roteador
 const router=express.Router();
@@ -23,8 +29,8 @@ router.post('/login',AdmController.Login);
 router.get('adm/dashboard',AdmController.showDashbord);
 
 // produtos
-router.get('/adicionarprodutos',AdmController.showProdutos);
-router.post('/adicionarprodutos',multer.single('img'),AdmController.AddProdutos);
+router.get('/adicionarprodutos',UsuarioContoller.ShowProdutos);
+router.post('/adicionarprodutos',upload.single('img'),UsuarioContoller.AddProdutos);
 
 
 module.exports= router;

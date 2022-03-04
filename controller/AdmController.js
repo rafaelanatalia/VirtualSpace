@@ -1,3 +1,4 @@
+const Produtos = require('../database/Produtos.json');
 
 const fs = require('fs');
 const bcrypt = require('bcrypt');

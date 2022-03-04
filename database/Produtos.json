@@ -1,3 +1,9 @@
 [
-
+    {
+        "nome": "d",
+        "descricao": "ewe",
+        "preco": 23.03,
+        "img": "assets/img/1646419536521-fullsize_2018_10_27_10_Peca-Grafica-248568_618584_101701084_1492990827.jpg",
+        "id": "9c0f9373-a86a-43f0-ac56-80f707f0e492"
+    }
 ]

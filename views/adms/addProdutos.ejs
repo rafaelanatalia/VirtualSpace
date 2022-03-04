@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
     <link rel="stylesheet" href="/assets/css/Create.css">
     <title>Criar Conta</title>
 </head>
@@ -28,20 +30,21 @@
                 <label>
                     Categoria do Produto
                    <select name="categorias" id="categori">
-                       <option value="Tecnologia">Tecnoligia</option>
+                       <option value="Tecnologia">Tecnologia</option>
                        <option value="Roupas">Roupas</option>
                        <option value="Comidas">Comidas</option>
                    </select>
                 </label>
 
                 <label>
-                    Foto:
-                    <img src="/img/no-image.png">
+                    Foto:<i class='bx bx-image-add'></i>
+            
                     <div>Clique para selecione nova imagem</div>
                     <input type="file" name="img" id="img">
+                    <div><i class='bx bx-import' ></i></div>
                 </label>
 
-                <button type="submit">Salvar</button>
+                <input type="submit" value="Salvar">
             </form>
         </div>
 </div>

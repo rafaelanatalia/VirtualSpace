@@ -1,3 +1,9 @@
+const Produto = require('../database/Produtos.json');
+
+const fs = require('fs');
+const { randomUUID } = require('crypto');
+const { validationResult } = require('express-validator');
+
 module.exports = UsuarioController = {
     
     ShowProdutos: (req, res) => {
@@ -19,7 +25,7 @@ module.exports = UsuarioController = {
         const preco = Number(req.body.preco);
         // const categori = Select(req.body.select);
         
-        const produtos = {nome, descricao, preco,img:'/img/' + req.file.filename}
+        const produtos = {nome, descricao, preco,img:'assets/img/' + req.file.filename}
         
         // Adicionar o id de produtos recém criada
         produtos.id = randomUUID();

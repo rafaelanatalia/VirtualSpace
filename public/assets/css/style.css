@@ -281,7 +281,7 @@ h1 {
   .inicial {
     position: relative;
     top: 24px;
-    width: 514px;
+   
     text-align: left;
     color: black;
   }
@@ -778,48 +778,14 @@ footer>.contatos>div>ul>li{
   font-size: 46px;
 }
 
-@media (max-width:1279px) {
 
-  body{
-    width: 1279px;
-  }
-  
-  .logo{
-    width: 100px;
+
+@media screen and (max-width: 768px) {
+
+  header, main, footer, img{
+    max-width: 768px;
   }
 
-  header>nav{
-    
-    display: none;
-  }
-  nav{
-    margin-top: 50px;
-  }
-  nav> ul{
-    flex-direction: column;
-    margin-bottom: 10px;
-  }
-
-
-
-  #btnmobile{
-    margin-top: 30px;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    background: transparent;
-    border: transparent;
-  }
-  #btnmobile>i{
-   font-size: 40px;
-  }
-
-
-
-
-}
-
-@media (max-width:768px) {
   .logo{
     width: 120px;
   }
@@ -849,24 +815,23 @@ footer>.contatos>div>ul>li{
     display: flex;
     flex-direction: column;
   }
-
-  #btnmobile.active ~ header>nav{
-    display: flex;
-  }
+.wrappers{
+  display: flex;
+}
 
 /*        Home mobile 768px      */
 
 
 /*esquerda*/
   .flex-container-center{
-    display: flex;
+    
     flex-direction: column;
-    margin-left: 20px;
+    
   }
 
   .nuvem-branca, .fundo_azul {
   
-    width: 760px;
+    width: 100%;
   
 }
   .foguete {
@@ -892,6 +857,15 @@ footer>.contatos>div>ul>li{
 /*         sobre nos mobile*/
   #Sobre_nos{
   padding-top: 60px;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+#Sobre_nos>img{
+  width: 300px;
+ 
 }
 
 #Sobre_nos > div > h3{
@@ -925,12 +899,10 @@ footer>.contatos>div>ul>li{
 }
 
 @media screen and (max-width: 480px) {
-  
-  body{
-    block-size: border-box;
-   
-    flex-wrap: wrap;
-  }
+header, main, footer, img{
+  max-width: 480px;
+}
+
   .logo{
     width: 120px;
   }
@@ -948,6 +920,7 @@ footer>.contatos>div>ul>li{
   
 
   header{
+  
     margin-right: 50px;
     width: 100%;
     justify-content: space-between;
@@ -973,7 +946,8 @@ footer>.contatos>div>ul>li{
     font-size: 35px;
   }
 
-  #btnmobile~header>nav{
+  .wrappers{
+    margin-left:170px;
     display: flex;
   }
 
@@ -997,17 +971,20 @@ footer>.contatos>div>ul>li{
   
   .nuvem-branca, .fundo_azul {
   
-    width: 760px;
+    width: 100%;
   
+}
+.fundo_azul{
+  bottom:376px;
 }
   .foguete {
   position: relative;
-  left: 109px;
+  left: 36px;
 
 }
 
   .planeta{
-    left: 86px;
+    left: 14px;
   }
 
   /*============ FORMULARIOS ====================*/
@@ -1016,9 +993,8 @@ footer>.contatos>div>ul>li{
     
     width: 419px;
     height: 500px;
-  margin-left: 200px;   
-  margin-top: 140px;
-  margin-bottom: 30px;
+  margin: 40px auto;
+ 
   }
 /*direita*/
 
@@ -1057,16 +1033,20 @@ input {
 
 
 /*         sobre nos mobile*/
+
+#Sobre_nos > img{
+  width: 300px;
+}
   #Sobre_nos{
   padding-top: 60px;
-  justify-content: flex-start;
+  flex-direction: column;
   
  
 }
 .texto_sobre {
   display: flexbox;
-  width: 460px;
-  height: 489px;
+  width: 400px;
+  height: 350px;
 }
 #Sobre_nos > div > h3{
   color:white;
@@ -1075,12 +1055,20 @@ input {
 }
 
 #Sobre_nos > div > p{
-  font-size: 25px;
+  font-size: 18px;
 }
+
+
 
 /*sua loja*/
 
+#sua_loja > div > img{
+  display: none;
+}
+
  .circulos{
+   margin: 5px 0;
+   flex-direction: column;
    justify-content: center;
  }
   
@@ -1100,6 +1088,7 @@ input {
 
 /*        planos         */
   #planos{
+    
     padding-top: 0;
     
   }
@@ -1114,10 +1103,14 @@ h5{
     font-size: 25px;
 }
 
+.Planos-card{
+  flex-direction: column;
+  margin: 10px 0;
+}
 #planos > div > div.basico > div.beneficios > ul > li,
 #planos > div > div.medio > div.beneficios > ul > li,
 #planos > div > div.top > div.beneficios > ul > li{
-  font-size: 25px;
+  font-size: 20px;
 }
 
 
@@ -1139,10 +1132,11 @@ li{
 
 
   .basico, .medio, .top{
-    width: 450px;
+    width: 300px;
+    margin: 10px 0;
   }
   .basico:hover, .medio:hover, .top:hover{
-    width: 480px;
+    width: none;
   }
 
   .basico:hover,
@@ -1157,26 +1151,27 @@ li{
   }
 
   .bnt-top,.bnt-basico, .bnt-medio{
-    width: 320px;
+    width: 230px;
     height: 70px;
-    font-size: 25px;
+    font-size: 15px;
+    
   }
 
   .bnt-top:hover,.bnt-basico:hover, .bnt-medio:hover{
-    width: 320px;
+    width: 200px;
     height: 70px;
   }
 
 
 /*Footer*/
   footer{
-   width: 1520px;
+   width: 100%;
    
 
   }
 
   footer>.contatos{
-    
+    flex-direction: column;
     justify-content: center;
   }
 
