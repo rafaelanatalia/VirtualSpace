@@ -12,7 +12,6 @@
   --z--index-medio: 50;
   --z--index-baixo: 1;
 }
-
 /*======reset=======*/
 * {
     font-family: var(--font-family);
@@ -20,297 +19,507 @@
   padding: 0;
 }
 
-.header{
-  background-color: var(--cor--secundaria);
-  height: 100px;
-  width: 100vw;
-  display: flex;
-  flex-direction: row;
-}
-.logo{
-  display: flex;
-  width: 100px;
-  height: 100px;
-  margin-left: 20px;
-  flex-grow: 50;
-}
-.nav-menu{
-  display: flex;
-  align-items: center;
-  flex-grow: 50;
-  justify-content: flex-end;
-}
-div.nav-menu > a > i {
-  margin-right: 20px;
-  color: black;
-  cursor: pointer;
-}
-.lateral-menu-rigth{
-  background-color: none;
-  width: 200px;
-  position: absolute;
-  top:100px;
-  overflow: hidden;
-}
-
-.btnmobile{
-  font-size: 25px;
-}
-.lateral-menu-rigth > ul > li{
-  font-size: 13px;
-  list-style-type: none;
-}
-.lateral-menu-rigth > ul > li > a{
-  background-color: var(--cor--secundaria);
-  text-decoration: none;
-  color: white;
-  padding: 10px 25px;
-  display: flex;
-  margin: 0;
-  position: relative;
-  left: 200px;
-  transition: 1s;
-}
-.lateral-menu-rigth > ul > li > a:hover{
-  background-color: var(--cor--primaria);
-  color: white;
-}
-.btnmobile:hover ~ .lateral-menu-rigth > ul > li > a{
-  transform: translateX(-200px);
-}
-
-
-/* ==================================main==================================== */
-.container-flex{
-  width: 100vw;
-  display: flex;
-  flex-direction: row;
-}
-/* ==============================================Conteiner Left======================================= */
-.container-flex-left{
-  display: flex;
-  width: 5vw;
-  max-width: 5vw;
-  background-color: #1D1531;
-  flex-grow:5;
-}
-div.container-flex-left > a > i {
-  color: white;
-}
-.lateral-menu-left{
-  display: flex;
-  position: absolute;
-  width: 150px;
-  background-color: #1D1531;
-  flex-direction: column;
-  transition: 0.5s;
-  right: 360px;
-  max-width: 150px;
-}
-.btnmobile-left:hover ~ .lateral-menu-left{
-  transform: translateX(150px);
-}
-.list-menu-left{
-  display: flex;
-  justify-content: center;
-  display: flex;
-  flex-wrap: nowrap;
-  max-width: 150px;
-}
-.list-menu-left > ul > li{
-  list-style-type: none;
-  width: 100vw;
-  max-width: 150px;
-}
-.list-menu-left > ul > li> a {
-  text-decoration: none;
-  color: white;
-  flex-direction: row;
-  justify-content: flex-end;
-  padding: 15px 40px;
-  display: flex;
-  font-size: 13px;
-  flex-wrap: nowrap;
-  max-width:150px;
-  max-height: 100vh;
-}
-.list-menu-left > ul > li> a:hover{
-  border-left: 2px solid #ED0A4B;
-  background-color: #110B21;
-}
-.list-menu-left > ul > li> a > .divisoria-rigth{  
-  position: relative;
-  left:30px
-}
-.inicio > i{
-  position: relative;
-  right: 10px;
-  top: 2px;
-}
-.pessoas > i {
-  position: relative;
-  top:2px;
-  right: 5px;
-}
-.vendas > i{
-  position: relative;
-  top:2px;
-  right: 5px;
-}
-/* ===========================Relatórios=================================== */
-.relatórios-P > i{
-  position: relative;
-  top:2px;
-  right: 5px;
-}
-.relatórios-L {
-  background-color: none;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 244px;
-  left: 150px;
-  overflow: hidden;
-}
-.relatórios-L > a {
-  text-decoration: none;
-  color: white;
-  display: flex;
-  justify-content: center;
-  background-color: #1D1531;
-  padding: 10px 31px;
-  position: relative;
-  left: -150px;
-  transition: 2s;
-}
-.relatórios-L > a:hover{
-  border-left: 2px solid #ED0A4B;
-  background-color: #110B21;
-}
-.relatórios-P:hover ~ .relatórios-L > a{
-  transform: translateX(150px);
-}
-
-/* =============================================Conteiner Rigth==================================== */
-.container-flex-rigth{
-  display: flex;
-  width: 95vw;
-  max-width: 95vw;
-  background-color: rgba(10, 19, 223, 0.22);
-  flex-grow: 95;
-  height: 100vh;
-}
-.flex-rigth-margem{
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
-  margin: 10px;
-}
-/* ---------------------Titulo-------------------- */
-.container-rigth-box{
-  height: 70px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-}
-/* ---------------------Resumo De Vendas ------------------- */
-.resumo-vendas{
-  height: 70px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: stretch;
-}
-.resumo-vendas-box{
-  display: flex;
-  width: 70px;
-  height: 65px;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-.label-box-white{
-  font-size: 6px;
-  display: flex;
-  height: 10px;
-  width: 30px;
-}
-.vendas-box-white{
-  display: flex;
-  background-color: white;
-  width: 60px;
-  height: 40px;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-.img-box-white{
-  width: 30px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.box-white-dados{
-  width: 30px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-/* -------------------------Grafico--------------------------------- */
-  .container-grafico{
-    width: 320px;
-    height: 200px;
-    max-width: 320px;
-    max-height: 200px;
+@media(max-width:500px){
+  .header{
+    background-color: var(--cor--secundaria);
+    height: 100px;
+    width: 100vw;
     display: flex;
+    flex-direction: row;
+  }
+  .logo{
+    display: flex;
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+    flex-grow: 50;
+  }
+  .nav-menu{
+    display: flex;
+    align-items: center;
+    flex-grow: 50;
+    justify-content: flex-end;
+  }
+  div.nav-menu > a > i {
+    margin-right: 20px;
+    color: black;
+    cursor: pointer;
+  }
+  .lateral-menu-rigth{
+    background-color: none;
+    width: 200px;
+    position: absolute;
+    top:100px;
+    overflow: hidden;
+  }
+
+  .btnmobile{
+    font-size: 25px;
+  }
+  .lateral-menu-rigth > ul > li{
+    font-size: 13px;
+    list-style-type: none;
+  }
+  .lateral-menu-rigth > ul > li > a{
+    background-color: var(--cor--secundaria);
+    text-decoration: none;
+    color: white;
+    padding: 10px 25px;
+    display: flex;
+    margin: 0;
+    position: relative;
+    left: 200px;
+    transition: 1s;
+  }
+  .lateral-menu-rigth > ul > li > a:hover{
+    background-color: var(--cor--primaria);
+    color: white;
+  }
+  .btnmobile:hover ~ .lateral-menu-rigth > ul > li > a{
+    transform: translateX(-200px);
+  }
+
+
+  /* ==================================main==================================== */
+  .container-flex{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+  }
+  /* ==============================================Conteiner Left======================================= */
+  .container-flex-left{
+    display: flex;
+    width: 5vw;
+    max-width: 5vw;
+    background-color: #1D1531;
+    flex-grow:5;
+  }
+  div.container-flex-left > a > i {
+    color: white;
+  }
+  .lateral-menu-left{
+    display: flex;
+    position: absolute;
+    width: 150px;
+    background-color: #1D1531;
+    flex-direction: column;
+    transition: 0.5s;
+    right: 360px;
+    max-width: 150px;
+  }
+  .btnmobile-left:hover ~ .lateral-menu-left{
+    transform: translateX(150px);
+  }
+  .list-menu-left{
+    display: flex;
+    justify-content: center;
+    display: flex;
+    flex-wrap: nowrap;
+    max-width: 150px;
+  }
+  .list-menu-left > ul > li{
+    list-style-type: none;
+    width: 100vw;
+    max-width: 150px;
+  }
+  .list-menu-left > ul > li> a {
+    text-decoration: none;
+    color: white;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 15px 40px;
+    display: flex;
+    font-size: 13px;
+    flex-wrap: nowrap;
+    max-width:150px;
+    max-height: 100vh;
+  }
+  .list-menu-left > ul > li> a:hover{
+    border-left: 2px solid #ED0A4B;
+    background-color: #110B21;
+  }
+  .list-menu-left > ul > li> a > .divisoria-rigth{  
+    position: relative;
+    left:30px
+  }
+  .inicio > i{
+    position: relative;
+    right: 10px;
+    top: 2px;
+  }
+  .pessoas > i {
+    position: relative;
+    top:2px;
+    right: 5px;
+  }
+  .vendas > i{
+    position: relative;
+    top:2px;
+    right: 5px;
+  }
+  /* ===========================Relatórios=================================== */
+  .relatórios-P > i{
+    position: relative;
+    top:2px;
+    right: 5px;
+  }
+  .relatórios-L {
+    background-color: none;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 244px;
+    left: 150px;
+    overflow: hidden;
+  }
+  .relatórios-L > a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    background-color: #1D1531;
+    padding: 10px 31px;
+    position: relative;
+    left: -150px;
+    transition: 2s;
+  }
+  .relatórios-L > a:hover{
+    border-left: 2px solid #ED0A4B;
+    background-color: #110B21;
+  }
+  .relatórios-P:hover ~ .relatórios-L > a{
+    transform: translateX(150px);
+  }
+
+  /* =============================================Conteiner Rigth==================================== */
+  .container-flex-rigth{
+    display: flex;
+    width: 95vw;
+    max-width: 95vw;
+    background-color: rgba(10, 19, 223, 0.22);
+    flex-grow: 95;
+    height: 100vh;
+  }
+  .flex-rigth-margem{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin: 10px;
+  }
+  /* ---------------------Titulo-------------------- */
+  .container-rigth-box{
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+  /* ---------------------Resumo De Vendas ------------------- */
+  .resumo-vendas{
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+  }
+  .resumo-vendas-box{
+    display: flex;
+    width: 70px;
+    height: 65px;
     justify-content: center;
     flex-direction: column;
     align-items: center;
   }
+  .label-box-white{
+    font-size: 6px;
+    display: flex;
+    height: 10px;
+    width: 30px;
+  }
+  .vendas-box-white{
+    display: flex;
+    background-color: white;
+    width: 60px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .img-box-white{
+    width: 30px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .img-box-white > img {
+    width: 25px;
+  }
+  .box-white-dados{
+    width: 30px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* -------------------------Grafico--------------------------------- */
+    .container-grafico{
+      width: 320px;
+      height: 200px;
+      max-width: 320px;
+      max-height: 200px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+    .container-grafico > label {
+      font-size: 9px;
+      margin:5px;
+    }
+    .grafico{
+      background-color: white;
+      width: 270px;
+      height: 200px;
+      border-radius: 10px;
+    }
+    /* =============================Dia Anterior e Melhores Vendedores================================== */
+    .position-melhores-dia{
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center
+    }
+    .container-duplo{
+      width: 135px;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .box-white-both{
+      background-color: white;
+      width: 120px;
+      height: 170px;
+      border-radius: 30px;
+    }
+    .container-duplo > label{
+      font-size: 10px;
+    }
+  /* ====================================Criação de Produto======================================== */
+  .form-criacao-produto{
+    display: flex;
+  }
+  .form-criacao-produto> form > label{
+    font-size: 10px;
+  }
+}
+@media(min-width:900px){
+  header{
+    background-color: #0071b2;
+    height: 150px;
+  }
+  .header{
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+  }
+  .logo-container{
+    width: 15vw;
+    padding-left: 100px;
+  }
+  .logo{
+    width: 150px;
+  }
+  .btnmobile{
+    display: none;
+  }
+  .nav-menu{
+    width: 70vw;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .lateral-menu-rigth{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .lateral-menu-rigth > ul{
+    display: flex;
+
+  }
+  .lateral-menu-rigth > ul > li{
+    display: flex;
+    padding: 10px 20px;
+  }
+  .lateral-menu-rigth > ul > li > a{
+    text-decoration: none;
+    color: white;
+    background-color: var(--cor--secundaria);
+    transition: 1s;
+  }
+  .lateral-menu-rigth > ul > li > a:hover{
+    border-radius: 2px 6px 8px 10px;
+    border-bottom: 5px solid #4dbeff;
+  }
+  .container-flex{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+  }
+  .container-flex-left{
+    display: flex;
+    width: 25vw;
+    height: 100vh;
+    max-width: 30vw;
+    background-color: #1D1531;
+    justify-content: center;
+  }
+  div.container-flex-left > a > i {
+    display: none;
+  }
+  .lateral-menu-left{
+    display: flex;
+    width: 150px;
+    background-color: #1D1531;
+    flex-direction: column;
+    max-width: 150px;
+  }
+  .list-menu-left{
+    display: flex;
+    justify-content: center;
+    display: flex;
+    flex-wrap: nowrap;
+    max-width: 150px;
+  }
+  .list-menu-left > ul > li{
+    list-style-type: none;
+    width: 100vw;
+    max-width: 150px;
+    padding: 10px 10px;
+    position: relative;
+    right: 80px;
+  }
+  .list-menu-left > ul > li> a {
+    text-decoration: none;
+    color: white;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 20px 80px;
+    width: 150px;
+    display: flex;
+    font-size: 20px;
+    flex-wrap: nowrap;
+    max-width:150px;
+    max-height: 100vh;
+  }
+  .list-menu-left > ul > li> a:hover{
+    border-left: 2px solid #ED0A4B;
+    background-color: #110B21;
+  }
+/* =======================Container rigth================= */
+  .container-flex-rigth{
+    display: flex;
+    background-color: rgba(10, 19, 223, 0.22);
+    flex-grow: 95;
+    height: 100vh;
+  }
+  .flex-rigth-margem{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    margin: 50px;
+    width: 800px;
+  }
+  .container-rigth-box{
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .container-rigth-box > h4{
+    font-size: 40px;
+  }
+  .container-rigth-box > h6{
+    font-size: 20px;
+  }
+  .resumo-vendas{
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 80px;
+  }
+  .resumo-vendas-box{
+    display: flex;
+    width: 200px;
+    height: 120px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .label-box-white{
+    font-size: 18px;
+    display: flex;
+    height: 50px;
+    width: 100px;
+  }
+  .vendas-box-white{
+    display: flex;
+    background-color: white;
+    width: 150px;
+    height: 100px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .img-box-white{
+    width: 70px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .box-white-dados{
+    width: 70px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .box-white-dados > h6 {
+    font-size: 20px;
+  }
+  /* ===========================Grafico===================== */
+  .container-grafico{
+    width: 800px;
+    height: 600px;
+    max-width: 800px;
+    max-height: 800px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+  }
   .container-grafico > label {
-    font-size: 9px;
-    margin:5px;
+    font-size: 18px;
+    margin-bottom:5px;
   }
   .grafico{
     background-color: white;
-    width: 270px;
-    height: 200px;
+    width: 600px;
+    height: 350px;
     border-radius: 10px;
   }
-  /* =============================Dia Anterior e Melhores Vendedores================================== */
-  .position-melhores-dia{
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center
-  }
-  .container-duplo{
-    width: 135px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .box-white-both{
-    background-color: white;
-    width: 120px;
-    height: 170px;
-    border-radius: 30px;
-  }
-  .container-duplo > label{
-    font-size: 10px;
-  }
-/* ====================================Criação de Produto======================================== */
-.form-criacao-produto{
-  display: flex;
-}
-.form-criacao-produto> form > label{
-  font-size: 10px;
 }
