@@ -10,6 +10,7 @@ var logger = require('morgan');
 //importando os roteadores
 const VirtualRouter = require("./routers/VirtualRouter");
 const AdmRouter = require('./routers/AdmRouter');
+const ProdutosRouter = require('./routers/ProdutosRouter');
 
 // importando os middlewares
 
@@ -37,6 +38,7 @@ app.use(express.json());
 // criar a rota respondendo a requisição
 app.use('/', VirtualRouter);
 app.use('/adm', AdmRouter);
+app.use('/produtos',ProdutosRouter);
 
 
 // catch 404 and forward to error handler

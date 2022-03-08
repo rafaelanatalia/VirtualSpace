@@ -17,12 +17,5 @@ router.get('/beta/planomedio',VirtualController.PlanoMedio);
 router.get('/beta/planotop',VirtualController.PlanoTop);
 router.get('/produtos',VirtualController.ShowProduto);
 
-// Rotas Dashboard
-
-// router.get('/produtos',UsuarioController.ShowProdutos);
-// router.get('/produtos/:id',UsuarioController);
-// router.post('/cadastro-produtos',UsuarioController.AddProdutos);
-// router.delete('/produtos/:id',UsuarioController.Delete);
-// router.put('/produtos/:id',UsuarioController);
 
 module.exports= router
