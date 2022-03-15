@@ -1,12 +1,9 @@
-const Produto = require('../database/Produtos.json');
+
+const Produtos = require('../database/Produtos.json');
 
 const fs = require('fs');
-const {
-    randomUUID
-} = require('crypto');
-const {
-    validationResult
-} = require('express-validator');
+const { randomUUID } = require('crypto');
+const { validationResult } = require('express-validator');
 
 module.exports = UsuarioController = {
 

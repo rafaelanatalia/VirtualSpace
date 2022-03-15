@@ -1,7 +1,6 @@
 //criando o  roteador e impostando o express
 const express = require("express");
-const AdmController = require("../controller/AdmController");
-const UsuarioController = require("../controller/UsuarioController");
+
 
 //impostando o controller
 const VirtualController= require('../controller/VirtualController');
@@ -16,6 +15,13 @@ router.get('/beta/planobasico',VirtualController.PlanoBasico);
 router.get('/beta/planomedio',VirtualController.PlanoMedio);
 router.get('/beta/planotop',VirtualController.PlanoTop);
 router.get('/produtos',VirtualController.ShowProduto);
+
+
+// pages de login
+router.get('/cliente/login',VirtualController.showlogin);
+router.post('/cliente/create',VirtualController.Registro);
+router.get('/cliente/create',VirtualController.Create);
+router.post('/cliente/login',VirtualController.Login);
 
 
 module.exports= router

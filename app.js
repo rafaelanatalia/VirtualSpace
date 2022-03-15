@@ -37,8 +37,8 @@ app.use(express.json());
 
 // criar a rota respondendo a requisição
 app.use('/', VirtualRouter);
-app.use('/adm', AdmRouter);
-app.use('/produtos',ProdutosRouter);
+app.use('/', AdmRouter);
+app.use('/adm/produtos',ProdutosRouter);
 
 
 // catch 404 and forward to error handler

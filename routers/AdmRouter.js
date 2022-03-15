@@ -5,14 +5,11 @@ const express = require("express");
 
 //impostando o controller
 const AdmController = require("../controller/AdmController");
-const UsuarioContoller = require("../controller/UsuarioController")
-
-const VirtualController= require('../controller/VirtualController');
+const UsuarioContoller = require("../controller/ProdutoController");
 
 
 
 // import multer
-const upload= require("../middlewares/multer")
 
 
 
@@ -22,15 +19,16 @@ const router=express.Router();
 
 //definindo rotas
 
+// pages de login
 router.get('/login',AdmController.showlogin);
 router.post('/create',AdmController.Registro);
 router.get('/create',AdmController.Create);
 router.post('/login',AdmController.Login);
+
 router.get('adm/dashboard',AdmController.showDashbord);
 
 // produtos
-router.get('/adicionarprodutos',UsuarioContoller.ShowProdutos);
-router.post('/adicionarprodutos',upload.single('img'),UsuarioContoller.AddProdutos);
+
 
 
 module.exports= router;

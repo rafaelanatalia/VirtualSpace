@@ -12,9 +12,9 @@
     <div class="center">
         <div class="login">
             <h2>Criar Conta</h2>
-    <form action="/create" method="POST">
-              <label>Nome da Loja</label>
-              <input type="text" name="lojanome" placeholder="Nome da Loja">
+    <form action="/cliente/create" method="POST">
+              <label>Nome </label>
+              <input type="text" name="nome" placeholder="Nome">
               <label>Email</label>
               <input type="email" name="email" placeholder="Seu Email">
               <label>Senha</label>
@@ -23,8 +23,8 @@
               <input type="password" name="senhanovamente" placeholder="Sua Senha Novamente">
               <input type="submit" value="Criar Conta">
 
-              <a class="criarconta" href="/login" title="">Login Vendedor</a>
-              <a class="criarconta" href="/cliente/create" title="">Criar Conta Cliente</a>
+              <a class="criarconta" href="/cliente/login" title="">Login Cliente</a>
+                <a class="criarconta" href="/create" title="">Criar Conta Vendedor</a>
             </form>
         </div>
 </div>

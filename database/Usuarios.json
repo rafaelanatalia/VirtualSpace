@@ -1,33 +1,3 @@
 [
-   {},
-   {
-      "nomeloja": "henrique",
-      "email": "henrique@gmail.com",
-      "senha": "123456",
-      "id": null
-   },
-   {
-      "nomeloja": "gabriel",
-      "email": "gabriel@gmail.com",
-      "senha": "123456",
-      "id": 1
-   },
-   {
-      "nomeloja": "gabriel2",
-      "email": "gabriel.patara@gmail.com",
-      "senha": "123456",
-      "id": 2
-   },
-   {
-      "nomeloja": "LeLe",
-      "email": "lele@hotmail.com",
-      "senha": "123456",
-      "id": 3
-   },
-   {
-      "nomeloja": "lala",
-      "email": "rafaela@rafa.com",
-      "senha": "1234",
-      "id": 4
-   }
+  
 ]
