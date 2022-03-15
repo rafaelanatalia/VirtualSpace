@@ -10,7 +10,7 @@ var logger = require('morgan');
 //importando os roteadores
 const VirtualRouter = require("./routers/VirtualRouter");
 const AdmRouter = require('./routers/AdmRouter');
-const ProdutosRouter = require('./routers/ProdutosRouter');
+const ProdutosRouter = require("./routers/ProdutosRouter");
 
 // importando os middlewares
 
