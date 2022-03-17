@@ -11,6 +11,7 @@ var logger = require('morgan');
 const VirtualRouter = require("./routers/VirtualRouter");
 const AdmRouter = require('./routers/AdmRouter');
 const ProdutosRouter = require("./routers/ProdutosRouter");
+const PagamentosRouter = require("./routers/PagamentosRouter");
 
 // importando os middlewares
 
@@ -39,6 +40,7 @@ app.use(express.json());
 app.use('/', VirtualRouter);
 app.use('/', AdmRouter);
 app.use('/adm/produtos',ProdutosRouter);
+app.use('/pagamento',PagamentosRouter);
 
 
 // catch 404 and forward to error handler
