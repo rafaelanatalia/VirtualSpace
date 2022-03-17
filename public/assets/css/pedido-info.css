@@ -1,0 +1,116 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+header{
+    background-color: #1D1531;
+    height: 70px;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    background: linear-gradient(180deg, rgba(90, 108, 244, 0.25) 0%, rgba(10, 19, 223, 0) 100%, rgba(2, 144, 207, 0.23) 100%);
+}
+.left-container{
+    width: 70vw;
+    height: 100%;
+    max-width: 70vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.right-container{
+    width: 30vw;
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 2px #0071B2 solid;
+}
+.box-informacoes{
+    width: 800px;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.informacoes{
+    width: 400px;
+    height: 200px;
+}
+h2{ 
+    margin: 30px 0px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 60px;
+    text-align: center;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+}
+h3{
+    text-align: center;
+}
+.informacoes > p{
+    margin-top: 12px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+}
+.produto{
+    border: 2px black solid;
+    width: 800px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.box-produto{
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.frete-box{
+    width: 800px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.resumo-info{
+    width: 300px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.btn-Finalizar{
+    background: linear-gradient(180deg, #8066BD 0%, #6D49C2 100%);
+    padding: 20px 80px;
+    border: 2px #03A9F1 solid;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+}
+.btn-Voltar{
+    background: linear-gradient(180deg, rgba(104, 8, 14, 0.7) 0%, #E33232 100%);
+    padding: 20px 90px;
+    border: 2px #03A9F1 solid;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+}
