@@ -2,8 +2,8 @@
 :root {
   --cor--primaria: #91d7f2;
   --border--bottom: 2px solid rgba(0, 0, 0, 0.5);
-  --titulos: 48px;
-  --textos: 20px;
+  --titulos: 30px;
+  --textos: 16px;
   --textcolor: #ffff;
   --font-family: "Nunito", sans-serif;
   --fontweidt: bold;
@@ -138,8 +138,8 @@ input {
     align-items: center;
     justify-content: center;
     border-radius: 37px;
-    width: 250px;
-    height: 45px;
+    width: 227px;
+    height: 40px;
     margin-left: 29px;
     padding-left: 12px;
     font-size: var(--textos);

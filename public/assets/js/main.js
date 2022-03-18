@@ -5,11 +5,12 @@ nav.addEventListener('click',(event) => {
 });
 
 /*menu mobile*/
-var menuBar= document.querySelector('#btnmobile i');
+
+var menuBar= document.querySelector('div.wrappers > button');
 
 menuBar.addEventListener('click',(e)=>{
     e.preventDefault();
-   let menuMobile=document.querySelector('body > header > nav ul');
+   let menuMobile=document.querySelector('body > header > nav');
    if(menuMobile.classList.contains('show-menu')){
        menuMobile.classList.remove('show-menu');
    }

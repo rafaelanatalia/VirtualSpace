@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap");
+
+:root {
+  --cor--primaria: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    #0071b2;
+  --cor--secundaria: #00517f;
+  --cor--liteen: #4dbeff;
+  --cor--media: #398ebf;
+  --border--bottom: 2px solid rgba(0, 0, 0, 0.5);
+  --titulos: 48px;
+  --textos: 20px;
+  --textcolor: #fff;
+  --font-family: "Nunito", sans-serif;
+  --fontweidt: bold;
+ 
+}
+
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* hambur */
+
+.wrappers {
+    display: block;
+  }
+
+  .wrappers{
+    width:100px;
+    height:100px;
+    position: absolute;
+    left:97%;
+top: 11%;
+    transform: translate(-50%, -50%);
+}
+.nav{
+    width:35px;
+    height:35px;
+    position: absolute;
+  
+    transform: translate(-50%, -50%);
+    padding: 0px;
+    background-color:transparent;
+    border-style:none;
+    outline: none;
+    cursor: pointer;
+}
+.nav span{
+    width:100%;
+    height:5px;
+    background-color:rgb(102, 29, 29);
+    display:block;
+    position: absolute;
+    border-radius: 2px;
+    transition: all .5s ease;
+}
+.nav span:nth-child(1){
+    top:0px;
+    left:0px;
+}
+.nav span:nth-child(2){
+    top:20px;
+    right:0px;
+}
+.nav span:nth-child(3){
+    top:40px;
+    left:0px;
+}
+.nav.open span:nth-child(2){
+    animation: span2 1.5s forwards cubic-bezier(.8, .5, .2, 1.4);
+}
+@keyframes span2{
+    0%{
+        transform: translate(0,0) scale(1);
+    }
+    20%{
+        width:5px;
+        border-radius: 50%;
+        transform: translate(0,0) scale(1);
+    }
+    40%{
+        width:5px;
+        border-radius: 50%;
+        transform: translate(0,0) scale(1);
+    }
+    50%{
+        width:5px;
+        border-radius: 50%;
+        transform: translate(0,18px) scale(1); 
+    }
+    80%{
+        width:5px;
+        border-radius: 50%;
+        transform: translate(0,-16px) scale(1);
+    }
+    100%{
+        width:5px;
+        border-radius: 50%;
+        transform: translate(0,100px) scale(0);
+    }
+}
+.nav.open span:nth-child(3){
+    animation: span3 .8s forwards cubic-bezier(.8, .5, .2, 1.4);
+    animation-delay: .7s;
+}
+@keyframes span3{
+    0%{
+        transform: translate(0,0);
+    }
+    60%{
+        transform: rotate(80deg) translate(-7px, -7px);
+    }
+    100%{
+        transform: rotate(45deg) translate(-7px, -7px);
+    }
+}
+.nav.open span:nth-child(1){
+    animation: span1 .8s forwards cubic-bezier(.8, .5, .2, 1.4);
+    animation-delay: 1.1s;
+}
+@keyframes span1{
+    0%{
+        transform: translate(0,0);
+    }
+    60%{
+        transform: rotate(-110deg) translate(-7px, -7px);
+    }
+    100%{
+        transform: rotate(-45deg) translate(-20px, 20px);
+    }
+}   
+.nav span:nth-child(1){
+    animation: span1_close .8s forwards cubic-bezier(.8, .5, .2, 1.4);
+}
+@keyframes span1_close {
+    0%{
+        transform: rotate(-45deg) translate(-20px, 20px);
+    }
+    100%{
+        transform: rotate(0deg) translate(0, 0);
+    }
+}
+.nav span:nth-child(2){
+    animation: span2_close .8s forwards cubic-bezier(.8, .5, .2, 1.4);
+}
+@keyframes span2_close{
+    0%{
+        transform: translate(0, 40px) scale(0);
+    }
+    100%{
+        transform: translate(0, 0) scale(1);
+    }
+}
+.nav span:nth-child(3){
+    animation: span3_close .8s forwards cubic-bezier(.8, .5, .2, 1.4);
+}
+@keyframes span3_close{
+    0%{
+        transform: rotate(45deg) translate(-7px, -7px);
+    }
+    100%{
+        transform: rotate(0deg) translate(0, 0);
+    }
+}
+
+
+/* header nav */
+header{
+ 
+    max-width: 480px;
+    flex-wrap: wrap;
+    display: flex;
+    width: 100%;
+    background: var(--cor--primaria);
+}
+.logo-container>a>img{
+    width: 100px;
+}
+
+
+nav{
+   max-width: 480px;
+    position: relative;
+    display: none;
+    transform: translate(15%, 30%);
+    flex-wrap: wrap;
+    margin: 10px 40px;
+ 
+}
+
+
+ul li {
+    list-style-type: none
+  
+ 
+}
+
+a{ 
+    font-family: "Nunito";
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+
+}
+
+i{
+    color: var(--clr);
+}
+
+body > header > nav.show-menu{
+    display: block;
+    
+  
+}
+
+
+@media  (min-width:481px) and (max-width:768px)  {
+
+        .wrappers{
+            top: 15%;
+        }
+
+
+    header{
+        max-width: 768px;
+        width: 100%;
+    }
+
+    nav{
+        max-width: 768px;
+        width: 100%;
+        margin: -202px 251px;
+        align-items: center;
+        justify-content: center;
+    }
+
+   
+
+}
+
+
+@media (min-width:769px) and (max-width: 1280px)  {
+    
+   /* .wrappers{display: none;} */
+   .wrappers{display: none;}
+
+    header{
+        max-width: 1280px;
+        width: 100%;
+    }
+
+    nav{
+        max-width: 1280px;
+        display: flex;
+    }
+
+  nav>ul{
+    
+        display: flex;
+    }
+   
+    nav>ul>li{
+        margin-left: 12px;
+    }
+
+    a:hover{
+        border-radius: 2px 6px 8px 10px;
+        border-bottom: 5px solid #4dbeff;
+    }
+} 
+
+@media (min-width:1281px) {
+    header{
+        margin: auto;
+       min-width:1400px;
+        width: 100%;
+    }
+
+    .wrappers{display: none;}
+    nav{
+        max-width: 1280px;
+        display: flex;
+    }
+
+  nav>ul{
+    
+        display: flex;
+    }
+   
+    nav>ul>li{
+        margin-left: 12px;
+    }
+
+    a:hover{
+        border-radius: 2px 6px 8px 10px;
+        border-bottom: 5px solid #4dbeff;
+    }
+}

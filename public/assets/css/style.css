@@ -90,7 +90,7 @@ h1 {
     height:100px;
     position: absolute;
     left:50%;
-    top:50%;
+    top:10%;
     transform: translate(-50%, -50%);
 }
 .nav{
@@ -780,7 +780,7 @@ footer>.contatos>div>ul>li{
 
 
 
-@media screen and (max-width: 768px) {
+@media (min-width:481px) and (max-width: 768px) {
 
   header, main, footer, img{
     max-width: 768px;
@@ -790,20 +790,16 @@ footer>.contatos>div>ul>li{
     width: 120px;
   }
 
-  #btnmobile{
-    margin-top: 18px;
-    display: block;
-  }
 
-  #btnmobile{
-    font-size: 25px;
+  .wrappers{
+    display: flex;
+    
+    transform: translate(178%, -6%);
   }
-
-  
 
   header{
     width: 100%;
-    justify-content: space-between;
+  
   }
   header>nav{
     display: none;
@@ -815,8 +811,10 @@ footer>.contatos>div>ul>li{
     display: flex;
     flex-direction: column;
   }
-.wrappers{
-  display: flex;
+  body > header > nav.show-menu{
+    display: block;
+    
+  
 }
 
 /*        Home mobile 768px      */
@@ -899,7 +897,11 @@ footer>.contatos>div>ul>li{
 }
 
 @media screen and (max-width: 480px) {
-header, main, footer, img{
+.wrappers{
+ display: flex;
+}
+
+  header, main, footer, img{
   max-width: 480px;
 }
 
@@ -907,15 +909,6 @@ header, main, footer, img{
     width: 120px;
   }
 
-  #btnmobile{
-    margin-top: 24px;
-    margin-right: 30px;
-    display: block;
-  }
-
-  #btnmobile{
-    font-size: 60px;
-  }
 
   
 
@@ -927,6 +920,8 @@ header, main, footer, img{
     
   }
   header>nav{
+    position: relative;
+    flex-wrap: wrap;
     display: none;
     justify-content: space-between;  
     margin-top: 100px;
@@ -948,9 +943,13 @@ header, main, footer, img{
 
   .wrappers{
     margin-left:170px;
-    display: flex;
+    
   }
-
+  body > header > nav.show-menu{
+    display: block;
+    
+  
+}
 /*        Home mobile   */
 
 

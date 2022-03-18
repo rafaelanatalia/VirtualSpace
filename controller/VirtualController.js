@@ -95,7 +95,10 @@ showDashbord:(req,res)=>{
     res.render('adms/dashboard');
    
     
-}
+},
+ test:(req,res)=>{
+     res.render('test')
+ }
 }
 
 

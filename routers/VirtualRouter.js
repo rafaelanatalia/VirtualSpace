@@ -24,4 +24,8 @@ router.get('/cliente/create',VirtualController.Create);
 router.post('/cliente/login',VirtualController.Login);
 
 
+// teste para fazer o header e footer no css 
+router.get('/test',VirtualController.test)
+
+
 module.exports= router

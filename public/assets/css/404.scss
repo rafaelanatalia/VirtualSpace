@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,600,700');
-$nunito-font: 'Nunito', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;700&display=swap');
+$ubutu-font: 'Ubuntu', sans-serif;
 
 // mixins
 @mixin breakpoint($point) {
@@ -61,8 +61,8 @@ body{
 
 .title{
   color: white;
-  font-family: $nunito-font;
-  font-weight: 600;
+  font-family: $ubutu-font;
+  font-weight: 700;
   text-align: center;
   font-size: 5vmin;
   margin-top: 31vmin;
@@ -74,8 +74,8 @@ body{
 
 .subtitle{
   color: white;
-  font-family: $nunito-font;
-  font-weight: 400;
+  font-family: $ubutu-font;
+  font-weight: 500;
   text-align: center;
   font-size: 3.5vmin;
   margin-top: -1vmin;
@@ -87,7 +87,7 @@ body{
   color: white;
   height: 5vmin;
   padding: 12px;
-  font-family: $nunito-font;
+  font-family: $ubutu-font;
   text-decoration: none;
 	border-radius: 5px;
 

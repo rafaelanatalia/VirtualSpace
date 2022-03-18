@@ -2,8 +2,8 @@
 :root {
   --cor--primaria: #91d7f2;
   --border--bottom: 2px solid rgba(0, 0, 0, 0.5);
-  --titulos: 30px;
-  --textos: 16px;
+  --titulos: 48px;
+  --textos: 20px;
   --textcolor: #ffff;
   --font-family: "Nunito", sans-serif;
   --fontweidt: bold;
@@ -49,9 +49,10 @@ body {
 }
 
 .center{
-    width: 350px;
-    height: 572px;
-   
+    /* width: 390px; */
+    /* height: 570px; */
+    width: 443px;
+    height: 760px;
     position: relative;
     cursor: pointer;
     
@@ -138,8 +139,8 @@ input {
     align-items: center;
     justify-content: center;
     border-radius: 37px;
-    width: 227px;
-    height: 40px;
+    width: 250px;
+    height: 45px;
     margin-left: 29px;
     padding-left: 12px;
     font-size: var(--textos);
@@ -151,20 +152,25 @@ input {
     border-radius: 30px;
     text-shadow: 10px;
   }
-
+  
   .login input[type="text"]:focus,
-  .login input[type="email"]:focus,
-  .login input[type="password"]:focus {
+  .login input[type="file"]:focus,
+  .login input[type="number"]:focus,
+  .login #img:focus
+   {
     background-color:#ab91f283;
   }
 
   .login input[type="text"]::placeholder,
-  .login input[type="email"]::placeholder,
-  .login input[type="password"]::placeholder {
+  .login input[type="file"]::placeholder,
+  .login input[type="number"]::placeholder,
+  .login #img::placeholder {
     font-size: 15px;
     color: var(--textcolor);
     text-indent: 10px;
   }
+
+
 
   .login input[type="submit"] {
     color: var(--textcolor);
@@ -189,6 +195,14 @@ input {
     transition: 1s;
   }
 
+  /* img */
+ 
+  input[type=file]{
+    opacity: 0;
+  }
+i{
+  margin-left: 20px;
+}
 
   /*   recuperar  */
 
