@@ -17,12 +17,14 @@ main {
 .wrapper {
   padding: 30px 10px;
 }
-
+h1{
+display: flex;
+justify-content: center;
+}
 section {
   display: flex;
   justify-content: space-around;
   -webkit-box-align: center;
-
   align-items: center;
   padding: 0 1.5em;
   position: relative;
@@ -128,6 +130,35 @@ button>a.button {
 button>a.button:hover {
   color: #e0aceb;
   box-shadow: rgba(115, 11, 201, 0.7) 0 0px 0px 40px inset;
+}
+
+@media (min-width: 1281px){
+
+  section{
+    margin: auto;
+  }
+}
+
+@media (min-width: 481px) and (max-width:768px){
+  section{
+    
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px){
+  section{
+
+    flex-wrap: wrap;
+  }
+  .wrapper{
+max-width: 480px;
+display: flex;
+
+  }
+  .wrapper {
+    padding: 30px 10px;
+  }
 }
 
 
