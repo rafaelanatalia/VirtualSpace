@@ -1,7 +1,8 @@
 //criando o  roteador e impostando o express
 const express = require("express");
 
-
+//Importando Middlewares
+const Verificador = require('../middlewares/null-Verify')
 //impostando o controller
 const VirtualController= require('../controller/VirtualController');
 

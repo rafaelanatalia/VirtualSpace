@@ -568,25 +568,18 @@ h1 {
       width: 206px;
       height: 45px;
       margin: auto;
-          color: white;
-          background: linear-gradient(
-              180deg,
-              rgba(142, 89, 228, 0.6) 100%,
-              rgba(119, 70, 211, 0.6) 0%
-            );
-          box-shadow: 0px 4px 4px rgba(14, 54, 231, 0.25);
-          border-radius: 22px;
-          margin-top: 35px;
-        }
+      color: white;
+      background: linear-gradient(180deg,rgba(0, 7, 163, 0.6) 0%,rgba(10, 19, 223, 0.6) 100%);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 22px;
+      margin-top: 35px;
+      border: none;
+}
 
   .bnt-basico:hover {
          
     color: var(--primaria);
-    background: linear-gradient(
-      180deg,
-      rgba(26, 188, 228, 0.6) 0%,
-      rgba(138, 122, 230, 0.6) 100%
-    );
+    background: linear-gradient(180deg,rgba(26, 188, 228, 0.6) 0%,rgba(138, 122, 230, 0.6) 100%);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 22px;
     transition: 1s;

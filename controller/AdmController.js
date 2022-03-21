@@ -14,10 +14,12 @@ const { validationResult } = require('express-validator');
         Registro:(req,res)=>{
             const userstring = fs.readFileSync(__dirname + '/../database/Usuarios.json',{encoding:"utf-8"});
             const user = JSON.parse(userstring);
-            const nomedaloja = req.body.nomedaloja;
+            const nomedaloja = req.body.lojanome;
             const email = req.body.email;
             const senha = req.body.senha;
             const senhanovamente = req.body.senhanovamente;
+
+
             if(senha == senhanovamente){
             const hash = bcrypt.hashSync(senha,10); 
             
@@ -27,10 +29,15 @@ const { validationResult } = require('express-validator');
     
             user.push(cliente);
     
+            
             fs.writeFileSync(
                 __dirname + '/../database/Usuarios.json',JSON.stringify(user, null, 3),{flag:'w'}
             );
-            res.redirect('/');
+
+            res.send(cliente);
+
+            // res.render('crud-usuarios/form-Create/formulario-usuario');
+
             }else{
                 res.send('As Senhas Estão Diferentes')
             }
@@ -75,8 +82,7 @@ const { validationResult } = require('express-validator');
         res.render('adms/dashboard');
        
         
-    }
-     
+    },
     
       
     

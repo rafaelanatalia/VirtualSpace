@@ -105,6 +105,7 @@ h3{
     border-radius: 5px;
     text-decoration: none;
     color: white;
+    margin-top: 50px;
 }
 .btn-Voltar{
     background: linear-gradient(180deg, rgba(104, 8, 14, 0.7) 0%, #E33232 100%);
