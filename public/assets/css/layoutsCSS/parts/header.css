@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap");
+
+:root{
+    --color_primary:#845EC2;
+    --color_secundario:#B39CD0;
+    --color_tercearia:#FBEAFF;
+    --color_quartecenaria:#00C9A7;
+    --text-family: 'Nutino';
+    --text-size:18px;
+    --text-size-mobile:15px;
+    --title-family: 'Space Grotesk';
+    --title-size:64px;
+    --title-size-mobile:40px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--color_primary);
+    justify-content: center;
+}
+
+nav ul li{
+    
+    text-decoration: none;
+    list-style-type: none;
+}
+
+a{
+    font-size: var(--text-size-mobile);
+    text-decoration: none;
+}
+
+
+i{
+    color:var(--clr);
+    font-size: var(--text-size-mobile);
+}
+
+
