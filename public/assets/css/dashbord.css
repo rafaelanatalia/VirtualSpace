@@ -101,6 +101,7 @@
     display: flex;
     position: absolute;
     width: 150px;
+    height: 100vh;
     background-color: #1D1531;
     flex-direction: column;
     transition: 0.5s;
@@ -284,6 +285,14 @@
       width: 270px;
       height: 200px;
       border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .line-chart{
+      width: 250px;
+      height: 160px;
+    
     }
     /* =============================Dia Anterior e Melhores Vendedores================================== */
     .position-melhores-dia{
@@ -373,6 +382,9 @@
     height: 100vh;
     display: flex;
     flex-direction: row;
+  }
+  main{
+    height: 100vh;
   }
   .container-flex-left{
     display: flex;
@@ -521,5 +533,9 @@
     width: 600px;
     height: 350px;
     border-radius: 10px;
+  }
+  .line-chart{
+   padding: 20px;
+  
   }
 }
