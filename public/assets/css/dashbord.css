@@ -14,12 +14,14 @@
 }
 /*======reset=======*/
 * {
-    font-family: var(--font-family);
+  font-family: var(--font-family);
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-@media(max-width:500px){
+
+@media (min-width:0px) and (max-width:480px){
   .header{
     background-color: var(--cor--secundaria);
     height: 100px;
@@ -105,7 +107,7 @@
     background-color: #1D1531;
     flex-direction: column;
     transition: 0.5s;
-    right: 360px;
+    left: -41vw;
     max-width: 150px;
   }
   .btnmobile-left:hover ~ .lateral-menu-left{
@@ -290,8 +292,8 @@
       align-items: center;
     }
     .line-chart{
-      width: 250px;
-      height: 160px;
+      width: 100vw;
+      height: 100vh;
     
     }
     /* =============================Dia Anterior e Melhores Vendedores================================== */
@@ -327,7 +329,9 @@
     font-size: 10px;
   }
 }
-@media(min-width:900px){
+
+
+@media(min-width:1280px){
   header{
     background-color: #0071b2;
     height: 150px;
@@ -379,7 +383,6 @@
   }
   .container-flex{
     width: 100vw;
-    height: 100vh;
     display: flex;
     flex-direction: row;
   }
@@ -389,7 +392,6 @@
   .container-flex-left{
     display: flex;
     width: 25vw;
-    height: 100vh;
     max-width: 30vw;
     background-color: #1D1531;
     justify-content: center;
@@ -417,20 +419,19 @@
     max-width: 150px;
     padding: 10px 10px;
     position: relative;
-    right: 80px;
   }
   .list-menu-left > ul > li> a {
     text-decoration: none;
     color: white;
     flex-direction: row;
-    justify-content: flex-end;
-    padding: 20px 80px;
+    justify-content: center;
+    padding: 30px 145px;
+    position: relative;
+    right: 70px;
     width: 150px;
     display: flex;
-    font-size: 20px;
+    font-size: 26px;
     flex-wrap: nowrap;
-    max-width:150px;
-    max-height: 100vh;
   }
   .list-menu-left > ul > li> a:hover{
     border-left: 2px solid #ED0A4B;
@@ -441,7 +442,6 @@
     display: flex;
     background-color: rgba(10, 19, 223, 0.22);
     flex-grow: 95;
-    height: 100vh;
   }
   .flex-rigth-margem{
     display: flex;
@@ -526,16 +526,38 @@
   }
   .container-grafico > label {
     font-size: 18px;
-    margin-bottom:5px;
+    margin-bottom:20px;
   }
   .grafico{
     background-color: white;
     width: 600px;
     height: 350px;
     border-radius: 10px;
+    
   }
   .line-chart{
    padding: 20px;
-  
+   margin-top: 30px;
+  }
+  .position-melhores-dia{
+    margin: 0px 5vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .container-duplo{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .box-white-both{
+    background-color: white;
+    border-radius: 10px;
+    width: 250px;
+    height: 300px;
   }
 }

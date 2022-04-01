@@ -26,7 +26,7 @@ router.get('/login',AdmController.showlogin);
 router.post('/create',AdmController.Registro);
 router.get('/create',AdmController.Create);
 router.post('/login',AdmController.Login);
-router.get('adm/dashboard',AdmController.showDashbord);
+router.get('/dashboard',AdmController.showDashbord);
 
 // produtos
 
