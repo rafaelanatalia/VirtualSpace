@@ -41,7 +41,6 @@ top: 11%;
     width:35px;
     height:35px;
     position: absolute;
-  
     transform: translate(-50%, -50%);
     padding: 0px;
     background-color:transparent;
@@ -52,7 +51,7 @@ top: 11%;
 .nav span{
     width:100%;
     height:5px;
-    background-color:rgb(102, 29, 29);
+    background-color:rgb(255, 255, 255);
     display:block;
     position: absolute;
     border-radius: 2px;
@@ -212,9 +211,18 @@ i{
 }
 
 body > header > nav.show-menu{
-    display: block;
-    
-  
+   
+    position: relative;
+    z-index: 1000;
+    display: flex;
+    width:50%;
+    height: 300px;
+    background-color: #024e7a;
+
+}
+
+.show-menu{
+    margin-top: 20px;
 }
 
 
