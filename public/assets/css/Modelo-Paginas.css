@@ -18,6 +18,7 @@ main {
   padding: 30px 10px;
 }
 h1{
+  margin-top: 2rem;
 display: flex;
 justify-content: center;
 }
@@ -131,6 +132,7 @@ button>a.button:hover {
   color: #e0aceb;
   box-shadow: rgba(115, 11, 201, 0.7) 0 0px 0px 40px inset;
 }
+
 
 @media (min-width: 1281px){
 
