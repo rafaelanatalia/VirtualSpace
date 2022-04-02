@@ -6,11 +6,14 @@
     --color_tercearia:#FBEAFF;
     --color_quartecenaria:#00C9A7;
     --text-family: 'Nutino';
+    --title-family: 'Space Grotesk';
+   
+    --title-size-mobile:40px;
     --text-size:18px;
     --text-size-mobile:15px;
     --title-family: 'Space Grotesk';
-    --title-size:64px;
-    --title-size-mobile:40px;
+    --title-size:20px;
+    --title-size-mobile:20px;
 }
 
 *{
@@ -21,15 +24,19 @@
 
 header{
     width: 100%;
-    max-width: 480px;
+height: 50px;
     display: flex;
     flex-wrap: wrap;
     background-color: var(--color_primary);
-    justify-content: center;
+    justify-content: space-between;
 }
 
+nav ul{
+    margin: auto;
+}
 nav ul li{
-    
+  
+    margin-bottom: 4px;
     text-decoration: none;
     list-style-type: none;
 }
@@ -37,17 +44,229 @@ nav ul li{
 a{
     font-size: var(--text-size-mobile);
     text-decoration: none;
+    color: #FFF;
 }
+
+a:hover{
+    color: brown;
+}
+
 
 
 i{
     color:var(--clr);
     font-size: var(--text-size-mobile);
 }
+nav{
+    position: relative;
+   
 
+    background-color: #845EC2;
+    display: none;
+ justify-items: center;
+   
+ 
+}
+
+body{
+    background-color: brown;
+}
+
+/* nav-icon-8  hambug*/
+.nav-icon-8{
+    
+    width: 35px;
+    height: 30px;
+    margin: 10px 10px;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+  }
+  .nav-icon-8 span{
+    background-color:#FFF;
+    position: absolute;
+    border-radius: 2px;
+    transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+    width:100%;
+    height: 4px;
+  }
+  .nav-icon-8 span:nth-child(1){
+    top:0px;
+    left: 0px;
+  }
+  .nav-icon-8 span:nth-child(2){
+    top:13px;
+    left: 0px;
+  }
+  .nav-icon-8 span:nth-child(3){
+    bottom:0px;
+    left: 0px;
+  }
+  .nav-icon-8:not(.open):hover span:nth-child(1){
+    transform: scaleX(.8);
+  }
+  .nav-icon-8:not(.open):hover span:nth-child(2){
+    transform: scaleX(.5);
+  }
+  .nav-icon-8:not(.open):hover span:nth-child(3){
+    transform: scaleX(.8);
+  }
+  .nav-icon-8.open span:nth-child(1){
+    top: 13px;
+  }
+  .nav-icon-8.open span:nth-child(2){
+    top:13px;
+  }
+  .nav-icon-8.open span:nth-child(3){
+    top: 13px;
+  }
+  
+
+nav.show-menu{
+    width: 75%;
+    height: 200px;
+    display: flex;
+    top: 54px;
+    animation-duration: 3s;
+    animation-name: menu;
+    justify-content: center;
+    border-radius: 0 0 20px 30px;
+}
+
+@keyframes menu {
+    from { top: 0px;
+    }
+    to {top: 54px;}
+}
+
+/* search */
+
+.bx-search-alt-2 input[type=search]{
+    width: 2px;
+    opacity: 0;
+    transition: 3s;
+  }
+  
+  .bx-search-alt-2 input[type=search]:hover{
+    width: 58px;
+    opacity: 1;
+  }
+
+  
+/* active link */
+ul li a.active{
+    border-bottom: 2px solid #fff;
+}
 
 @media (min-width:481px) and (max-width:768px) {
     header{
+    justify-content: space-between;
         width: 100%;
     }
 }
+
+
+
+
+
+
+@media (min-width:769px) and (max-width:1280px) {
+ header{
+     width: 100%;
+     flex-direction: wap;
+ }   
+
+ nav ul{
+     display: flex;
+   justify-content: space-evenly;
+ }
+ nav ul li{
+    margin-left: 40px;
+}
+
+nav{
+
+    display: block;
+   margin-top: 10px;
+   justify-items: center;
+   
+   }
+   
+   nav.show-menu{
+display: none;
+   }
+   
+   
+    .nav-icon-8{
+        display: none;
+    }
+    
+
+
+    .bx-search-alt-2 input[type=search]{
+        width: 100px;
+        opacity: 1;
+        transition: 3s;
+      }
+      
+      .bx-search-alt-2 input[type=search]:hover{
+        width: 100px;
+     
+      }
+
+      i, a{
+        font-size: var(--title-size);
+    }
+
+}
+
+
+@media (min-width:1366px) {
+    header{
+        width: 100%;
+        flex-direction: wap;
+    }   
+   
+    nav ul{
+        display: flex;
+      justify-content:center;
+    }
+
+    nav ul li{
+        margin-left: 40px;
+    }
+   
+    nav{
+    
+        display: block;
+       margin-top: 10px;
+       justify-items: center;
+       
+       }
+       
+       nav.show-menu{
+    display: none;
+       }
+       
+       .nav-icon-8{
+           display: none;
+       }
+       
+   
+   
+       .bx-search-alt-2 input[type=search]{
+           width: 100px;
+           opacity: 1;
+           transition: 3s;
+         }
+         
+         .bx-search-alt-2 input[type=search]:hover{
+           width: 100px;
+        
+         }
+
+         i, a{
+            font-size: var(--title-size);
+        }
+   }
+   
