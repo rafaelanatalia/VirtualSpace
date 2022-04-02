@@ -329,7 +329,287 @@
     font-size: 10px;
   }
 }
+@media (min-width:481px) and (max-width:768px){
+  .header{
+    background-color: var(--cor--secundaria);
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+  }
+  .logo{
+    display: flex;
+    width: 150px;
+    margin-left: 20px;
+    flex-grow: 50;
+  }
+  .nav-menu{
+    display: flex;
+    align-items: center;
+    flex-grow: 50;
+    justify-content: flex-end;
+  }
+  div.nav-menu > a > i {
+    margin-right: 9vw;
+    color: white;
+    cursor: pointer;
+    font-size: 7vw;
+  }
+  .lateral-menu-rigth{
+    background-color: none;
+    width: 250px;
+    position: absolute;
+    top:150px;
+    overflow: hidden;
+  }
+  .lateral-menu-rigth > ul > li{
+    font-size: 3vw;
+    list-style-type: none;
+  }
+  .lateral-menu-rigth > ul > li > a{
+    background-color: var(--cor--secundaria);
+    text-decoration: none;
+    color: white;
+    padding: 10px 25px;
+    display: flex;
+    margin: 0;
+    position: relative;
+    left: 250px;
+    transition: 1s;
+  }
+  .lateral-menu-rigth > ul > li > a:hover{
+    background-color: var(--cor--primaria);
+    color: white;
+  }
+  .btnmobile:hover ~ .lateral-menu-rigth > ul > li > a{
+    transform: translateX(-250px);
+  }
 
+
+  /* ==================================main==================================== */
+  .container-flex{
+    display: flex;
+    flex-direction: row;
+  }
+  /* ==============================================Conteiner Left======================================= */
+  .container-flex-left{
+    display: flex;
+    width: 8vw;
+    background-color: #1D1531;
+  }
+  div.container-flex-left > a > i {
+    color: white;
+    font-size: 5vw;
+  }
+  .lateral-menu-left{
+    display: flex;
+    position: absolute;
+    width: 30vw;
+    height: 100vh;
+    background-color: #1D1531;
+    flex-direction: column;
+    transition: 0.5s;
+    align-items: center;
+    left: -30vw;
+  }
+  .btnmobile-left:hover ~ .lateral-menu-left{
+    transform: translateX(30vw);
+  }
+  .list-menu-left{
+    display: flex;
+    justify-content: center;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .list-menu-left > ul > li{
+    list-style-type: none;
+    width: 30vw;
+    position: relative;
+  }
+  .list-menu-left > ul > li> a {
+    text-decoration: none;
+    color: white;
+    flex-direction: row;
+    justify-content: center;
+    padding: 4vw 14.5vw;
+    display: flex;
+    font-size: 2vw;
+    flex-wrap: nowrap;
+    max-width:150px;
+    max-height: 100vh;
+  }
+  .list-menu-left > ul > li> a:hover{
+    background-color: #110B21;
+  }
+  .list-menu-left > ul > li> a > .divisoria-rigth{  
+    position: relative;
+    left:2vw;
+  }
+  .inicio > i{
+    position: relative;
+    right: 10px;
+    top: 2px;
+  }
+  .pessoas > i {
+    position: relative;
+    top:2px;
+    right: 5px;
+  }
+  .vendas > i{
+    position: relative;
+    top:2px;
+    right: 5px;
+  }
+  .relatórios-P > i{
+    position: relative;
+    right: 5px;
+  }
+  
+  .relatórios-P > i{
+    position: relative;
+    top:2px;
+    right: 5px;
+  }
+  
+
+  /* =============================================Conteiner Rigth==================================== */
+  .container-flex-rigth{
+    display: flex;
+    width: 92vw;
+    background-color: rgba(10, 19, 223, 0.22);
+    height: 100vh;
+  }
+  .flex-rigth-margem{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin: 25px;
+  }
+  /* ---------------------Titulo-------------------- */
+  .container-rigth-box{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 4vw;
+
+  }
+  /* ---------------------Resumo De Vendas ------------------- */
+  .resumo-vendas{
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+  }
+  .resumo-vendas-box{
+    display: flex;
+    width: 150px;
+    height: 100px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4vw;
+  }
+  .label-box-white{
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    height: 20px;
+    width: 100px;
+  }
+  .vendas-box-white{
+    display: flex;
+    background-color: white;
+    width: 14vw;
+    height: 100px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+   
+    
+  }
+  .img-box-white{
+    width: 7vw;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .img-box-white > img {
+    width: 6vw;
+  }
+  .box-white-dados{
+    width: 50px;
+    height: 40px;
+    font-size: 3vw ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  /* -------------------------Grafico--------------------------------- */
+    .container-grafico{
+      width: 650px;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+    .container-grafico > label {
+      font-size: 2.5vw;
+      margin:10px;
+    }
+    .grafico{
+      background-color: white;
+      width: 500px;
+      height: 250px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .line-chart{
+      width: 100vw;
+      height: 100vh;
+    
+    }
+    /* =============================Dia Anterior e Melhores Vendedores================================== */
+    .position-melhores-dia{
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top:25px ;
+    }
+    .container-duplo{
+      width: 250px;
+      height: 280px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .container-duplo > label {
+      font-size: 2vw;
+      height: 30px;
+    }
+    .box-white-both{
+      background-color: white;
+      width: 180px;
+      height: 280px;
+      border-radius: 30px;
+    }
+  /* ====================================Criação de Produto======================================== */
+  .form-criacao-produto{
+    display: flex;
+  }
+  .form-criacao-produto> form > label{
+    font-size: 10px;
+  }
+}
 
 @media(min-width:1280px){
   header{
