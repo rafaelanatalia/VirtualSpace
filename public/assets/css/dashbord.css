@@ -318,6 +318,16 @@
       height: 170px;
       border-radius: 30px;
     }
+    .porcentagem{
+      background-color: white;
+      width: 10vw;
+      height: 20vh;
+      border-radius: 100%;
+      border: #0071b2 2vw solid;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     .container-duplo > label{
       font-size: 10px;
     }
@@ -602,6 +612,16 @@
       height: 280px;
       border-radius: 30px;
     }
+    .porcentagem{
+      background-color: white;
+      width: 10vw;
+      height: 20vh;
+      border-radius: 100%;
+      border: #0071b2 2vw solid;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   /* ====================================Criação de Produto======================================== */
   .form-criacao-produto{
     display: flex;
@@ -839,5 +859,19 @@
     border-radius: 10px;
     width: 250px;
     height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .porcentagem{
+    background-color: white;
+    width: 10vw;
+    height: 20vh;
+    border-radius: 100%;
+    border: #0071b2 2vw solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
