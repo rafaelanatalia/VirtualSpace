@@ -11,35 +11,33 @@ const { validationResult } = require('express-validator');
             res.render('crud-usuarios/criarconta');
             
         },
-        Registro:(req,res)=>{
-            const userstring = fs.readFileSync(__dirname + '/../database/Usuarios.json',{encoding:"utf-8"});
-            const user = JSON.parse(userstring);
-            const nomedaloja = req.body.lojanome;
-            const email = req.body.email;
-            const senha = req.body.senha;
-            const senhanovamente = req.body.senhanovamente;
+        Registro: async (req,res)=>{
+            try{
+                const nome_loja = req.body.lojanome;
+                const email = req.body.email;
+                const senha = req.body.senha;
+                const senhanovamente = req.body.senhanovamente;
+                const planos_id = 1;
+                const foto = "./img";
+                const usuarioDB = require('../server/models')
 
-
-            if(senha == senhanovamente){
-            const hash = bcrypt.hashSync(senha,10); 
+                if(senha == senhanovamente){
+                
+                const post = await usuarioDB.usuarios.create({
+                    nome_loja,
+                    email,
+                    foto,
+                    senha,
+                    planos_id
+                })
+        
             
-            const cliente = {nomedaloja,email,senha:hash};
-    
-            cliente.id = user.length === 0 ? 1 : user.length + 1;
-    
-            user.push(cliente);
-    
-            
-            fs.writeFileSync(
-                __dirname + '/../database/Usuarios.json',JSON.stringify(user, null, 3),{flag:'w'}
-            );
-
-            res.send(cliente);
-
-            // res.render('crud-usuarios/form-Create/formulario-usuario');
-
-            }else{
-                res.send('As Senhas Estão Diferentes')
+                return res.status(200),send(post);
+                }else{
+                    res.send('As Senhas Estão Diferentes');
+                }
+            } catch(err){
+                return res.status(400).send({ error : err });
             }
         },
      
