@@ -40,6 +40,9 @@ const { validationResult } = require('express-validator');
                 return res.status(400).send({ error : err });
             }
         },
+        RegistroSecundarioCreate:(req,res) =>{
+            res.render("crud-usuarios/form-Create/create-plan")
+        },
      
         showlogin:(req,res)=>{
             res.render('crud-usuarios/login');
