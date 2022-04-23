@@ -45,7 +45,6 @@ body {
 .center{
     width: 500px;
     height: 600px;
-   
     position: relative;
     cursor: pointer;
     display: flex;
@@ -172,20 +171,35 @@ body {
     background-color: none ;
     width: 250px;
     height: 300px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 .sobre1{
-    background-color: red;
+    background-color: #7f00ff;
+    border-radius: 15px;
     width: 250px;
     height: 300px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 .sobre2{
-    background-color: blue;
+    background-color: #7f00ff;
+    border-radius: 15px;
     width: 250px;
     height: 300px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 .sobre3{
-    background-color: green;
+    background-color: #7f00ff;
+    border-radius: 15px;
     width: 250px;
     height: 300px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 

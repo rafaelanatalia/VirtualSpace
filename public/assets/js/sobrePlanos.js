@@ -1,10 +1,12 @@
 function plano1(){
-    const carrosel = document.getElementById('sobreMov')
+    const carrosel = document.getElementById('sobreMov');
     carrosel.style.bottom = "300px";
 }
 function plano2(){
-    console.log('azul');
+    const carrosel = document.getElementById('sobreMov');
+    carrosel.style.bottom = "600px";
 }
 function plano3(){
-    console.log('verde');
+    const carrosel = document.getElementById('sobreMov');
+    carrosel.style.bottom = "900px";
 }
