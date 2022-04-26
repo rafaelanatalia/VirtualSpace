@@ -5,7 +5,7 @@ var createError = require('http-errors');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
+const session = require('express-session');
 
 //importando os roteadores
 const VirtualRouter = require("./routers/VirtualRouter");
@@ -29,6 +29,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 //config a pasta public
+app.use(session({
+  name:"VirtualSpace",
+  secret:process.env.SENHASESSION,
+  resave:false,
+  saveUninitialized:false
+}))
 app.use(express.static(path.join(__dirname, 'public')));
 
 

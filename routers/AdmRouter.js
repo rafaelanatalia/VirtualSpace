@@ -24,6 +24,7 @@ const router=express.Router();
 // pages de login
 router.get('/login',AdmController.showlogin);
 router.post('/create',AdmController.Registro);
+router.get('/create-plan',AdmController.RegistroSecundarioCreate);
 router.get('/create',AdmController.Create);
 router.post('/login',AdmController.Login);
 router.get('/dashboard',AdmController.showDashbord);

@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap");
+:root {
+  --cor--primaria: #91d7f2;
+  --border--bottom: 2px solid rgba(0, 0, 0, 0.5);
+  --titulos: 30px;
+  --textos: 16px;
+  --textcolor: #ffff;
+  --font-family: "Nunito", sans-serif;
+  --fontweidt: bold;
+  --z--index-max: 100;
+  --z--index-medio: 50;
+  --z--index-baixo: 1;
+}
+
+/*======reset=======*/
+* {
+    box-sizing: border-box;
+    font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+}
+
+
+ 
+    
+/*====== login=====*/
+
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: radial-gradient(
+        circle at 18.68% 38.6%,
+        #743cb6 0,
+        #5e35b5 25%,
+        #422eb3 50%,
+        #0829b1 75%,
+        #0025b0 100%
+      );
+  
+}
+
+.center{
+    width: 500px;
+    height: 600px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.center .login{
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.089);
+    backdrop-filter: blur(20px);
+    border: 1px solid while;
+    color: var(--textcolor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.055);
+    border-radius: 60px 10px;
+    transition: all .4s;
+}
+
+.center .login label{
+    margin-top: 20px;
+    font-size: var(--textos);
+    text-align:start;
+    font-family: "Nunito";
+        color: var(--textcolor);
+
+}
+
+.center:hover .login{
+    color: rgb(16, 140, 212);
+}
+
+
+.center::before,
+.center::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #7f00ff;
+    z-index: -20;
+    transition: all .4s;
+    border-radius: 60px 10px;
+}
+
+.center::before{
+    top: 0;
+    right: 0;
+}
+
+.center::after{
+    bottom: 0;
+    left: 0;
+    background: #e100ff;
+
+}
+
+.center:hover::before{
+    width: 50px;
+    height: 50px;
+    transform: translate(20px, -20px);
+    border-radius: 50%;
+}
+
+.center:hover::after{
+    width: 100px;
+    height: 100px;
+    transform: translate(-20, 20px);
+    border-radius: 50%;
+}
+
+/* começando o formulario  */
+
+.margin-center{
+    width: 430px;
+    height: 540px;
+    margin-top: 30px;
+}
+.gradePlanos{
+    width: 430px;
+    height: 125px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+.boxPlanos{
+    border: 1px black solid;
+    width: 130px;
+    border-radius: 10px;
+}
+.sobrePlanos{
+    color: white;
+    background-color: gold;
+    padding: 5px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.bntFinalizar{
+    text-decoration: none;
+    color: white;
+    background-color: firebrick;
+    padding: 20px 60px;
+    border-radius: 10px;
+}
+.sobre{
+    width: 250px;
+    height: 300px;
+    position: absolute;
+    left: 100px;
+    overflow: hidden;
+}
+.sobreMov{
+    position: relative;
+    bottom: 0px;
+}
+.sobre0{
+    background-color: none ;
+    width: 250px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.sobre1{
+    background-color: #7f00ff;
+    border-radius: 15px;
+    width: 250px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.sobre2{
+    background-color: #7f00ff;
+    border-radius: 15px;
+    width: 250px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.sobre3{
+    background-color: #7f00ff;
+    border-radius: 15px;
+    width: 250px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
