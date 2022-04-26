@@ -19,14 +19,13 @@ const { validationResult } = require('express-validator');
                 const senhanovamente = req.body.senhanovamente;
                 const planos_id = 1;
                 const foto = "./img";
-                const usuarioDB = require('../server/models')
+                const usuarioDB = require('../server/models');
 
                 if(senha == senhanovamente){
                 
                 const post = await usuarioDB.usuarios.create({
                     nome_loja,
                     email,
-                    foto,
                     senha,
                     planos_id
                 })
