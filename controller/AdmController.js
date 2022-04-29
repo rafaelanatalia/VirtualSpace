@@ -12,12 +12,12 @@ const { validationResult } = require('express-validator');
             
         },
         Registro: async (req,res)=>{
-            try{
+           
                 const nome_loja = req.body.lojanome;
                 const email = req.body.email;
                 const senha = req.body.senha;
                 const senhanovamente = req.body.senhanovamente;
-                const planos_id = 1;
+                const planos_id = 4;
                 const foto = "./img";
                 const usuarioDB = require('../server/models');
 
@@ -29,15 +29,13 @@ const { validationResult } = require('express-validator');
                     senha,
                     planos_id
                 })
-        
+                
             
                 return res.status(200).send(post);
                 }else{
                     res.send('As Senhas Estão Diferentes');
                 }
-            } catch(err){
-                return res.status(400).send({ error : err });
-            }
+           
         },
         RegistroSecundarioCreate:(req,res) =>{
             res.render("crud-usuarios/form-Create/create-plan")
@@ -48,32 +46,19 @@ const { validationResult } = require('express-validator');
         },
     
         Login:(req,res)=>{
-             
-            const {email,senha} = req.body;
-    
-            const usuariosstring = fs.readFileSync(__dirname + '/../database/Usuarios.json',{encoding:"utf-8"});
-            const usuarios = JSON.parse(usuariosstring);
-    
-            const usuario = usuarios.find( u => u.email == email);
-    
-            if(usuario === undefined){
-                return res.send('Senha ou Email invalido');
-            }
-            const senhacorreta = bcrypt.compareSync(senha,usuario.senha);
-            
-            if(!senhacorreta){
-                return res.send('Senha ou Email invalido');
-            }
-            // req.session.usuario = usuario;
-    
-            return res.redirect('/views/dashboard');
+            const usuarioDB = require('../server/models');
+
+        
     
         },
         Logout:(req,res)=>{
             
-            req.session.usuario = undefined;
+            if(req.session.usuario = undefined){
+
+                
+            }
     
-            return res.redirect('/login')
+            
         },
         
     

@@ -4,6 +4,9 @@ const {
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
 
+  class usuarios extends Model {}
+  
+
   usuarios.associate = (models) =>{
     usuarios.hasMany(models.planos,{
       foreignkey:"planos_id",
