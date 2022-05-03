@@ -4,6 +4,7 @@ const fs = require('fs');
 const bcrypt = require('bcrypt');
 const { randomUUID } = require('crypto');
 const { validationResult } = require('express-validator');
+const db = require('../server/models');
 
 
     module.exports = AdmController = {
@@ -17,7 +18,6 @@ const { validationResult } = require('express-validator');
                 const email = req.body.email;
                 const senha = req.body.senha;
                 const senhanovamente = req.body.senhanovamente;
-                const planos_id = 4;
                 const foto = "./img";
                 const usuarioDB = require('../server/models');
 
@@ -27,11 +27,11 @@ const { validationResult } = require('express-validator');
                     nome_loja,
                     email,
                     senha,
-                    planos_id
                 })
                 
             
-                return res.status(200).send(post);
+                return res.render('crud-usuarios/login');
+
                 }else{
                     res.send('As Senhas Estão Diferentes');
                 }
@@ -47,8 +47,24 @@ const { validationResult } = require('express-validator');
     
         Login:(req,res)=>{
             const usuarioDB = require('../server/models');
+            const usuarioemail = req.body.email;
+            const usuariosenha = req.body.senha;
+            const jwt = require('jsonwebtoken');
+            const SECRET = 'segredo';
 
-        
+            db.usuarios.findAll().then(function(usuario){
+                usuario.map((i)=>{
+                    if(i.email == usuarioemail && i.senha == usuariosenha){
+                        if(i.planos_id == 4){
+                            return res.render('crud-usuarios/form-Create/create-plan');
+                        }
+                            const id = i.id;
+                            const token = jwt.sign({id},SECRET,{expiresIn: 60})
+                            return res.render('adms/dashboard');
+                    }
+                    
+                });
+            })
     
         },
         Logout:(req,res)=>{
