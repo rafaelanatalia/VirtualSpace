@@ -52,18 +52,24 @@ const db = require('../server/models');
             const jwt = require('jsonwebtoken');
             const SECRET = 'segredo';
 
-            db.usuarios.findAll().then(function(usuario){
-                usuario.map((i)=>{
-                    if(i.email == usuarioemail && i.senha == usuariosenha){
-                        if(i.planos_id == 4){
-                            return res.render('crud-usuarios/form-Create/create-plan');
-                        }
-                            const id = i.id;
-                            const token = jwt.sign({id},SECRET,{expiresIn: 60})
-                            return res.render('adms/dashboard');
-                    }
-                    
-                });
+            db.usuarios.findOne({
+                where:{
+                    email:usuarioemail,
+                    senha:usuariosenha
+                }
+            }).then(function(usuario){
+               
+                usuario.senha = undefined;
+                delete usuario.senha;
+                req.session.usuario = usuario ;
+
+                if(usuario.planos_id == 4){
+                   
+
+                    return res.redirect('/create-plan');
+                }
+
+                    return res.redirect('/dashboard');
             })
     
         },

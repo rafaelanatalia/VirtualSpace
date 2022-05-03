@@ -20,76 +20,7 @@
     margin: 0;
     
   }
-/* ===================HEADER==================== */
 
-    header {
-      height: 100px;
-      width: 100vw;
-      position: absolute;
-      transform: translateY(-150px);
-    }
-    header:hover{
-      animation: arrow 0.7s both;
-    }
-
-    @keyframes arrow {
-      0% {transform: translateY(-121px);}
-      10%{transform: translateY(-110px);}
-      20%{transform: translateY(-100px);}
-      30%{transform: translateY(-80px);}
-      40%{transform: translateY(-60px);}
-      50%{transform: translateY(-40px);}
-      60%{transform: translateY(-30px);}
-      70%{transform: translateY(-20px);}
-      80%{transform: translateY(-10px);}
-      90%{transform: translateY(-5px);}
-      100%{transform: translateY(-0);}
-    }
-    .header-container{
-        background-color: var(--cor--secundaria);
-        height: 18vh;
-        display: flex;
-        flex-direction: row;
-    }
-    .logo-container{
-        flex-grow: 80;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-    }
-    #nav-menu{
-        flex-grow: 50;
-        display: flex;
-        align-items: center;
-        padding-left: 5vw;
-    }
-    nav > ul {
-        display: flex;
-        list-style-type: none ;
-    }
-    nav > ul > li {
-        display: flex;
-        justify-content: center;
-    }
-    header > nav > ul > li > i{
-        line-height: 2px;
-    }
-    nav > ul > li >a{
-        color: white;
-        padding: 1vh 2vw;
-        text-decoration: none;
-        font-family: var(--font-family);
-    }
-    nav > ul > li >a:hover{
-        border-radius: 2px 6px 8px 10px;
-        border-bottom: 5px solid #4dbeff;
-    }
-    .logo {
-        width: 110px;
-        display: flex;
-        align-items: flex-end;
-    }
 /* =============================Main======================================== */
 
 main{

@@ -22,65 +22,6 @@
 
 
 @media (min-width:0px) and (max-width:480px){
-  .header{
-    background-color: var(--cor--secundaria);
-    height: 100px;
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-  }
-  .logo{
-    display: flex;
-    width: 100px;
-    height: 100px;
-    margin-left: 20px;
-    flex-grow: 50;
-  }
-  .nav-menu{
-    display: flex;
-    align-items: center;
-    flex-grow: 50;
-    justify-content: flex-end;
-  }
-  div.nav-menu > a > i {
-    margin-right: 20px;
-    color: black;
-    cursor: pointer;
-  }
-  .lateral-menu-rigth{
-    background-color: none;
-    width: 200px;
-    position: absolute;
-    top:100px;
-    overflow: hidden;
-  }
-
-  .btnmobile{
-    font-size: 25px;
-  }
-  .lateral-menu-rigth > ul > li{
-    font-size: 13px;
-    list-style-type: none;
-  }
-  .lateral-menu-rigth > ul > li > a{
-    background-color: var(--cor--secundaria);
-    text-decoration: none;
-    color: white;
-    padding: 10px 25px;
-    display: flex;
-    margin: 0;
-    position: relative;
-    left: 200px;
-    transition: 1s;
-  }
-  .lateral-menu-rigth > ul > li > a:hover{
-    background-color: var(--cor--primaria);
-    color: white;
-  }
-  .btnmobile:hover ~ .lateral-menu-rigth > ul > li > a{
-    transform: translateX(-200px);
-  }
-
 
   /* ==================================main==================================== */
   .container-flex{
@@ -685,6 +626,7 @@
     width: 100vw;
     display: flex;
     flex-direction: row;
+    margin-top: 20vh;
   }
   main{
     height: 100vh;

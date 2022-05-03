@@ -138,8 +138,13 @@ body {
     margin-bottom: 100px;
 }
 .boxPlanos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     border: 1px black solid;
     width: 130px;
+    height: 200px;
     border-radius: 10px;
 }
 .sobrePlanos{
@@ -202,4 +207,3 @@ body {
     justify-content: center;
     text-align: center;
 }
-

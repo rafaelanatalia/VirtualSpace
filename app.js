@@ -12,6 +12,7 @@ const VirtualRouter = require("./routers/VirtualRouter");
 const AdmRouter = require('./routers/AdmRouter');
 const ProdutosRouter = require("./routers/ProdutosRouter");
 const PagamentosRouter = require("./routers/PagamentosRouter");
+const sessionMiddleware = require("./middlewares/sessionMiddleware");
 
 // importando os middlewares
 
@@ -29,6 +30,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 //config a pasta public
+
 app.use(session({
   name:"VirtualSpace",
   secret:process.env.SENHASESSION,
@@ -41,6 +43,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 //JSON
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
+
+//res local
+
+app.use(sessionMiddleware);
+
 
 // criar a rota respondendo a requisição
 app.use('/', VirtualRouter);

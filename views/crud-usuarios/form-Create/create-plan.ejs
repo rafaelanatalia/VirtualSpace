@@ -12,16 +12,16 @@
 <body>
     <div class="center">
         <div class="margin-center">
-            <h2>Hello!, Nome</h2><br>
+            <h2>Hello!, <%= usuario?.nome_loja %> </h2><br>
             <label>Escolha abaixo uma logo (opicional)</label><br>
             <h5>você poderá muda-la depois se quiser</h5><br><br>
-            <input type="file"></input><br><br><br>
-            <label>Escolha abaixo o plano desejado</label><br><br>
+            <input type="file"></input><br><br>
+            <label>Escolha abaixo o plano desejado</label>
                 <div class="gradePlanos">
-                    <div class="boxPlanos">Plano Basico<br><br><button href="" class="sobrePlanos" onclick="plano1()">Sobre</button><br><br><input type="checkbox"> </div>
-                    <div class="boxPlanos">Plano Médio<br><br><button href="" class="sobrePlanos" onclick="plano2()">Sobre</button><br><br><input type="checkbox"> </div>
-                    <div class="boxPlanos">Plano Top<br><br><button href="" class="sobrePlanos" onclick="plano3()">Sobre</button><br><br><input type="checkbox"> </div>
-                </div>
+                    <label for="plano1" class="boxPlanos" onclick="plano1()">Plano Basico<br><br><button href="" class="sobrePlanos">Sobre</button><br><br><input type="radio" name="plano" value="1" id="plano1"></label>
+                    <label for="plano2" class="boxPlanos" onclick="plano2()">Plano Médio<br><br><button href="" class="sobrePlanos">Sobre</button><br><br><input type="radio" name="plano" value="2" id="plano2"></label>
+                    <label for="plano3" class="boxPlanos" onclick="plano3()">Plano Top<br><br><button href="" class="sobrePlanos">Sobre</button><br><br><input type="radio" name="plano" value="3" id="plano3"></label>
+                </div><br>
                 <a href="" class="bntFinalizar">Ir para Opções de pagamento</a>
         </div>
     </div>

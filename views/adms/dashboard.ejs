@@ -10,25 +10,7 @@
     <title>Pagina de Usuarios</title>
 </head>
 <body>
-    <header>
-        <div class="header">
-            <div class="logo-container">
-                <a href="#Home"><img src="/assets/img/Vitural_space-logo.png" alt="logo da empresa" class="logo"></a>
-            </div>
-            <div class="nav-menu">
-                <a class="btnmobile"><i class='bx bx-menu'></i></a>
-            <div class="lateral-menu-rigth">
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Sobre Nós</a></li>
-                    <li><a href="">Planos</a></li>
-                    <li><a href="">Sua Loja</a></li>
-                    <li><a href="">Modelos De Paginas</a></li>
-                </ul>
-            </div>
-            </div>
-        </div>
-    </header>
+    <%- include('../parts/header'); %>
     <main>
         <div class="container-flex">
             <div class="container-flex-left">
@@ -52,7 +34,7 @@
             <div class="container-flex-rigth">
                 <div class="flex-rigth-margem">
                     <div class="container-rigth-box">
-                        <h4>Hi Empresa Teste,</h4><br>
+                        <h4>Hi, <%= usuario?.nome_loja %>  </h4><br>
                         <h6>Suas Vendas de Hoje:</h6>
                     </div>
                         <div class="resumo-vendas">
