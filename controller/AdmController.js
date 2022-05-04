@@ -18,7 +18,6 @@ const db = require('../server/models');
                 const email = req.body.email;
                 const senha = req.body.senha;
                 const senhanovamente = req.body.senhanovamente;
-                const foto = "./img";
                 const usuarioDB = require('../server/models');
 
                 if(senha == senhanovamente){
@@ -33,7 +32,8 @@ const db = require('../server/models');
                 return res.render('crud-usuarios/login');
 
                 }else{
-                    res.send('As Senhas Estão Diferentes');
+
+                    res.render('As Senhas Estão Diferentes');
                 }
            
         },
@@ -49,9 +49,7 @@ const db = require('../server/models');
             const usuarioDB = require('../server/models');
             const usuarioemail = req.body.email;
             const usuariosenha = req.body.senha;
-            const jwt = require('jsonwebtoken');
-            const SECRET = 'segredo';
-
+            
             db.usuarios.findOne({
                 where:{
                     email:usuarioemail,
@@ -62,12 +60,6 @@ const db = require('../server/models');
                 usuario.senha = undefined;
                 delete usuario.senha;
                 req.session.usuario = usuario ;
-
-                if(usuario.planos_id == 4){
-                   
-
-                    return res.redirect('/create-plan');
-                }
 
                     return res.redirect('/dashboard');
             })

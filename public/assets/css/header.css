@@ -192,9 +192,23 @@
         transform: rotate(0deg) translate(0, 0);
     }
 }
+.usuarioLogado{
+    padding: 5px 30px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 5vh;
+    right: 7vw;
+    
+}
+.usuarioLogado > img{
+    width: 4vw;
+    height: 8vh;
+    border-radius: 100px;
+    margin-right: 20px;
+}
 
-  
-  
   /* ==============BOTÕES============== */
   #Home{
     padding-top: 150px;

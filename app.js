@@ -13,6 +13,7 @@ const AdmRouter = require('./routers/AdmRouter');
 const ProdutosRouter = require("./routers/ProdutosRouter");
 const PagamentosRouter = require("./routers/PagamentosRouter");
 const sessionMiddleware = require("./middlewares/sessionMiddleware");
+const planVerify = require("./middlewares/planVerify");
 
 // importando os middlewares
 
@@ -49,11 +50,14 @@ app.use(express.json());
 app.use(sessionMiddleware);
 
 
+
+
+
 // criar a rota respondendo a requisição
-app.use('/', VirtualRouter);
-app.use('/', AdmRouter);
-app.use('/adm/produtos',ProdutosRouter);
-app.use('/pagamento',PagamentosRouter);
+app.use('/', planVerify,VirtualRouter);
+app.use('/',planVerify, AdmRouter);
+app.use('/adm/produtos',planVerify,ProdutosRouter);
+app.use('/pagamento',planVerify,PagamentosRouter);
 
 
 // catch 404 and forward to error handler
