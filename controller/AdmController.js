@@ -78,6 +78,9 @@ const db = require('../server/models');
        
         
         },
+        showplanotop:(req,res)=>{
+            res.render('paginas/pagina-top');
+        }
 }
 
 module.exports = AdmController;
