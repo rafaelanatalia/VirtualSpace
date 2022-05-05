@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   planos.init({
     nome_plano: DataTypes.STRING,
-    preco: DataTypes.STRING
+    preco: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'planos',

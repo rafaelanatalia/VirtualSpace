@@ -16,11 +16,12 @@ module.exports = (sequelize, DataTypes) => {
     nome_loja: DataTypes.STRING,
     email: DataTypes.STRING,
     senha: DataTypes.STRING,
-    planos_id: DataTypes.INTEGER
+    planos_id: DataTypes.INTEGER,
+    foto: DataTypes.STRING,
   }, {
     sequelize,
     modelName: 'usuarios',
-    timestamps: false,
+    timestamps: true,
   });
   return usuarios;
 };
