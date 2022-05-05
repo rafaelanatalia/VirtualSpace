@@ -21,7 +21,8 @@ module.exports = {
         type: Sequelize.STRING
       },
       planos_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        defaultValue: 1,
       },
       createdAt: {
         allowNull: false,
