@@ -12,11 +12,12 @@ const VirtualRouter = require("./routers/VirtualRouter");
 const AdmRouter = require('./routers/AdmRouter');
 const ProdutosRouter = require("./routers/ProdutosRouter");
 const PagamentosRouter = require("./routers/PagamentosRouter");
-const sessionMiddleware = require("./middlewares/sessionMiddleware");
-const planVerify = require("./middlewares/planVerify");
+const PlanosRouter = require("./routers/PlanosRouter");
 
 // importando os middlewares
-
+const planVerify = require("./middlewares/planVerify");
+const sessionMiddleware = require("./middlewares/sessionMiddleware");
+const logedVerify = require('./middlewares/logedVerify');
 
 //criando o servidor 
 const app=express();
@@ -50,18 +51,15 @@ app.use(express.json());
 //res local
 app.use(sessionMiddleware);
 
-
-
-
-
 // =====================Rotas===========================
 
-app.use('/', planVerify,VirtualRouter); //Pagina Principal
-app.use('/',planVerify, AdmRouter); //Usuarios e Clientes
-app.use('/produtos',planVerify,ProdutosRouter);//Produtos
+app.use('/',VirtualRouter); //Pagina Principal
+app.use('/', AdmRouter); //Usuarios e Clientes
+app.use('/',PlanosRouter);//Planos
+app.use('/produtos',logedVerify,ProdutosRouter);//Produtos
 
 
-app.use('/pagamento',planVerify,PagamentosRouter);
+app.use('/pagamento',PagamentosRouter);
 
 
 // catch 404 and forward to error handler
@@ -85,5 +83,5 @@ app.use(function(req, res, next) {
 
 //o levantamento do servidor foi para a bin 
 // importando o app para a bin 
-module.exports=app
+module.exports = app
 
