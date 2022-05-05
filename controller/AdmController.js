@@ -1,13 +1,30 @@
-const Produtos = require('../database/Produtos.json');
-
-const fs = require('fs');
-const bcrypt = require('bcrypt');
-const { randomUUID } = require('crypto');
-const { validationResult } = require('express-validator');
 const db = require('../server/models');
 
 
-    module.exports = AdmController = {
+    const  AdmController = {
+        showlogin:(req,res)=>{
+            res.render('crud-usuarios/login');
+        },
+        Login:(req,res)=>{
+            const usuarioDB = require('../server/models');
+            const usuarioemail = req.body.email;
+            const usuariosenha = req.body.senha;
+            
+            db.usuarios.findOne({
+                where:{
+                    email:usuarioemail,
+                    senha:usuariosenha
+                }
+            }).then(function(usuario){
+               
+                usuario.senha = undefined;
+                delete usuario.senha;
+                req.session.usuario = usuario ;
+
+                    return res.redirect('/dashboard');
+            })
+    
+        },
         Create:(req,res)=>{
             res.render('crud-usuarios/criarconta');
             
@@ -37,54 +54,30 @@ const db = require('../server/models');
                 }
            
         },
+        showloginCliente:(req,res)=>{
+            res.render('crud-usuarios/loginCliente');
+        },
+        loginCliente:(req,res)=>{
+            
+        },
+        showCreateCliente:(req,res)=>{
+            res.render('crud-usuarios/criarcontaCliente');
+        },
+        CreateCliente:(req,res)=>{
+            
+        },
+        
+
         RegistroSecundarioCreate:(req,res) =>{
             res.render("crud-usuarios/form-Create/create-plan")
         },
-     
-        showlogin:(req,res)=>{
-            res.render('crud-usuarios/login');
-        },
-    
-        Login:(req,res)=>{
-            const usuarioDB = require('../server/models');
-            const usuarioemail = req.body.email;
-            const usuariosenha = req.body.senha;
-            
-            db.usuarios.findOne({
-                where:{
-                    email:usuarioemail,
-                    senha:usuariosenha
-                }
-            }).then(function(usuario){
-               
-                usuario.senha = undefined;
-                delete usuario.senha;
-                req.session.usuario = usuario ;
-
-                    return res.redirect('/dashboard');
-            })
-    
-        },
-        Logout:(req,res)=>{
-            
-            if(req.session.usuario = undefined){
-
-                
-            }
-    
-            
-        },
         
     
-    
-    showDashbord:(req,res)=>{
-        res.render('adms/dashboard');
+        showDashbord:(req,res)=>{
+            res.render('adms/dashboard');
        
         
-    },
-    
-      
-    
-    
-
+        },
 }
+
+module.exports = AdmController;

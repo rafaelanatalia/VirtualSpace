@@ -45,18 +45,22 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
-//res local
+//Middleware
 
+//res local
 app.use(sessionMiddleware);
 
 
 
 
 
-// criar a rota respondendo a requisição
-app.use('/', planVerify,VirtualRouter);
-app.use('/',planVerify, AdmRouter);
-app.use('/adm/produtos',planVerify,ProdutosRouter);
+// =====================Rotas===========================
+
+app.use('/', planVerify,VirtualRouter); //Pagina Principal
+app.use('/',planVerify, AdmRouter); //Usuarios e Clientes
+app.use('/produtos',planVerify,ProdutosRouter);//Produtos
+
+
 app.use('/pagamento',planVerify,PagamentosRouter);
 
 

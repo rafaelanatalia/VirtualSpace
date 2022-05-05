@@ -1,0 +1,130 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: "Nunito", sans-serif;
+}
+
+header{
+    background-color: #0071b2;
+    height: 150px;
+  }
+  .header{
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+  }
+  #logo-container{
+    width: 15vw;
+    padding-left: 100px;
+  }
+  #logo{
+    width: 150px;
+  }
+  .btnmobile{
+    display: none;
+  }
+  .nav-menu{
+    width: 70vw;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .lateral-menu-rigth{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .lateral-menu-rigth > ul{
+    display: flex;
+
+  }
+  .lateral-menu-rigth > ul > li{
+    display: flex;
+    padding: 10px 20px;
+  }
+  .lateral-menu-rigth > ul > li > a{
+    text-decoration: none;
+    color: white;
+    background-color: var(--cor--secundaria);
+    transition: 1s;
+  }
+  .lateral-menu-rigth > ul > li > a:hover{
+    border-radius: 2px 6px 8px 10px;
+    border-bottom: 5px solid #4dbeff;
+  }
+  .container-flex{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20vh;
+  }
+  main{
+    height: 100vh;
+  }
+  .container-flex-left{
+    display: flex;
+    width: 25vw;
+    max-width: 30vw;
+    background-color: #1D1531;
+    justify-content: center;
+  }
+  div.container-flex-left > a > i {
+    display: none;
+  }
+  .lateral-menu-left{
+    display: flex;
+    width: 150px;
+    background-color: #1D1531;
+    flex-direction: column;
+    max-width: 150px;
+  }
+  .list-menu-left{
+    display: flex;
+    justify-content: center;
+    display: flex;
+    flex-wrap: nowrap;
+    max-width: 150px;
+  }
+  .list-menu-left > ul > li{
+    list-style-type: none;
+    width: 100vw;
+    max-width: 150px;
+    padding: 10px 10px;
+    position: relative;
+  }
+  .list-menu-left > ul > li> a {
+    text-decoration: none;
+    color: white;
+    flex-direction: row;
+    justify-content: center;
+    padding: 30px 50px;
+    position: relative;
+    right: 70px;
+    width: 150px;
+    display: flex;
+    font-size: 26px;
+    flex-wrap: nowrap;
+  }
+  .list-menu-left > ul > li> a:hover{
+    border-left: 2px solid #ED0A4B;
+    background-color: #110B21;
+  }
+/* =======================Container rigth================= */
+    .container-flex-rigth{
+    display: flex;
+    background-color: rgba(10, 19, 223, 0.22);
+    flex-grow: 95;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    }
+    .container-flex-rigth-margin{
+      width: 65vw;
+      display: flex;
+      justify-content: space-between;
+    }
+    .buttonProdutos{
+        padding: 50px 80px; 
+
+    }
