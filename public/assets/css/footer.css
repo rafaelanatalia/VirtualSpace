@@ -1,0 +1,33 @@
+footer{
+    width: 100vw;
+    height: 300px;
+    background-color: black;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+.container-margin-footer{
+  width: 900px;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer-part{
+  border-left: white 2px solid;
+  border-right: white 2px solid;
+  height: 200px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-part > img{
+  width: 50px;
+  height: 50px;
+}
