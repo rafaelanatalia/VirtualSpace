@@ -194,7 +194,6 @@
     }
 }
 .usuarioLogado{
-    padding: 5px 30px;
     position: absolute;
     display: flex;
     justify-content: center;

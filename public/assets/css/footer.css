@@ -7,7 +7,11 @@ footer{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    font-family: "Nunito", sans-serif;
   }
+.titulo{
+  margin-bottom: 5vh;
+}
 .container-margin-footer{
   width: 900px;
   height: 200px;

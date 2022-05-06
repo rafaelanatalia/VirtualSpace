@@ -4,25 +4,24 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
-    .container-flex{
-      width: 100vw;
-      display: flex;
-      flex-direction: row;
-      margin-top: 20vh;
-    }
-    main{
-      height: 100vh;
-    }
-    .container-flex-left{
+   .container-flex-left{
       display: flex;
       width: 25vw;
+      padding-top: 10vh;
       max-width: 30vw;
       background-color: #1D1531;
       justify-content: center;
     }
     div.container-flex-left > a > i {
       display: none;
+    }
+    .img-lateral-menu > img{
+      width: 15vw;
+    }
+    .img-lateral-menu{
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     .lateral-menu-left{
       display: flex;
