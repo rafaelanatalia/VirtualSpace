@@ -186,3 +186,21 @@ header{
       .btnFinalizar:hover{
         box-shadow: black 3px 3px 3px;
       }
+      .container-flex-rigth-margin >form > nav {
+        width: 25vw;
+        height: 80vh;
+        margin-top: 5px;
+      }
+      .container-flex-rigth-margin >form > nav > li {
+        list-style-type: none;
+        display: flex;
+        border: #ED0A4B 2px solid;
+        justify-content: center;
+        cursor: pointer;
+      }
+      .container-flex-rigth-margin >form > nav > li:hover{
+        box-shadow: black 3px 3px 3px;
+      }
+      .procurar{
+        height: 1vh;
+      }

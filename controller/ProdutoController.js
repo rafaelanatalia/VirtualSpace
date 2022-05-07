@@ -9,9 +9,6 @@ const  UsuarioController = {
     showIncluir: (req, res) => {
         res.render('adms/produtosIncluir');
     },
-    showProcurar: (req, res) => {
-        res.render('adms/produtosProcurar');
-    },
     showAlterar: (req, res) => {
         res.render('adms/produtosAlterar');
     },

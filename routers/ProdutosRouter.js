@@ -10,7 +10,6 @@ router.get('/',ProdutoController.showProdutos);
 
 //Crud de produtos - GET
 router.get('/incluir',ProdutoController.showIncluir);
-router.get('/procurar',ProdutoController.showProcurar);
 router.get('/alterar',ProdutoController.showAlterar);
 router.get('/deletar',ProdutoController.showDeletar);
 
