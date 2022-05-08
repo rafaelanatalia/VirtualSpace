@@ -1,13 +1,15 @@
 let express = require('express');
-const { showPlanoBasico, showPlanoMedio, showPlanoTop } = require('../controller/PlanosController');
+const PlanosController = require('../controller/PlanosController');
 let router = express.Router();
 
 
 
 
-router.get('/planobasico',showPlanoBasico);
-router.get('/planomedio',showPlanoMedio);
-router.get('/planotop',showPlanoTop);
+router.get('/planobasico',PlanosController.showPlanoBasico);
+router.get('/planomedio',PlanosController.showPlanoMedio);
+router.get('/planotop',PlanosController.showPlanoTop);
+
+router.get('/produto',PlanosController.showProduto);
 
 
 

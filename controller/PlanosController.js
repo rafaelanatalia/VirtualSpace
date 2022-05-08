@@ -7,6 +7,9 @@ const PlanosController = {
     },
     showPlanoTop:(req,res)=>{
         res.render('paginas/pagina-top');
+    },
+    showProduto:(req,res)=>{
+        res.render('adms/produto');
     }
 }
 

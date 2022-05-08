@@ -32,7 +32,7 @@ router.post('/cliente/create',AdmController.CreateCliente);
 //Rota Para Dashboard
 router.get('/dashboard',AdmController.showDashbord);
 
-router.get('/planotop',AdmController.showplanotop);
+
 
 
 module.exports= router;

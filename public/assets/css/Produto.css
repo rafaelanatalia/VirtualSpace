@@ -1,0 +1,26 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+main{
+    display: flex;
+    justify-content: center;
+}
+.flex-margin{
+    height: 65vh;
+    width: 70vw;
+    margin-top: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.container-flex-left{
+    width: 60vw;
+    height: 65vh;
+}
+.container-flex-rigth{
+    width: 60vw;
+    height: 65vh;
+    border: black 1px solid;
+}
