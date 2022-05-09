@@ -1,5 +1,7 @@
 let express = require('express');
+const multer = require('../middlewares/multer');
 let router = express.Router();
+
 
 
 let ProdutoController = require('../controller/ProdutoController');
@@ -14,6 +16,6 @@ router.get('/alterar',ProdutoController.showAlterar);
 router.get('/deletar',ProdutoController.showDeletar);
 
 //Crud de produtos - POST
-router.post('/incluir',ProdutoController.Incluir);
+router.post('/incluir',multer.single('foto'),ProdutoController.Incluir);
 
 module.exports = router;

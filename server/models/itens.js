@@ -11,14 +11,15 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-    
+      
     }
   }
   itens.init({
     foto: DataTypes.STRING,
     titulo: DataTypes.STRING,
     descricao: DataTypes.STRING,
-    preco: DataTypes.STRING
+    preco: DataTypes.STRING,
+    usuario_id:DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'itens',

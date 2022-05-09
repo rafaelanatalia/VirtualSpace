@@ -10,6 +10,9 @@ module.exports = (sequelize, DataTypes) => {
   usuarios.associate = (models) =>{
     usuarios.hasMany(models.planos,{
       foreignkey:"planos_id",
+    }),
+    usuarios.hasMany(models.itens,{
+      foreignkey:"itens_id",
     });
   }
   usuarios.init({

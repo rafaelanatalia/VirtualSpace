@@ -19,6 +19,9 @@ module.exports = {
       },
       preco: {
         type: Sequelize.STRING
+      }, 
+      usuario_id: {
+        type: Sequelize.INTEGER,
       },
       createdAt: {
         allowNull: false,

@@ -16,21 +16,23 @@ const  UsuarioController = {
         res.render('adms/produtosDeletar');
     },
     Incluir: async (req,res)=>{
-        const nome = req.body.nome;
+        const titulo = req.body.nome;
         const descricao = req.body.descricao;
         const preco = req.body.preco;
-        const foto = req.body.foto;
+        const foto = req.file.filename;
+        const usuario_id = req.session.usuario.id;
         const DB = require('../server/models');
 
         const post =  await DB.itens.create({
             foto,
-            nome,
+            titulo,
             descricao,
-            preco
+            preco,
+            usuario_id,
                  
             })
 
-        res.send(nome,descricao,preco)
+        res.render('adms/produtos')
     },
 
 
