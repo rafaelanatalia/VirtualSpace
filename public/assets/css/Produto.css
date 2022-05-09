@@ -4,7 +4,8 @@
 }
 main{
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .flex-margin{
     height: 65vh;
@@ -13,14 +14,65 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-
+    flex-direction: row;
 }
 .container-flex-left{
     width: 60vw;
     height: 65vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10vw;
 }
 .container-flex-rigth{
     width: 60vw;
     height: 65vh;
     border: black 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-flex-left > h2{
+    margin-bottom: 13vh;
+}
+.container-flex-left > p{
+    margin-bottom: 5vh;
+}
+.container-flex-rigth > img{
+    width: 25vw;
+    
+}
+.containerComentario{
+    width: 60vw;
+    height: 65vh;
+    margin-top: 8vh;
+    display: flex;
+    flex-direction: column;
+    padding: 10vh;
+    align-items: center;
+}
+.containerComentario > h2{
+    margin-bottom: 5vh;
+}
+.containerComentario > ul {
+    list-style-type: none;
+}
+.containerComentario > ul > li{
+    padding: 4vh;
+    width: 60vw;
+    background-color: black;
+    border: black 2px solid;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 2vh;
+}
+.containerComentario > form > input[type="text"]{
+    width: 60vw;
+    height: 8vh;
+    display: flex;
+}
+.containerComentario > form > input[type="submit"]{
+    border: black 2px solid;
+    color:  black;
+    padding: 3vh 3vw;
 }
