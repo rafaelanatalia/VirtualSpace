@@ -8,7 +8,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      nome: {
+      nome_cliente: {
         type: Sequelize.STRING
       },
       email: {
@@ -18,10 +18,14 @@ module.exports = {
         type: Sequelize.STRING
       },
       endereco: {
+        allowNull: true,
         type: Sequelize.STRING
+        
       },
       telefone: {
+        allowNull: true,
         type: Sequelize.STRING
+        
       },
       createdAt: {
         allowNull: false,

@@ -193,20 +193,16 @@
     }
 }
 .usuarioLogado{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 5vh;
-    right: 7vw;
-    
+   border: black 1px solid;
+   padding: 4vh;
+   margin-left: 4vh;
+   border-radius: 20px;
 }
-.usuarioLogado > img{
-    width: 4vw;
-    height: 8vh;
-    border-radius: 100px;
-    margin-right: 20px;
+.usuarioLogado:hover{
+    border-radius: 20px;
+    box-shadow: black 2px 2px 2px;
 }
+
 
   /* ==============BOTÕES============== */
   #Home{

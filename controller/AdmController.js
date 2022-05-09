@@ -58,13 +58,44 @@ const db = require('../server/models');
             res.render('crud-usuarios/loginCliente');
         },
         loginCliente:(req,res)=>{
+            const clienteemail = req.body.email;
+            const clientesenha = req.body.senha;
             
+            db.clientes.findOne({
+                where:{
+                    email:clienteemail,
+                    senha:clientesenha
+                }
+            }).then(function(usuario){
+               
+                usuario.senha = undefined;
+                delete usuario.senha;
+                req.session.usuario = usuario ;
+
+                    return res.render('index');
+            })
         },
         showCreateCliente:(req,res)=>{
             res.render('crud-usuarios/criarcontaCliente');
         },
-        CreateCliente:(req,res)=>{
+        CreateCliente: async (req,res)=>{
+            const nome_cliente = req.body.nome;
+                const email = req.body.email;
+                const senha = req.body.senha;
+                const senhanovamente = req.body.senhanovamente;
+                const usuarioDB = require('../server/models');
+
+                if(senha == senhanovamente){
+                
+                const post = await usuarioDB.clientes.create({
+                    nome_cliente,
+                    email,
+                    senha,
+                })
+                
             
+                return res.render('crud-usuarios/login');
+             }
         },
         
 

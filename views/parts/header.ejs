@@ -17,13 +17,7 @@
                     <li><i class='bx bx-user'></i><a href="/login">Login</a></li>
                     <li><i class='bx bx-user-plus'></i><a href="/create">Criar Conta</a></li>
                 <% }else{%>
-                    <li>
-                        <a class="usuarioLogado" href="/dashboard">
-                            <img src="/assets/img/img-teste.png" alt="">
-                            <label for=""><%= usuario?.nome_loja %></label>
-                        </a>
-                        
-                    </li>
+                    <li><a class="usuarioLogado" href="/dashboard"><label for=""><%= usuario?.nome_loja %></label></a></li>
                 <% }%>
             </ul>
             
