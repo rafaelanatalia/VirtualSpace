@@ -1,7 +1,7 @@
 const clientVerify = function(req,res,next){
-    if(req.session.cliente){
-       
-    return res.redirect('/')
+    if(!req.session.cliente){
+
+       return res.redirect('/cliente/login');
     }
     next()
 }

@@ -32,7 +32,7 @@ const  UsuarioController = {
                  
             })
 
-        res.render('adms/produtos')
+        res.send(post);
     },
 
 

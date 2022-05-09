@@ -57,10 +57,8 @@ app.use(sessionMiddleware);
 app.use('/',VirtualRouter); //Pagina Principal
 app.use('/', AdmRouter); //Usuarios e Clientes
 app.use('/',PlanosRouter);//Planos
-app.use('/produtos',logedVerify,clientVerify,ProdutosRouter);//Produtos
+app.use('/produtos',logedVerify,ProdutosRouter);//Produtos
 
-
-app.use('/pagamento',PagamentosRouter);
 
 
 // catch 404 and forward to error handler

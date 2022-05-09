@@ -19,7 +19,7 @@ router.get('/create',AdmController.Create);
 router.post('/create',AdmController.Registro);
 
 //Segunda Pagina De Registro
-router.get('/create-plan',clientVerify,AdmController.RegistroSecundarioCreate);
+router.get('/create-plan',AdmController.RegistroSecundarioCreate);
 
 
 //Login De Cliente
@@ -31,7 +31,7 @@ router.get('/cliente/create',AdmController.showCreateCliente);
 router.post('/cliente/create',AdmController.CreateCliente);
 
 //Rota Para Dashboard
-router.get('/dashboard',clientVerify,AdmController.showDashbord);
+router.get('/dashboard',AdmController.showDashbord);
 
 
 
