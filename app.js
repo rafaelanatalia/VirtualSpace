@@ -18,6 +18,7 @@ const PlanosRouter = require("./routers/PlanosRouter");
 const planVerify = require("./middlewares/planVerify");
 const sessionMiddleware = require("./middlewares/sessionMiddleware");
 const logedVerify = require('./middlewares/logedVerify');
+const clientVerify = require("./middlewares/clientVerify");
 
 //criando o servidor 
 const app=express();
@@ -56,7 +57,7 @@ app.use(sessionMiddleware);
 app.use('/',VirtualRouter); //Pagina Principal
 app.use('/', AdmRouter); //Usuarios e Clientes
 app.use('/',PlanosRouter);//Planos
-app.use('/produtos',logedVerify,ProdutosRouter);//Produtos
+app.use('/produtos',logedVerify,clientVerify,ProdutosRouter);//Produtos
 
 
 app.use('/pagamento',PagamentosRouter);

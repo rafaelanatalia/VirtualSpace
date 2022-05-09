@@ -66,11 +66,11 @@ const db = require('../server/models');
                     email:clienteemail,
                     senha:clientesenha
                 }
-            }).then(function(usuario){
+            }).then(function(cliente){
                
-                usuario.senha = undefined;
-                delete usuario.senha;
-                req.session.usuario = usuario ;
+                cliente.senha = undefined;
+                delete cliente.senha;
+                req.session.cliente = cliente ;
 
                     return res.render('index');
             })

@@ -14,6 +14,6 @@ router.get('/alterar',ProdutoController.showAlterar);
 router.get('/deletar',ProdutoController.showDeletar);
 
 //Crud de produtos - POST
-router.post('/incluir',ProdutoController.Incluir)
+router.post('/incluir',ProdutoController.Incluir);
 
 module.exports = router;

@@ -2,6 +2,7 @@
 const {
   Model
 } = require('sequelize');
+const usuarios = require('./usuarios');
 module.exports = (sequelize, DataTypes) => {
   class itens extends Model {
     /**
@@ -10,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+    
     }
   }
   itens.init({
