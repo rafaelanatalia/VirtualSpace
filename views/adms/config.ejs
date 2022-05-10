@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incluir Produtos</title>
+    <link rel="stylesheet" href="/assets/css/config.css">
+</head>
+<body>
+    <%- include('../parts/header'); %>
+    <main>
+        <div class="container-flex">
+            <%- include('../parts/navLeftDashboard'); %>
+            <div class="container-flex-rigth">
+                <div class="container-flex-rigth-margin">
+                    <form>
+                        <h3>nome da loja</h3>
+                        <input type="text" name="nomeLoja">
+                        <h3>Subtitulo</h3>
+                        <input type="text" name="subTitulo">
+                        <h3>Sobre Nós</h3>
+                        <input type="text" name="sobreNos">
+                        <h3>Telefone</h3>
+                        <input type="text" name="telefone">
+                        <h3>Celular</h3>
+                        <input type="text" name="celular">
+                        <h3>Email</h3>
+                        <input type="text" name="email">
+                        <a type="submit" class="btnAplicar">Aplicar</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

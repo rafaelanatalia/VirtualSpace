@@ -111,6 +111,9 @@ const db = require('../server/models');
         },
         showplanotop:(req,res)=>{
             res.render('paginas/pagina-top');
+        },
+        showConfig:(req,res)=>{
+            res.render('adms/config');
         }
 }
 

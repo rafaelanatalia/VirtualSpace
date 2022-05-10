@@ -32,6 +32,7 @@ router.post('/cliente/create',AdmController.CreateCliente);
 
 //Rota Para Dashboard
 router.get('/dashboard',AdmController.showDashbord);
+router.get('/config',AdmController.showConfig);
 
 
 
