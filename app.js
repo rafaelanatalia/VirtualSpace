@@ -34,13 +34,14 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 //config a pasta public
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(session({
   name:"VirtualSpace",
   secret:process.env.SENHASESSION,
   resave:false,
   saveUninitialized:false
 }))
-app.use(express.static(path.join(__dirname, 'public')));
 
 
 //JSON
@@ -64,7 +65,7 @@ app.use('/produtos',logedVerify,ProdutosRouter);//Produtos
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   res.render('404');
-    next(createError(404));
+    // next(createError(404));
    
   });
   

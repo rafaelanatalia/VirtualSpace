@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtos</title>
+    <title>Incluir Produtos</title>
     <link rel="stylesheet" href="/assets/css/Produtos.css">
 </head>
 <body>
@@ -14,8 +14,14 @@
             <%- include('../parts/navLeftDashboard'); %>
             <div class="container-flex-rigth">
                 <div class="container-flex-rigth-margin">
-                    <a class='buttonProdutos' href="/produtos/incluir">Adicionar</a>
-                    <a class='buttonProdutos' href="/produtos/alterar">Alterar/Remover</a>
+                    <form>
+                    <div class="form-row">
+                    <a class="incluir" href="/produtos/incluir">+</a><input type="text" class="procurar" name="procurar" placeholder="Escreva o nome ou o id do produto">
+                    </div>
+                    <nav>
+                        <li>nome<a class="alterar">Alterar</a><a class="excluir">Excluir</a></li>
+                    </nav>
+                    </form>
                 </div>
             </div>
         </div>
